@@ -1497,9 +1497,9 @@ class _GroupInviteSheet extends StatelessWidget {
     // l10nText uses context.watch under the hood; this method is called
     // from the Share button's onTap (outside a build pass), so we must
     // use the read-only variant or Provider asserts.
-    final groupLabel = groupName.trim().isEmpty ? 'a Totals group' : groupName;
+    final groupLabel = groupName.trim().isEmpty ? 'a Finomi group' : groupName;
     return context
-        .l10nTextRead('Join "{group}" on Totals with this invite code:\n{code}')
+        .l10nTextRead('Join "{group}" on Finomi with this invite code:\n{code}')
         .replaceFirst('{group}', groupLabel)
         .replaceFirst('{code}', inviteCode);
   }

@@ -277,8 +277,8 @@ class _SettingsPageState extends State<SettingsPage>
             if (mounted) {
               await Share.shareXFiles(
                 [XFile(tempFile.path)],
-                text: 'Totals Data Export',
-                subject: 'Totals Backup',
+                text: 'Finomi Data Export',
+                subject: 'Finomi Backup',
               );
 
               ScaffoldMessenger.of(context).showSnackBar(
@@ -470,8 +470,8 @@ class _SettingsPageState extends State<SettingsPage>
 
         await Share.shareXFiles(
           [XFile(file.path)],
-          text: 'Totals Data Export',
-          subject: 'Totals Backup',
+          text: 'Finomi Data Export',
+          subject: 'Finomi Backup',
         );
 
         if (mounted) {
@@ -1624,7 +1624,7 @@ class AboutPage extends StatelessWidget {
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      'Help us keep improving Totals with thoughtful updates.',
+                      'Help us keep improving Finomi with thoughtful updates.',
                       style: theme.textTheme.bodyMedium?.copyWith(
                         color: theme.colorScheme.onSurface.withOpacity(0.7),
                       ),
@@ -1686,7 +1686,7 @@ class AboutPage extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        'Totals',
+                        'Finomi',
                         style: theme.textTheme.headlineSmall?.copyWith(
                           fontWeight: FontWeight.bold,
                         ),

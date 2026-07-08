@@ -847,7 +847,7 @@ class _RuleWizardPageState extends State<_RuleWizardPage> {
       children: [
         Row(
           children: [
-            Expanded(child: _label('Field mapping (Totals → your API)')),
+            Expanded(child: _label('Field mapping (Finomi → your API)')),
             TextButton.icon(
               onPressed: () => setState(
                   () => _mappings.add(_MapRow(_entity.fieldKeys.first, ''))),

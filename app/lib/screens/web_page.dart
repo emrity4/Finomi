@@ -748,7 +748,7 @@ class _WebPageState extends State<WebPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                context.l10nText('Totals Server'),
+                context.l10nText('Finomi Server'),
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 16,

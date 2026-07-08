@@ -605,7 +605,7 @@ class _NotificationSettingsPageState extends State<NotificationSettingsPage> {
 
     if (result.isGranted) {
       _showSnack(
-        context.l10nTextRead('Battery optimization disabled for Totals'),
+        context.l10nTextRead('Battery optimization disabled for Finomi'),
       );
     } else {
       _showSnack(

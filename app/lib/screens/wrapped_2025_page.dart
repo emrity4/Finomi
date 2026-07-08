@@ -425,7 +425,7 @@ class _Wrapped2025PageState extends State<Wrapped2025Page> {
 
     return [
       _WrappedSlideData(
-        kicker: 'Totals Wrapped $_wrappedYear',
+        kicker: 'Finomi Wrapped $_wrappedYear',
         title: 'Your year in motion',
         value: '${summary.totalTransactions}',
         subtitle:

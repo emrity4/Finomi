@@ -1031,7 +1031,7 @@ class _FailedParseCardState extends State<_FailedParseCard> {
       'Sender: ${widget.item.address}',
       'Time: ${widget.item.timestamp}',
       'Reason: ${widget.item.reason}',
-      'Source: Totals failed parsing page',
+      'Source: Finomi failed parsing page',
     ].join('\n');
   }
 

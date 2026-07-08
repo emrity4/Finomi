@@ -1663,7 +1663,7 @@ class _AddAccountSlideState extends State<_AddAccountSlide>
                   0.22,
                   0.55,
                   Text(
-                    'Link a bank account so Totals can match your transactions. You can always add more later.',
+                    'Link a bank account so Finomi can match your transactions. You can always add more later.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 15,

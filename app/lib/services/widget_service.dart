@@ -148,7 +148,7 @@ class WidgetService {
         _budgetWidgetEmptyMessageKey,
         sanitizedIds.isEmpty
             ? payload.emptyMessage
-            : 'Choose up to $maxBudgetWidgetBudgets budgets in Totals.',
+            : 'Choose up to $maxBudgetWidgetBudgets budgets in Finomi.',
       );
       await HomeWidget.saveWidgetData<String>(
         _budgetWidgetLastUpdatedKey,

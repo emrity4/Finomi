@@ -22,8 +22,8 @@ class _DataSyncConsentPageState extends State<DataSyncConsentPage> {
     (
       AppIcons.upload_rounded,
       'Your data leaves your device',
-      'Totals is built to stay on your device. Data Sync sends the financial '
-          'records you select to a server you configure. Totals cannot see, '
+      'Finomi is built to stay on your device. Data Sync sends the financial '
+          'records you select to a server you configure. Finomi cannot see, '
           'verify, or secure that server.',
     ),
     (
@@ -36,7 +36,7 @@ class _DataSyncConsentPageState extends State<DataSyncConsentPage> {
     (
       AppIcons.bolt_rounded,
       'One-way export only',
-      'Totals only pushes data out. It never pulls data back or changes your '
+      'Finomi only pushes data out. It never pulls data back or changes your '
           'local records based on the server.',
     ),
     (

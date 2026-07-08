@@ -170,7 +170,7 @@ class _AccountShareScanPageState extends State<AccountShareScanPage> {
                     child: Text(
                       _isProcessing
                           ? 'Importing accounts...'
-                          : 'Point your camera at a Totals account QR.',
+                          : 'Point your camera at a Finomi account QR.',
                       style: theme.textTheme.bodyMedium?.copyWith(
                         color: colorScheme.onSurface,
                       ),

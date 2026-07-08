@@ -131,7 +131,7 @@ class _AutoCategorizationRulesScanPageState
                       _isProcessing
                           ? context.l10nText('Importing rules...')
                           : context.l10nText(
-                              'Point your camera at a Totals auto-category QR.',
+                              'Point your camera at a Finomi auto-category QR.',
                             ),
                       style: theme.textTheme.bodyMedium?.copyWith(
                         color: colorScheme.onSurface,

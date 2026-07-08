@@ -103,7 +103,7 @@ class _StatsRecapContentState extends State<StatsRecapContent> {
       // Share the image
       await Share.shareXFiles(
         [XFile(imagePath)],
-        text: 'My ${widget.data.year} Totals Recap!',
+        text: 'My ${widget.data.year} Finomi Recap!',
       );
     } catch (e) {
       if (mounted) {

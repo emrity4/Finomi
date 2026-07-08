@@ -291,7 +291,7 @@ class _CategoriesPageState extends State<CategoriesPage>
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
-                        '${context.l10nTextRead('Totals can ask again for')} '
+                        '${context.l10nTextRead('Finomi can ask again for')} '
                         '${dismissal.counterparty}.',
                       ),
                       behavior: SnackBarBehavior.floating,
@@ -336,7 +336,7 @@ class _CategoriesPageState extends State<CategoriesPage>
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
-                        '${context.l10nTextRead('Totals can ask again for')} '
+                        '${context.l10nTextRead('Finomi can ask again for')} '
                         '${dismissal.counterparty}.',
                       ),
                       behavior: SnackBarBehavior.floating,

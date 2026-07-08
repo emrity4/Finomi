@@ -558,7 +558,7 @@ class _RedesignHomePageState extends State<RedesignHomePage>
 
     try {
       final result = await FilePicker.platform.pickFiles(
-        dialogTitle: 'Choose your Totals backup',
+        dialogTitle: 'Choose your Finomi backup',
         type: FileType.custom,
         allowedExtensions: ['json'],
       );
@@ -1492,7 +1492,7 @@ class _InsightCard extends StatelessWidget {
                 if (showImportBackupPrompt) ...[
                   Text(
                     context.l10nText(
-                      'Used Totals before? Import your backup to restore your accounts, transactions, budgets, and categories.',
+                      'Used Finomi before? Import your backup to restore your accounts, transactions, budgets, and categories.',
                     ),
                     style: theme.textTheme.bodySmall?.copyWith(
                       color: AppColors.isDark(context)

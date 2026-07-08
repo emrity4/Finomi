@@ -314,7 +314,7 @@ class RedesignShellState extends State<RedesignShell>
           title: Text(ctx.l10nText('Keep transaction alerts active')),
           content: Text(
             ctx.l10nText(
-              'To make sure you get notified instantly when a transaction happens, Totals needs to be excluded from battery optimization. Without this, your phone may stop delivering notifications in the background.',
+              'To make sure you get notified instantly when a transaction happens, Finomi needs to be excluded from battery optimization. Without this, your phone may stop delivering notifications in the background.',
             ),
           ),
           actions: [
@@ -1513,7 +1513,7 @@ class _UserAccountsTab extends StatelessWidget {
           const _EmptyAccountsState(
             title: 'No registered accounts',
             subtitle:
-                'Once your accounts are added to Totals, they will appear here and in the QR section above.',
+                'Once your accounts are added to Finomi, they will appear here and in the QR section above.',
           ),
         if (hasAccounts) ...[
           const SizedBox(height: 12),

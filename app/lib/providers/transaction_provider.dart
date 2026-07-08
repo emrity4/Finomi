@@ -209,7 +209,7 @@ class TransactionProvider with ChangeNotifier {
   TransactionTotals _thirtyDayTotals = const TransactionTotals.zero();
   int _selfTransferCount = 0;
   String _monthlyInsight =
-      'No monthly activity yet. Keep using Totals to unlock insights.';
+      'No monthly activity yet. Keep using Finomi to unlock insights.';
   TransactionTrendSeries _weekTrendSeries = TransactionTrendSeries.empty(7);
   TransactionTrendSeries _monthTrendSeries = TransactionTrendSeries.empty(30);
   FinancialHealthSnapshot _financialHealth =
@@ -1425,7 +1425,7 @@ class TransactionProvider with ChangeNotifier {
     }
 
     if (!monthHasTransactions[0] && priorNets.isEmpty) {
-      return 'No monthly activity yet. Keep using Totals to unlock insights.';
+      return 'No monthly activity yet. Keep using Finomi to unlock insights.';
     }
 
     final currentLabel = _formatEtbValue(currentNet.abs());
