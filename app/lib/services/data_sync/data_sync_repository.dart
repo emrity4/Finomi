@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/account.dart';
-import 'package:totals/services/data_sync/sync_models.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/account.dart';
+import 'package:finomi/services/data_sync/sync_models.dart';
 
 class SyncTransactionLogDetails {
   final String reference;

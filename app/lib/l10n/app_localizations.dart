@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/providers/theme_provider.dart';
-import 'package:totals/theme/app_language_option.dart';
+import 'package:finomi/providers/theme_provider.dart';
+import 'package:finomi/theme/app_language_option.dart';
 
 class AppLocalizations {
   AppLocalizations._();
@@ -43,7 +43,7 @@ class AppLocalizations {
     "action.getStarted": "እንጀምር",
     "action.copyInviteLink": "የመጋበዣ ሊንክ ቅዳ",
     "action.openAccounts": "አካውንቶችን ክፈት",
-    "status.loadingTotals": "የቅርብ ጊዜ ድምርዎን በማዘጋጀት ላይ...",
+    "status.loadingFinomi": "የቅርብ ጊዜ ድምርዎን በማዘጋጀት ላይ...",
     "status.loadingInsight": "የቅርብ ጊዜ ግንዛቤዎን በማዘጋጀት ላይ...",
     "status.creating": "በመፍጠር ላይ...",
     "status.saving": "በማስቀመጥ ላይ...",
@@ -62,7 +62,7 @@ class AppLocalizations {
     "home.syncSmsHistory": "የኤስኤምኤስ ታሪክ አመሳስል",
     "home.insight": "ግንዛቤ",
     "home.noMonthlyActivity":
-        "እስካሁን ወርሃዊ እንቅስቃሴ የለም። ግንዛቤዎችን ለማግኘት Totalsን መጠቀምዎን ይቀጥሉ።",
+        "እስካሁን ወርሃዊ እንቅስቃሴ የለም። ግንዛቤዎችን ለማግኘት Finomiን መጠቀምዎን ይቀጥሉ።",
     "home.quickAccess": "ፈጣን መዳረሻ",
     "home.quickAccounts": "ፈጣን አካውንቶች",
     "home.nothingQuickAccess": "ለፈጣን መዳረሻ የተቀመጠ ነገር የለም",
@@ -205,7 +205,7 @@ class AppLocalizations {
     "shared.inviteLink": "የመጋበዣ ሊንክ",
     "shared.inviteLinkCopied": "የመጋበዣ ሊንክ ተቀድቷል",
     "shared.inviteLinkOrCode": "የመጋበዣ ሊንክ ወይም ኮድ",
-    "shared.pasteInvite": "የቡድን ቁልፍ ያለው የTotals የመጋበዣ ሊንክ ይለጥፉ",
+    "shared.pasteInvite": "የቡድን ቁልፍ ያለው የFinomi የመጋበዣ ሊንክ ይለጥፉ",
     "shared.paidBy": "ከፋይ",
     "shared.paidByMe": "በእኔ የተከፈለ",
     "shared.splitAmong": "የሚካፈሉት",
@@ -219,8 +219,8 @@ class AppLocalizations {
     "shared.noUnsharedTransactions": "ያልተጋሩ ትራንዛክሽኖች የሉም",
     "shared.noMatchingExpenses": "ተመሳሳይ ወጪዎች የሉም",
     "shared.sharedGroupSynced": "የጋራ ቡድን ተመሳስሏል",
-    "shared.engineUnreachable": "Totals Engine አይገኝም",
-    "shared.localSyncNote": "Totals Engine ሲገኝ የአካባቢ ለውጦች ይመሳሰላሉ",
+    "shared.engineUnreachable": "Finomi Engine አይገኝም",
+    "shared.localSyncNote": "Finomi Engine ሲገኝ የአካባቢ ለውጦች ይመሳሰላሉ",
     "shared.alreadyShared": "ያ ትራንዛክሽን አስቀድሞ በዚህ ቡድን ውስጥ ተጋርቷል",
     "shared.groupLimitBody": "በአንድ ጊዜ እስከ {limit} ንቁ ቡድኖች አባል መሆን ብቻ ይችላሉ።",
     "shared.expenseAddedToGroup": "ወጪ ወደ {group} ታክሏል",
@@ -298,7 +298,7 @@ class AppLocalizations {
     "tools.scanVerifyReceipts": "የትራንዛክሽን ደረሰኞችን ይቃኙ እና ያረጋግጡ",
     "tools.viewBrowser": "የፋይናንስ መረጃዎን በብሮውዘር ላይ ይመልከቱ",
     "tools.handyUtilities": "ጠቃሚ መሳሪያዎች በእጅዎ ላይ።",
-    "onboarding.welcome": "ወደ Totals እንኳን በደህና መጡ",
+    "onboarding.welcome": "ወደ Finomi እንኳን በደህና መጡ",
     "onboarding.personalTracker": "የኢትዮጵያ ባንኮች የግል ፋይናንስ መከታተያ",
     "onboarding.yourTracker": "የእርስዎ የግል ፋይናንስ መከታተያ። ብልህ የወጪ አጠቃቀም እዚህ ይጀምራል።",
     "onboarding.howItWorks": "እንዴት እንደሚሰራ",
@@ -310,20 +310,20 @@ class AppLocalizations {
     "onboarding.smsOnDevice": "ኤስኤምኤስ በመሳሪያው ላይ ብቻ ይቆያል",
     "onboarding.gettingStarted": "መጀመር",
     "onboarding.linkAccount":
-        "Totals የእርስዎን ትራንዛክሽኖች ማዛመድ እንዲችል የባንክ አካውንት ያገናኙ። በኋላ ላይ ሁልጊዜ ተጨማሪ ማከል ይችላሉ።",
+        "Finomi የእርስዎን ትራንዛክሽኖች ማዛመድ እንዲችል የባንክ አካውንት ያገናኙ። በኋላ ላይ ሁልጊዜ ተጨማሪ ማከል ይችላሉ።",
     "onboarding.addAccountLater":
         "የባንክ አካውንቶችን ከእርስዎ > መሳሪያዎች ያክሉ እና እዚህ ይታያሉ።",
-    "privacy.howTotalsHandles":
-        "Totals ኤስኤምኤስ፣ ካሜራ እና የአካባቢ ዳታን እንዴት እንደሚያስተናግድ",
-    "privacy.smsLocal": "Totals ከባንክዎ የሚመጡ የኤስኤምኤስ መልዕክቶችን ያነባል እና በራስ-ሰር",
+    "privacy.howFinomiHandles":
+        "Finomi ኤስኤምኤስ፣ ካሜራ እና የአካባቢ ዳታን እንዴት እንደሚያስተናግድ",
+    "privacy.smsLocal": "Finomi ከባንክዎ የሚመጡ የኤስኤምኤስ መልዕክቶችን ያነባል እና በራስ-ሰር",
     "privacy.smsNotSent": "እነዚያ የኤስኤምኤስ ይዘቶች ወደ ሰርቨሮቻችን አይላኩም።",
     "privacy.cameraAccess": "የካሜራ መዳረሻ ለአካውንት QR ቅኝት እና ለክፍያ ይጠቅማል",
     "privacy.optionalOnline": "አማራጭ የኦንላይን ባህሪያት",
     "privacy.localData": "እስክታወጡ፣ እስክታጸዱ ድረስ አብዛኛው የመተግበሪያ ዳታ በመሳሪያዎ ላይ ይቆያል፣",
-    "privacy.noTelemetry": "Totals የማስታወቂያ SDKዎችን ወይም ትንታኔዎችን አያካትትም",
+    "privacy.noTelemetry": "Finomi የማስታወቂያ SDKዎችን ወይም ትንታኔዎችን አያካትትም",
     "faq.helpFaq": "እገዛ እና ተዘውትረው የሚጠየቁ ጥያቄዎች",
     "faq.commonQuestions": "የተለመዱ ጥያቄዎች መልስ አግኝተዋል",
-    "faq.howReadTransactions": "Totals የእኔን ትራንዛክሽኖች እንዴት ያነባል?",
+    "faq.howReadTransactions": "Finomi የእኔን ትራንዛክሽኖች እንዴት ያነባል?",
     "faq.categorizeTransactions": "ትራንዛክሽኖችን እንዴት እመድባለሁ?",
     "faq.budgetsWork": "በጀቶች እንዴት ይሰራሉ?",
     "faq.exportData": "ዳታዬን እንዴት ወደ ውጭ እልካለሁ?",
@@ -406,7 +406,7 @@ class AppLocalizations {
     "settings.fetchSmsPatternsSubtitle": "የቅርብ ጊዜ የኤስኤምኤስ መተንተኛ ህጎችን አውርድ",
     "settings.exportDataSubtitle": "ምትኬ አስቀምጥ ወይም አጋራ",
     "settings.privacyPolicySubtitle":
-        "Totals ኤስኤምኤስ፣ ካሜራ እና የአካባቢ ዳታን እንዴት እንደሚይዝ",
+        "Finomi ኤስኤምኤስ፣ ካሜራ እና የአካባቢ ዳታን እንዴት እንደሚይዝ",
     "vault.pinMinDigits": "PIN ቢያንስ {count} አሃዞች መሆን አለበት።",
     "vault.pinMismatch": "PINዎቹ አይዛመዱም። እንደገና ይሞክሩ።",
     "vault.setupFailed": "ምትኬ ማዋቀር አልተቻለም፦ {error}",
@@ -466,7 +466,7 @@ class AppLocalizations {
     "Get Started": "እንጀምር",
     "Copy invite link": "የመጋበዣ ሊንክ ቅዳ",
     "Open Accounts": "አካውንቶችን ክፈት",
-    "Preparing your latest totals...": "የቅርብ ጊዜ ድምርዎን በማዘጋጀት ላይ...",
+    "Preparing your latest Finomi...": "የቅርብ ጊዜ ድምርዎን በማዘጋጀት ላይ...",
     "Your finances are locked": "ፋይናንስዎ ተቆልፏል",
     "Tap to unlock": "ለመክፈት ይንኩ",
     "Preparing your latest insight...": "የቅርብ ጊዜ ግንዛቤዎን በማዘጋጀት ላይ...",
@@ -484,9 +484,9 @@ class AppLocalizations {
     "Update check is only available for Google Play installs.":
         "የዝመና ፍተሻ ከGoogle Play ለተጫኑ መተግበሪያዎች ብቻ ይሰራል።",
     "Could not check for updates.": "ዝመናዎችን መፈተሽ አልተቻለም።",
-    "Totals is up to date.": "Totals የቅርብ ጊዜ ስሪት ላይ ነው።",
+    "Finomi is up to date.": "Finomi የቅርብ ጊዜ ስሪት ላይ ነው።",
     "Update available": "ዝመና አለ",
-    "A newer version of Totals is available.": "አዲስ የTotals ስሪት ይገኛል።",
+    "A newer version of Finomi is available.": "አዲስ የFinomi ስሪት ይገኛል።",
     "Update": "አዘምን",
     "Update now": "አሁን አዘምን",
     "Google Play cannot start this update right now.":
@@ -533,8 +533,8 @@ class AppLocalizations {
         "በፕሮፋይልዎ ውስጥ ጥቅም ላይ የዋሉ የተመዘገቡ አካውንቶች።",
     "No registered accounts yet.": "እስካሁን የተመዘገቡ አካውንቶች የሉም።",
     "No registered accounts": "የተመዘገቡ አካውንቶች የሉም",
-    "Once your accounts are added to Totals, they will appear here and in the QR section above.":
-        "አካውንቶችዎ ወደ Totals ከታከሉ በኋላ፣ እዚህ እና ከላይ ባለው QR ክፍል ውስጥ ይታያሉ።",
+    "Once your accounts are added to Finomi, they will appear here and in the QR section above.":
+        "አካውንቶችዎ ወደ Finomi ከታከሉ በኋላ፣ እዚህ እና ከላይ ባለው QR ክፍል ውስጥ ይታያሉ።",
     "Add bank accounts from the Tools screen and they will show up here.":
         "የባንክ አካውንቶችን ከመሳሪያዎች ገጽ ያክሉ፣ እዚህም ይታያሉ።",
     "Showing": "በማሳየት ላይ",
@@ -900,8 +900,8 @@ class AppLocalizations {
     "Invite link copied": "የመጋበዣ ሊንክ ተቀድቷል",
     "Invite code copied": "የመጋበዣ ኮድ ተቀድቷል",
     "Invite link or code": "የመጋበዣ ሊንክ ወይም ኮድ",
-    "Paste a Totals invite link with a group key":
-        "የቡድን ቁልፍ ያለው የTotals የመጋበዣ ሊንክ ይለጥፉ",
+    "Paste a Finomi invite link with a group key":
+        "የቡድን ቁልፍ ያለው የFinomi የመጋበዣ ሊንክ ይለጥፉ",
     "paste invite code (UUID)": "የመጋበዣ ኮድ (UUID) ይለጥፉ",
     "Trip to Lalibela, Roommates...": "የላሊበላ ጉዞ፣ የቤት ጓደኞች...",
     "Trip to Lalibela, Roommates…": "የላሊበላ ጉዞ፣ የቤት ጓደኞች...",
@@ -984,9 +984,9 @@ class AppLocalizations {
     "Delete expense": "ወጪ ሰርዝ",
     "Edit Expense": "ወጪ አርትዕ",
     "Shared group synced": "የጋራ ቡድን ተመሳስሏል",
-    "Totals Engine is not reachable": "Totals Engine አይገኝም",
-    "Local changes sync when Totals Engine is reachable":
-        "Totals Engine ሲገኝ የአካባቢ ለውጦች ይመሳሰላሉ",
+    "Finomi Engine is not reachable": "Finomi Engine አይገኝም",
+    "Local changes sync when Finomi Engine is reachable":
+        "Finomi Engine ሲገኝ የአካባቢ ለውጦች ይመሳሰላሉ",
     "That transaction is already shared in this group":
         "ያ ትራንዛክሽን አስቀድሞ በዚህ ቡድን ውስጥ ተጋርቷል",
     "Synced": "ተመሳስሏል",
@@ -1287,7 +1287,7 @@ class AppLocalizations {
     "Explore the API documentation and visualize your financial data with interactive charts and graphs. Perfect for analyzing trends and patterns.":
         "የAPI ሰነዱን ይመልከቱ እና የፋይናንስ ዳታዎን በተግባራዊ ቻርቶች እና ግራፎች ይተንትኑ። አዝማሚያዎችን ለመመርመር ጠቃሚ ነው።",
     "Back to Simple Mode": "ወደ ቀላል ሁነታ ተመለስ",
-    "Totals Server": "የTotals ሰርቨር",
+    "Finomi Server": "የFinomi ሰርቨር",
     "Running on port": "በዚህ ፖርት እየሰራ ነው",
     "Stopped": "ቆሟል",
     "Clear Console": "ኮንሶል አጽዳ",
@@ -1461,24 +1461,24 @@ class AppLocalizations {
     "Export failed": "ወደ ውጭ መላክ አልተሳካም",
     "This will add the imported data to your existing data. Duplicates will be skipped.":
         "ይህ የተገባውን ዳታ ወደ ነባር ዳታዎ ያክላል። ተደጋጋሚዎች ይዘለላሉ።",
-    "Totals Data Export": "የTotals ዳታ ወጪ",
-    "Totals Backup": "የTotals ምትኬ",
+    "Finomi Data Export": "የFinomi ዳታ ወጪ",
+    "Finomi Backup": "የFinomi ምትኬ",
     "Personal": "የግል",
-    "Totals is a personal finance app for Ethiopian banks. It automatically reads your bank SMS notifications, tracks your transactions, and gives you a clear picture of your money, balances, spending, budgets, and more, all in one place.":
-        "Totals ለኢትዮጵያ ባንኮች የተሰራ የግል ፋይናንስ መተግበሪያ ነው። የባንክዎን የኤስኤምኤስ ማሳወቂያዎች በራስ-ሰር ያነባል፣ ትራንዛክሽኖችዎን ይከታተላል፣ እና ገንዘብዎን፣ ቀሪ ሂሳቦችን፣ ወጪን፣ በጀቶችን እና ተጨማሪን በአንድ ቦታ ግልጽ ያደርጋል።",
-    "Totals reads your bank SMS notifications directly on your phone.":
-        "Totals የባንክዎን የኤስኤምኤስ ማሳወቂያዎች በስልክዎ ላይ በቀጥታ ያነባል።",
+    "Finomi is a personal finance app for Ethiopian banks. It automatically reads your bank SMS notifications, tracks your transactions, and gives you a clear picture of your money, balances, spending, budgets, and more, all in one place.":
+        "Finomi ለኢትዮጵያ ባንኮች የተሰራ የግል ፋይናንስ መተግበሪያ ነው። የባንክዎን የኤስኤምኤስ ማሳወቂያዎች በራስ-ሰር ያነባል፣ ትራንዛክሽኖችዎን ይከታተላል፣ እና ገንዘብዎን፣ ቀሪ ሂሳቦችን፣ ወጪን፣ በጀቶችን እና ተጨማሪን በአንድ ቦታ ግልጽ ያደርጋል።",
+    "Finomi reads your bank SMS notifications directly on your phone.":
+        "Finomi የባንክዎን የኤስኤምኤስ ማሳወቂያዎች በስልክዎ ላይ በቀጥታ ያነባል።",
     "Transactions are parsed locally and saved to your device.":
         "ትራንዛክሽኖች በመሳሪያዎ ላይ ተተንትነው ይቀመጣሉ።",
-    "Totals organizes everything into your dashboard, all on-device.":
-        "Totals ሁሉንም ነገር በዳሽቦርድዎ ውስጥ ያደራጃል፣ ሁሉም በመሳሪያዎ ላይ።",
+    "Finomi organizes everything into your dashboard, all on-device.":
+        "Finomi ሁሉንም ነገር በዳሽቦርድዎ ውስጥ ያደራጃል፣ ሁሉም በመሳሪያዎ ላይ።",
     "TIPS": "ጠቃሚ ምክሮች",
-    "Totals reads SMS messages from your bank and automatically extracts transaction details like amount, date, and balance.":
-        "Totals ከባንክዎ የሚመጡ የኤስኤምኤስ መልዕክቶችን ያነባል እና መጠን፣ ቀን እና ቀሪ ሂሳብ ያሉ የትራንዛክሽን ዝርዝሮችን በራስ-ሰር ያወጣል።",
-    "Tap any transaction to open its details, then choose a category. Totals will remember and auto-categorize future transactions to the same recipient.":
-        "ዝርዝሩን ለመክፈት ማንኛውንም ትራንዛክሽን ይንኩ፣ ከዚያ ምድብ ይምረጡ። Totals ያስታውሳል እና ወደፊት ለዚያው ተቀባይ የሚሆኑ ትራንዛክሽኖችን በራስ-ሰር ይመድባል።",
-    "Yes. Totals automatically detects accounts from your SMS and tracks each one separately. You can view balances and transactions per account.":
-        "አዎ። Totals አካውንቶችን ከኤስኤምኤስዎ በራስ-ሰር ያገኛል እና እያንዳንዱን ለብቻ ይከታተላል። ቀሪ ሂሳቦችን እና ትራንዛክሽኖችን በአካውንት ማየት ይችላሉ።",
+    "Finomi reads SMS messages from your bank and automatically extracts transaction details like amount, date, and balance.":
+        "Finomi ከባንክዎ የሚመጡ የኤስኤምኤስ መልዕክቶችን ያነባል እና መጠን፣ ቀን እና ቀሪ ሂሳብ ያሉ የትራንዛክሽን ዝርዝሮችን በራስ-ሰር ያወጣል።",
+    "Tap any transaction to open its details, then choose a category. Finomi will remember and auto-categorize future transactions to the same recipient.":
+        "ዝርዝሩን ለመክፈት ማንኛውንም ትራንዛክሽን ይንኩ፣ ከዚያ ምድብ ይምረጡ። Finomi ያስታውሳል እና ወደፊት ለዚያው ተቀባይ የሚሆኑ ትራንዛክሽኖችን በራስ-ሰር ይመድባል።",
+    "Yes. Finomi automatically detects accounts from your SMS and tracks each one separately. You can view balances and transactions per account.":
+        "አዎ። Finomi አካውንቶችን ከኤስኤምኤስዎ በራስ-ሰር ያገኛል እና እያንዳንዱን ለብቻ ይከታተላል። ቀሪ ሂሳቦችን እና ትራንዛክሽኖችን በአካውንት ማየት ይችላሉ።",
     "Go to Settings > Export Data. You can save the file directly or share it with other apps.":
         "ወደ ቅንብሮች > ዳታ ላክ ይሂዱ። ፋይሉን በቀጥታ ማስቀመጥ ወይም ከሌሎች መተግበሪያዎች ጋር ማጋራት ይችላሉ።",
     "Yes. Use Export Data to create a backup, then use Import Data on your other device to restore it.":
@@ -1487,8 +1487,8 @@ class AppLocalizations {
         "ከመነሻ ገጽ የያልተሳኩ ትንታኔዎች ገጽን ይክፈቱ። ከዚያ እንደገና መተንተን ይችላሉ። አሁንም ካልተሳካ፣ የባንኩ ቅርጸት እስካሁን ያልተደገፈ ሊሆን ይችላል።",
     "In Today's transactions, tap the refresh button to rescan today's bank SMS and pick up anything that was missed.":
         "በየዛሬ ትራንዛክሽኖች ውስጥ የዛሬን የባንክ ኤስኤምኤስ እንደገና ለመቃኘት እና ያመለጠውን ለመያዝ የማደሻ አዝራሩን ይንኩ።",
-    "Create a budget in the Budget tab with a spending limit and time period. Totals tracks your spending against it and notifies you when you are close to your limit.":
-        "በበጀት ትር ውስጥ የወጪ ገደብ እና የጊዜ ወቅት ያለው በጀት ይፍጠሩ። Totals ወጪዎን ከዚያ ጋር ይከታተላል እና ወደ ገደብዎ ሲቀርቡ ያሳውቅዎታል።",
+    "Create a budget in the Budget tab with a spending limit and time period. Finomi tracks your spending against it and notifies you when you are close to your limit.":
+        "በበጀት ትር ውስጥ የወጪ ገደብ እና የጊዜ ወቅት ያለው በጀት ይፍጠሩ። Finomi ወጪዎን ከዚያ ጋር ይከታተላል እና ወደ ገደብዎ ሲቀርቡ ያሳውቅዎታል።",
     "How do shared expenses work?": "የጋራ ወጪዎች እንዴት ይሰራሉ?",
     "Create a group in the Shared tab, add expenses, and split them with the people involved. Shared expense updates are encrypted with the group key, so only members of that group can see them. For anyone outside the group, the synced data is just encrypted data. Your personal transactions stay private unless you choose to link one to a shared expense.":
         "በየጋራ ትር ውስጥ ቡድን ይፍጠሩ፣ ወጪዎችን ያክሉ፣ እና ከተሳታፊዎች ጋር ይካፈሉ። የጋራ ወጪ ዝመናዎች በቡድኑ ቁልፍ ይመሰጠራሉ፣ ስለዚህ የዚያ ቡድን አባላት ብቻ ማየት ይችላሉ። ከቡድኑ ውጭ ላለ ማንኛውም ሰው፣ የተመሳሰለው ዳታ የተመሰጠረ ዳታ ብቻ ነው። የግል ትራንዛክሽኖችዎ ከጋራ ወጪ ጋር ለማገናኘት ካልመረጡ በስተቀር የግል ይቆያሉ።",
@@ -1525,7 +1525,7 @@ class AppLocalizations {
         "ማሳወቂያዎች ታግደዋል፤ በቅንብሮች ውስጥ ያብሩዋቸው",
     "Notifications permission denied": "የማሳወቂያ ፈቃድ ተከልክሏል",
     "Already excluded from battery optimization": "ከባትሪ ማመቻቸት አስቀድሞ ተነጥሏል",
-    "Battery optimization disabled for Totals": "ለTotals የባትሪ ማመቻቸት ተሰናክሏል",
+    "Battery optimization disabled for Finomi": "ለFinomi የባትሪ ማመቻቸት ተሰናክሏል",
     "Battery optimization exemption denied": "ከባትሪ ማመቻቸት መነጠል ተከልክሏል",
     "Test summary notification sent": "የሙከራ የዕለታዊ ማጠቃለያ ማሳወቂያ ተልኳል",
     "Test weekly summary notification sent": "የሙከራ ሳምንታዊ ማጠቃለያ ማሳወቂያ ተልኳል",
@@ -1574,30 +1574,30 @@ class AppLocalizations {
         "የጀርባ ማሳወቂያዎች እንዲደርሱ ከባትሪ ማመቻቸት ይነጥሉ",
     "Could not load the privacy policy right now.":
         "የግላዊነት መመሪያውን አሁን መጫን አልተቻለም።",
-    "Privacy Policy for Totals": "የTotals የግላዊነት መመሪያ",
+    "Privacy Policy for Finomi": "የFinomi የግላዊነት መመሪያ",
     "Effective date: April 23, 2026": "የሚጸናበት ቀን፦ ኤፕሪል 23, 2026",
     "Effective date: June 14, 2026": "የሚጸናበት ቀን፦ ጁን 14, 2026",
-    "Totals is a personal finance application published by Detached. This Privacy Policy explains how Totals accesses, uses, stores, and shares data when you use the Android application package `detached.totals`.":
-        "Totals በDetached የታተመ የግል ፋይናንስ መተግበሪያ ነው። ይህ የግላዊነት መመሪያ የAndroid መተግበሪያ ጥቅል `detached.totals`ን ሲጠቀሙ Totals ዳታን እንዴት እንደሚደርስበት፣ እንደሚጠቀምበት፣ እንደሚያስቀምጥ እና እንደሚያጋራ ያብራራል።",
+    "Finomi is a personal finance application published by Detached. This Privacy Policy explains how Finomi accesses, uses, stores, and shares data when you use the Android application package `detached.Finomi`.":
+        "Finomi በDetached የታተመ የግል ፋይናንስ መተግበሪያ ነው። ይህ የግላዊነት መመሪያ የAndroid መተግበሪያ ጥቅል `detached.Finomi`ን ሲጠቀሙ Finomi ዳታን እንዴት እንደሚደርስበት፣ እንደሚጠቀምበት፣ እንደሚያስቀምጥ እና እንደሚያጋራ ያብራራል።",
     "Summary": "ማጠቃለያ",
-    "Totals is designed to work primarily on-device.":
-        "Totals በዋናነት በመሳሪያዎ ላይ እንዲሰራ ተዘጋጅቷል።",
+    "Finomi is designed to work primarily on-device.":
+        "Finomi በዋናነት በመሳሪያዎ ላይ እንዲሰራ ተዘጋጅቷል።",
     "For core SMS-based transaction tracking, supported bank SMS messages are read, parsed, and stored locally on your device. Those SMS contents are not sent to our servers for normal transaction tracking.":
         "ለዋናው በኤስኤምኤስ የተመሰረተ የትራንዛክሽን ክትትል፣ የሚደገፉ የባንክ ኤስኤምኤስ መልዕክቶች በመሳሪያዎ ላይ ይነበባሉ፣ ይተነተናሉ እና ይቀመጣሉ። እነዚያ የኤስኤምኤስ ይዘቶች ለመደበኛ የትራንዛክሽን ክትትል ወደ ሰርቨሮቻችን አይላኩም።",
     "Some optional features use the internet:":
         "አንዳንድ አማራጭ ባህሪያት ኢንተርኔትን ይጠቀማሉ፦",
     "Payment verification can send the image, payment reference, selected account number, and selected bank identifier you submit to our verification service to process your request.":
         "የክፍያ ማረጋገጫ ጥያቄዎን ለማስኬድ ያስገቡትን ምስል፣ የክፍያ ማጣቀሻ፣ የተመረጠ አካውንት ቁጥር እና የተመረጠ የባንክ መለያ ወደ ማረጋገጫ አገልግሎታችን ሊልክ ይችላል።",
-    "Shared expenses lets you split expenses with friends in end-to-end encrypted groups. The Totals Engine relays encrypted payloads it cannot read, and push notifications are doorbell pings that do not include expense content.":
-        "የጋራ ወጪዎች ከጓደኞች ጋር ወጪዎችን ከጫፍ እስከ ጫፍ በተመሰጠሩ ቡድኖች ውስጥ እንዲካፈሉ ያስችላል። Totals Engine ሊያነበው የማይችለውን የተመሰጠረ ይዘት ያስተላልፋል፣ push ማሳወቂያዎችም የወጪ ይዘት የማያካትቱ የማንቂያ ምልክቶች ብቻ ናቸው።",
+    "Shared expenses lets you split expenses with friends in end-to-end encrypted groups. The Finomi Engine relays encrypted payloads it cannot read, and push notifications are doorbell pings that do not include expense content.":
+        "የጋራ ወጪዎች ከጓደኞች ጋር ወጪዎችን ከጫፍ እስከ ጫፍ በተመሰጠሩ ቡድኖች ውስጥ እንዲካፈሉ ያስችላል። Finomi Engine ሊያነበው የማይችለውን የተመሰጠረ ይዘት ያስተላልፋል፣ push ማሳወቂያዎችም የወጪ ይዘት የማያካትቱ የማንቂያ ምልክቶች ብቻ ናቸው።",
     "An optional identity backup vault lets you restore your shared-expense identity and group keys on a new device using a recovery code shown to you in the app plus a PIN you choose. Vault contents are encrypted on-device before being uploaded.":
         "አማራጭ የመታወቂያ ምትኬ ቮልት በመተግበሪያው ውስጥ የሚታይልዎትን የመመለሻ ኮድ እና የሚመርጡትን PIN በመጠቀም የጋራ ወጪ መታወቂያዎን እና የቡድን ቁልፎችን በአዲስ መሳሪያ ላይ እንዲመልሱ ያስችላል። የቮልት ይዘቶች ከመሰቀላቸው በፊት በመሳሪያዎ ላይ ይመሰጠራሉ።",
     "The app may download updated SMS parsing patterns and bank configuration files from our servers during setup, refresh, or manual update actions. This does not upload your SMS contents.":
         "መተግበሪያው በማዋቀር፣ በማደስ ወይም በእጅ የዝማኔ ተግባራት ጊዜ የተዘመኑ የኤስኤምኤስ መተንተኛ ንድፎችን እና የባንክ ውቅር ፋይሎችን ከሰርቨሮቻችን ሊያወርድ ይችላል። ይህ የኤስኤምኤስ ይዘትዎን አይሰቅልም።",
-    "Totals does not require account registration.":
-        "Totals የአካውንት ምዝገባ አይጠይቅም።",
-    "Totals does not use advertising SDKs or analytics telemetry to profile you.":
-        "Totals እርስዎን ለመግለጽ የማስታወቂያ SDKዎችን ወይም የትንታኔ ቴሌሜትሪን አይጠቀምም።",
+    "Finomi does not require account registration.":
+        "Finomi የአካውንት ምዝገባ አይጠይቅም።",
+    "Finomi does not use advertising SDKs or analytics telemetry to profile you.":
+        "Finomi እርስዎን ለመግለጽ የማስታወቂያ SDKዎችን ወይም የትንታኔ ቴሌሜትሪን አይጠቀምም።",
     "Data We Access": "የምንደርስበት ዳታ",
     "SMS messages and SMS-derived transaction data from supported bank notifications.":
         "ከሚደገፉ የባንክ ማሳወቂያዎች የኤስኤምኤስ መልዕክቶች እና ከኤስኤምኤስ የተገኘ የትራንዛክሽን ዳታ።",
@@ -1611,8 +1611,8 @@ class AppLocalizations {
         "የክፍያ ማረጋገጫ ግቤቶች፣ ለምሳሌ የክፍያ ማጣቀሻዎች፣ የተመረጡ የአካውንት ቁጥሮች እና የባንክ መለያዎች።",
     "Notification settings and locally generated notifications.":
         "የማሳወቂያ ቅንብሮች እና በአካባቢው የሚፈጠሩ ማሳወቂያዎች።",
-    "Local authentication prompts, if you use the app lock feature. Totals does not receive your raw fingerprint, face scan, or other biometric template; biometric verification is handled by your device operating system.":
-        "የመተግበሪያ መቆለፊያን ከተጠቀሙ የአካባቢ ማረጋገጫ ጥያቄዎች። Totals ጥሬ የጣት አሻራዎን፣ የፊት ቅኝትዎን ወይም ሌላ የባዮሜትሪክ አብነት አይቀበልም፤ የባዮሜትሪክ ማረጋገጫ በመሳሪያዎ ስርዓተ ክወና ይካሄዳል።",
+    "Local authentication prompts, if you use the app lock feature. Finomi does not receive your raw fingerprint, face scan, or other biometric template; biometric verification is handled by your device operating system.":
+        "የመተግበሪያ መቆለፊያን ከተጠቀሙ የአካባቢ ማረጋገጫ ጥያቄዎች። Finomi ጥሬ የጣት አሻራዎን፣ የፊት ቅኝትዎን ወይም ሌላ የባዮሜትሪክ አብነት አይቀበልም፤ የባዮሜትሪክ ማረጋገጫ በመሳሪያዎ ስርዓተ ክወና ይካሄዳል።",
     "Exported or imported backup files that you choose to create or restore.":
         "ለመፍጠር ወይም ለመመለስ የሚመርጧቸው የተላኩ ወይም የተገቡ የምትኬ ፋይሎች።",
     "Optional local network access if you manually start the in-app local web dashboard or server.":
@@ -1653,14 +1653,14 @@ class AppLocalizations {
         "ዋና የኤስኤምኤስ ክትትል፦ ለመደበኛ የትራንዛክሽን ክትትል የሚጠቀሙ የኤስኤምኤስ ይዘቶች በመሳሪያዎ ላይ ይቆያሉ።",
     "Payment verification: If you use the payment verification feature, the data you submit may be transmitted over HTTPS to our verification service hosted at `sms-parsing-visualizer.vercel.app` to process your request.":
         "የክፍያ ማረጋገጫ፦ የክፍያ ማረጋገጫ ባህሪውን ከተጠቀሙ፣ ያስገቡት ዳታ ጥያቄዎን ለማስኬድ በ`sms-parsing-visualizer.vercel.app` ወደሚስተናገደው የማረጋገጫ አገልግሎታችን በHTTPS ሊተላለፍ ይችላል።",
-    "Configuration updates: When Totals downloads updated SMS parsing patterns or bank configuration files, it connects to our hosted configuration endpoints. The app may also perform basic connectivity checks to confirm internet access. These requests are used to download configuration, not to upload your SMS contents for normal tracking.":
-        "የውቅር ዝማኔዎች፦ Totals የተዘመኑ የኤስኤምኤስ መተንተኛ ንድፎችን ወይም የባንክ ውቅር ፋይሎችን ሲያወርድ ከተስተናገዱ የውቅር መጨረሻ ነጥቦቻችን ጋር ይገናኛል። መተግበሪያው የኢንተርኔት መዳረሻን ለማረጋገጥ መሰረታዊ የግንኙነት ፍተሻዎችንም ሊያከናውን ይችላል። እነዚህ ጥያቄዎች ውቅርን ለማውረድ እንጂ የኤስኤምኤስ ይዘትዎን ለመደበኛ ክትትል ለመስቀል አይደሉም።",
-    "Shared expenses (optional): If you create or join a shared expense group, the app exchanges encrypted payloads with our Totals Engine service at `engine.totals.detached.space` over HTTPS. Each payload is encrypted on-device with a group symmetric key (for group-wide payloads) or with a one-to-one shared secret derived from device key pairs (for targeted payloads). The Totals Engine stores and relays the encrypted blobs and the public identifiers needed for delivery, such as the random group identifier and the sender and recipient device public keys. The Totals Engine cannot decrypt expense amounts, descriptions, member display names, or other group contents.":
-        "የጋራ ወጪዎች (አማራጭ)፦ የጋራ ወጪ ቡድን ከፈጠሩ ወይም ከተቀላቀሉ፣ መተግበሪያው በ`engine.totals.detached.space` ላይ ካለው የTotals Engine አገልግሎታችን ጋር በHTTPS የተመሰጠሩ ይዘቶችን ይለዋወጣል። እያንዳንዱ ይዘት በመሳሪያዎ ላይ በቡድን ሲሜትሪክ ቁልፍ (ለቡድን ሁሉ የሚላኩ ይዘቶች) ወይም ከመሳሪያ ቁልፍ ጥንዶች በተወሰደ አንድ-ለ-አንድ የጋራ ሚስጥር (ለተወሰኑ ይዘቶች) ይመሰጠራል። Totals Engine የተመሰጠሩትን ይዘቶች እና ለማድረስ የሚያስፈልጉ የህዝብ መለያዎችን፣ ለምሳሌ የተሰጠ የቡድን መለያ እና የላኪና ተቀባይ መሳሪያ የህዝብ ቁልፎችን፣ ያከማቻል እና ያስተላልፋል። Totals Engine የወጪ መጠኖችን፣ መግለጫዎችን፣ የአባላት የሚታዩ ስሞችን ወይም ሌላ የቡድን ይዘትን መፍታት አይችልም።",
-    "Push notifications (optional): If you enable shared-expense notifications, the app registers a Firebase Cloud Messaging device token with the Totals Engine so the engine can wake the app when there is new activity. The push payload itself does not include expense content; the app pulls the encrypted payload over HTTPS and composes the notification text locally on your device.":
-        "Push ማሳወቂያዎች (አማራጭ)፦ የጋራ ወጪ ማሳወቂያዎችን ካበሩ፣ አዲስ እንቅስቃሴ ሲኖር Engine መተግበሪያውን እንዲያነቃ መተግበሪያው የFirebase Cloud Messaging የመሳሪያ ቶከንን በTotals Engine ይመዘግባል። የpush ይዘቱ ራሱ የወጪ ይዘት አያካትትም፤ መተግበሪያው የተመሰጠረውን ይዘት በHTTPS ያወርዳል እና የማሳወቂያውን ጽሑፍ በመሳሪያዎ ላይ ያዘጋጃል።",
-    "Identity backup vault (optional): If you turn on the identity backup feature, the app encrypts your shared-expense identity seed and your group keys on-device using a key derived from a PIN you choose and a random recovery code shown to you in the app. The encrypted blob is then uploaded to the Totals Engine, indexed only by an opaque identifier derived from the recovery code. The PIN is not transmitted, and the engine cannot derive it or decrypt the blob.":
-        "የመታወቂያ ምትኬ ቮልት (አማራጭ)፦ የመታወቂያ ምትኬ ባህሪን ካበሩ፣ መተግበሪያው የጋራ ወጪ መታወቂያ seedዎን እና የቡድን ቁልፎችዎን ከሚመርጡት PIN እና በመተግበሪያው ከሚታይልዎት የዘፈቀደ የመመለሻ ኮድ በተወሰደ ቁልፍ በመሳሪያዎ ላይ ያመሰጥራል። ከዚያ የተመሰጠረው blob ወደ Totals Engine ይሰቀላል፣ እና ከመመለሻ ኮድ በተወሰደ ግልጽ ያልሆነ መለያ ብቻ ይመዘገባል። PIN አይተላለፍም፣ Engineም ሊያመነጨው ወይም blobን ሊፈታ አይችልም።",
+    "Configuration updates: When Finomi downloads updated SMS parsing patterns or bank configuration files, it connects to our hosted configuration endpoints. The app may also perform basic connectivity checks to confirm internet access. These requests are used to download configuration, not to upload your SMS contents for normal tracking.":
+        "የውቅር ዝማኔዎች፦ Finomi የተዘመኑ የኤስኤምኤስ መተንተኛ ንድፎችን ወይም የባንክ ውቅር ፋይሎችን ሲያወርድ ከተስተናገዱ የውቅር መጨረሻ ነጥቦቻችን ጋር ይገናኛል። መተግበሪያው የኢንተርኔት መዳረሻን ለማረጋገጥ መሰረታዊ የግንኙነት ፍተሻዎችንም ሊያከናውን ይችላል። እነዚህ ጥያቄዎች ውቅርን ለማውረድ እንጂ የኤስኤምኤስ ይዘትዎን ለመደበኛ ክትትል ለመስቀል አይደሉም።",
+    "Shared expenses (optional): If you create or join a shared expense group, the app exchanges encrypted payloads with our Finomi Engine service at `engine.Finomi.detached.space` over HTTPS. Each payload is encrypted on-device with a group symmetric key (for group-wide payloads) or with a one-to-one shared secret derived from device key pairs (for targeted payloads). The Finomi Engine stores and relays the encrypted blobs and the public identifiers needed for delivery, such as the random group identifier and the sender and recipient device public keys. The Finomi Engine cannot decrypt expense amounts, descriptions, member display names, or other group contents.":
+        "የጋራ ወጪዎች (አማራጭ)፦ የጋራ ወጪ ቡድን ከፈጠሩ ወይም ከተቀላቀሉ፣ መተግበሪያው በ`engine.Finomi.detached.space` ላይ ካለው የFinomi Engine አገልግሎታችን ጋር በHTTPS የተመሰጠሩ ይዘቶችን ይለዋወጣል። እያንዳንዱ ይዘት በመሳሪያዎ ላይ በቡድን ሲሜትሪክ ቁልፍ (ለቡድን ሁሉ የሚላኩ ይዘቶች) ወይም ከመሳሪያ ቁልፍ ጥንዶች በተወሰደ አንድ-ለ-አንድ የጋራ ሚስጥር (ለተወሰኑ ይዘቶች) ይመሰጠራል። Finomi Engine የተመሰጠሩትን ይዘቶች እና ለማድረስ የሚያስፈልጉ የህዝብ መለያዎችን፣ ለምሳሌ የተሰጠ የቡድን መለያ እና የላኪና ተቀባይ መሳሪያ የህዝብ ቁልፎችን፣ ያከማቻል እና ያስተላልፋል። Finomi Engine የወጪ መጠኖችን፣ መግለጫዎችን፣ የአባላት የሚታዩ ስሞችን ወይም ሌላ የቡድን ይዘትን መፍታት አይችልም።",
+    "Push notifications (optional): If you enable shared-expense notifications, the app registers a Firebase Cloud Messaging device token with the Finomi Engine so the engine can wake the app when there is new activity. The push payload itself does not include expense content; the app pulls the encrypted payload over HTTPS and composes the notification text locally on your device.":
+        "Push ማሳወቂያዎች (አማራጭ)፦ የጋራ ወጪ ማሳወቂያዎችን ካበሩ፣ አዲስ እንቅስቃሴ ሲኖር Engine መተግበሪያውን እንዲያነቃ መተግበሪያው የFirebase Cloud Messaging የመሳሪያ ቶከንን በFinomi Engine ይመዘግባል። የpush ይዘቱ ራሱ የወጪ ይዘት አያካትትም፤ መተግበሪያው የተመሰጠረውን ይዘት በHTTPS ያወርዳል እና የማሳወቂያውን ጽሑፍ በመሳሪያዎ ላይ ያዘጋጃል።",
+    "Identity backup vault (optional): If you turn on the identity backup feature, the app encrypts your shared-expense identity seed and your group keys on-device using a key derived from a PIN you choose and a random recovery code shown to you in the app. The encrypted blob is then uploaded to the Finomi Engine, indexed only by an opaque identifier derived from the recovery code. The PIN is not transmitted, and the engine cannot derive it or decrypt the blob.":
+        "የመታወቂያ ምትኬ ቮልት (አማራጭ)፦ የመታወቂያ ምትኬ ባህሪን ካበሩ፣ መተግበሪያው የጋራ ወጪ መታወቂያ seedዎን እና የቡድን ቁልፎችዎን ከሚመርጡት PIN እና በመተግበሪያው ከሚታይልዎት የዘፈቀደ የመመለሻ ኮድ በተወሰደ ቁልፍ በመሳሪያዎ ላይ ያመሰጥራል። ከዚያ የተመሰጠረው blob ወደ Finomi Engine ይሰቀላል፣ እና ከመመለሻ ኮድ በተወሰደ ግልጽ ያልሆነ መለያ ብቻ ይመዘገባል። PIN አይተላለፍም፣ Engineም ሊያመነጨው ወይም blobን ሊፈታ አይችልም።",
     "Support and external links: If you open external links from the app, such as support pages, Telegram, or bank links, those services receive information according to their own privacy policies.":
         "ድጋፍ እና ውጫዊ ሊንኮች፦ ከመተግበሪያው ውጫዊ ሊንኮችን ከከፈቱ፣ ለምሳሌ የድጋፍ ገጾች፣ Telegram ወይም የባንክ ሊንኮች፣ እነዚያ አገልግሎቶች መረጃን በራሳቸው የግላዊነት መመሪያዎች መሰረት ይቀበላሉ።",
     "Local network dashboard: If you manually start the optional local web dashboard or server, your financial data may be available to devices on the same local network using the URL shown in the app until you stop the server.":
@@ -1675,8 +1675,8 @@ class AppLocalizations {
     "We may disclose information if required by law, to protect users, or to prevent fraud, abuse, or security issues.":
         "በህግ ከተጠየቅን፣ ተጠቃሚዎችን ለመጠበቅ ወይም ማጭበርበርን፣ በደልን ወይም የደህንነት ችግኞችን ለመከላከል መረጃን ልናጋራ እንችላለን።",
     "Storage and Retention": "ማከማቻ እና ማቆያ",
-    "Most Totals data is stored locally on your device until you delete it, clear app data, or uninstall the app.":
-        "አብዛኛው የTotals ዳታ እስኪሰርዙት፣ የመተግበሪያ ዳታ እስኪያጸዱ ወይም መተግበሪያውን እስኪያስወግዱ ድረስ በመሳሪያዎ ላይ ይቀመጣል።",
+    "Most Finomi data is stored locally on your device until you delete it, clear app data, or uninstall the app.":
+        "አብዛኛው የFinomi ዳታ እስኪሰርዙት፣ የመተግበሪያ ዳታ እስኪያጸዱ ወይም መተግበሪያውን እስኪያስወግዱ ድረስ በመሳሪያዎ ላይ ይቀመጣል።",
     "Exported backup files remain wherever you save or share them.":
         "የተላኩ የምትኬ ፋይሎች ባስቀመጡበት ወይም ባጋሩበት ቦታ ይቆያሉ።",
     "QR scan results are processed locally in the app.":
@@ -1687,10 +1687,10 @@ class AppLocalizations {
         "የወረዱ የኤስኤምኤስ ንድፍ ፋይሎች እና የባንክ ውቅር ፋይሎች ለወደፊት ጥቅም በመሳሪያዎ ላይ ሊቀመጡ ይችላሉ።",
     "Your shared-expense identity key pair, your per-group symmetric keys, and your locally cached copy of group activity are stored in app-private storage on your device. They are removed when you leave the group, clear app data, or uninstall the app.":
         "የጋራ ወጪ መታወቂያ ቁልፍ ጥንድዎ፣ የእያንዳንዱ ቡድን ሲሜትሪክ ቁልፎችዎ እና በአካባቢው የተቀመጠው የቡድን እንቅስቃሴ ቅጂ በመሳሪያዎ ላይ በመተግበሪያ-ግል ማከማቻ ውስጥ ይቀመጣሉ። ከቡድኑ ሲወጡ፣ የመተግበሪያ ዳታን ሲያጸዱ ወይም መተግበሪያውን ሲያስወግዱ ይወገዳሉ።",
-    "Encrypted payloads relayed by the Totals Engine on your behalf are stored on the server only as long as needed to deliver them to every intended recipient. Once a recipient acknowledges a payload, the engine removes its copy for that recipient.":
-        "በእርስዎ ምትክ Totals Engine የሚያስተላልፋቸው የተመሰጠሩ ይዘቶች ለተመደቡት ተቀባዮች ሁሉ እስኪደርሱ ድረስ ብቻ በሰርቨሩ ላይ ይቀመጣሉ። አንድ ተቀባይ ይዘቱን እንደተቀበለ ሲያረጋግጥ፣ Engine ለዚያ ተቀባይ ያለውን ቅጂ ያስወግዳል።",
-    "If you upload an encrypted identity vault blob, it remains stored on the Totals Engine, in encrypted form indexed by the opaque recovery code identifier, until you delete it from within the app or replace it with a new vault. Without the matching recovery code and PIN, the engine cannot recover the contents.":
-        "የተመሰጠረ የመታወቂያ ቮልት blob ካሰቀሉ፣ ከመተግበሪያው ውስጥ እስኪሰርዙት ወይም በአዲስ ቮልት እስኪተኩት ድረስ በግልጽ ያልሆነ የመመለሻ ኮድ መለያ በተመዘገበ የተመሰጠረ መልክ በTotals Engine ላይ ይቀመጣል። ተዛማጅ የመመለሻ ኮድ እና PIN ከሌለ፣ Engine ይዘቱን መመለስ አይችልም።",
+    "Encrypted payloads relayed by the Finomi Engine on your behalf are stored on the server only as long as needed to deliver them to every intended recipient. Once a recipient acknowledges a payload, the engine removes its copy for that recipient.":
+        "በእርስዎ ምትክ Finomi Engine የሚያስተላልፋቸው የተመሰጠሩ ይዘቶች ለተመደቡት ተቀባዮች ሁሉ እስኪደርሱ ድረስ ብቻ በሰርቨሩ ላይ ይቀመጣሉ። አንድ ተቀባይ ይዘቱን እንደተቀበለ ሲያረጋግጥ፣ Engine ለዚያ ተቀባይ ያለውን ቅጂ ያስወግዳል።",
+    "If you upload an encrypted identity vault blob, it remains stored on the Finomi Engine, in encrypted form indexed by the opaque recovery code identifier, until you delete it from within the app or replace it with a new vault. Without the matching recovery code and PIN, the engine cannot recover the contents.":
+        "የተመሰጠረ የመታወቂያ ቮልት blob ካሰቀሉ፣ ከመተግበሪያው ውስጥ እስኪሰርዙት ወይም በአዲስ ቮልት እስኪተኩት ድረስ በግልጽ ያልሆነ የመመለሻ ኮድ መለያ በተመዘገበ የተመሰጠረ መልክ በFinomi Engine ላይ ይቀመጣል። ተዛማጅ የመመለሻ ኮድ እና PIN ከሌለ፣ Engine ይዘቱን መመለስ አይችልም።",
     "Security": "ደህንነት",
     "We rely on your device operating system and application sandbox for local storage protection.":
         "ለአካባቢ ማከማቻ ጥበቃ በመሳሪያዎ ስርዓተ ክወና እና በመተግበሪያ ሳንድቦክስ እንመካለን።",
@@ -1703,10 +1703,10 @@ class AppLocalizations {
         "ፈቃዶችን መከልከል ይችላሉ፣ ግን አንዳንድ ባህሪያት ያለእነሱ ላይሰሩ ይችላሉ።",
     "You can avoid optional online features if you do not want to send verification data or download remote configuration updates.":
         "የማረጋገጫ ዳታ መላክ ወይም የሩቅ ውቅር ዝማኔዎችን ማውረድ ካልፈለጉ አማራጭ የኦንላይን ባህሪያትን መተው ይችላሉ።",
-    "You can choose not to use the shared-expenses feature, or to leave a group at any time. Leaving a group removes its local data on your device and unregisters your device from that group on the Totals Engine.":
-        "የጋራ ወጪዎች ባህሪን አለመጠቀም ወይም በማንኛውም ጊዜ ከቡድን መውጣት መምረጥ ይችላሉ። ከቡድን መውጣት በመሳሪያዎ ላይ ያለውን የአካባቢ ዳታ ያስወግዳል እና መሳሪያዎን ከዚያ ቡድን በTotals Engine ላይ ይሰርዛል።",
-    "You can disable shared-expense push notifications from the in-app settings. This unregisters your Firebase Cloud Messaging token with the Totals Engine.":
-        "የጋራ ወጪ push ማሳወቂያዎችን ከመተግበሪያው ቅንብሮች ውስጥ ማጥፋት ይችላሉ። ይህ የFirebase Cloud Messaging ቶከንዎን ከTotals Engine ላይ ያስወግዳል።",
+    "You can choose not to use the shared-expenses feature, or to leave a group at any time. Leaving a group removes its local data on your device and unregisters your device from that group on the Finomi Engine.":
+        "የጋራ ወጪዎች ባህሪን አለመጠቀም ወይም በማንኛውም ጊዜ ከቡድን መውጣት መምረጥ ይችላሉ። ከቡድን መውጣት በመሳሪያዎ ላይ ያለውን የአካባቢ ዳታ ያስወግዳል እና መሳሪያዎን ከዚያ ቡድን በFinomi Engine ላይ ይሰርዛል።",
+    "You can disable shared-expense push notifications from the in-app settings. This unregisters your Firebase Cloud Messaging token with the Finomi Engine.":
+        "የጋራ ወጪ push ማሳወቂያዎችን ከመተግበሪያው ቅንብሮች ውስጥ ማጥፋት ይችላሉ። ይህ የFirebase Cloud Messaging ቶከንዎን ከFinomi Engine ላይ ያስወግዳል።",
     "You can choose not to set up an identity backup vault, or delete an existing vault from within the app.":
         "የመታወቂያ ምትኬ ቮልትን አለማዋቀር ወይም ያለውን ቮልት ከመተግበሪያው ውስጥ መሰረዝ መምረጥ ይችላሉ።",
     "You can export or import your data using in-app tools.":
@@ -1716,7 +1716,7 @@ class AppLocalizations {
     "You can stop the optional local web dashboard or server at any time.":
         "አማራጭ የአካባቢ ድር ዳሽቦርድ ወይም ሰርቨርን በማንኛውም ጊዜ ማቆም ይችላሉ።",
     "Children": "ልጆች",
-    "Totals is not directed to children.": "Totals ለልጆች የታሰበ አይደለም።",
+    "Finomi is not directed to children.": "Finomi ለልጆች የታሰበ አይደለም።",
     "Changes to This Policy": "በዚህ መመሪያ ላይ ለውጦች",
     "We may update this Privacy Policy from time to time. When we do, we will update the effective date above and the in-app copy where appropriate.":
         "ይህን የግላዊነት መመሪያ ከጊዜ ወደ ጊዜ ልናዘምን እንችላለን። ሲሆንም ከላይ ያለውን የሚጸናበት ቀን እና በመተግበሪያ ውስጥ ያለውን ቅጂ በሚገባ እናዘምናለን።",
@@ -1724,8 +1724,8 @@ class AppLocalizations {
     "Detached": "Detached",
     "For privacy questions or requests, use one of the following support channels:":
         "ለግላዊነት ጥያቄዎች ወይም ጥያቄዎች፣ ከሚከተሉት የድጋፍ መንገዶች አንዱን ይጠቀሙ፦",
-    "https://t.me/totals_chat": "https://t.me/totals_chat",
-    "Welcome to Totals": "ወደ Totals እንኳን በደህና መጡ",
+    "https://t.me/Finomi_chat": "https://t.me/Finomi_chat",
+    "Welcome to Finomi": "ወደ Finomi እንኳን በደህና መጡ",
     "Personal finance tracker for Ethiopian banks":
         "የኢትዮጵያ ባንኮች የግል ፋይናንስ መከታተያ",
     "Your personal finance tracker. Smarter spending starts here.":
@@ -1738,14 +1738,14 @@ class AppLocalizations {
     "No Ads or Analytics": "ምንም ማስታወቂያዎች ወይም ትንታኔዎች የሉም",
     "SMS Stays On Device": "ኤስኤምኤስ በመሳሪያው ላይ ብቻ ይቆያል",
     "GETTING STARTED": "መጀመር",
-    "Link a bank account so Totals can match your transactions. You can always add more later.":
-        "Totals የእርስዎን ትራንዛክሽኖች ማዛመድ እንዲችል የባንክ አካውንት ያገናኙ። በኋላ ላይ ሁልጊዜ ተጨማሪ ማከል ይችላሉ።",
+    "Link a bank account so Finomi can match your transactions. You can always add more later.":
+        "Finomi የእርስዎን ትራንዛክሽኖች ማዛመድ እንዲችል የባንክ አካውንት ያገናኙ። በኋላ ላይ ሁልጊዜ ተጨማሪ ማከል ይችላሉ።",
     "Add bank accounts from You > Tools and they will show up here.":
         "የባንክ አካውንቶችን ከእርስዎ > መሳሪያዎች ያክሉ እና እዚህ ይታያሉ።",
-    "How Totals handles SMS, camera, and local data":
-        "Totals ኤስኤምኤስ፣ ካሜራ እና የአካባቢ ዳታን እንዴት እንደሚያስተናግድ",
-    "Totals reads SMS messages from your bank and automatically":
-        "Totals ከባንክዎ የሚመጡ የኤስኤምኤስ መልዕክቶችን ያነባል እና በራስ-ሰር",
+    "How Finomi handles SMS, camera, and local data":
+        "Finomi ኤስኤምኤስ፣ ካሜራ እና የአካባቢ ዳታን እንዴት እንደሚያስተናግድ",
+    "Finomi reads SMS messages from your bank and automatically":
+        "Finomi ከባንክዎ የሚመጡ የኤስኤምኤስ መልዕክቶችን ያነባል እና በራስ-ሰር",
     "Those SMS contents are not sent to our servers.":
         "እነዚያ የኤስኤምኤስ ይዘቶች ወደ ሰርቨሮቻችን አይላኩም።",
     "Camera access is used for account QR scanning and payment":
@@ -1753,11 +1753,11 @@ class AppLocalizations {
     "Optional Online Features": "አማራጭ የኦንላይን ባህሪያት",
     "Most app data stays on your device until you export, clear,":
         "እስክታወጡ፣ እስክታጸዱ ድረስ አብዛኛው የመተግበሪያ ዳታ በመሳሪያዎ ላይ ይቆያል፣",
-    "Totals does not include advertising SDKs or analytics":
-        "Totals የማስታወቂያ SDKዎችን ወይም ትንታኔዎችን አያካትትም",
+    "Finomi does not include advertising SDKs or analytics":
+        "Finomi የማስታወቂያ SDKዎችን ወይም ትንታኔዎችን አያካትትም",
     "Help & FAQ": "እገዛ እና ተዘውትረው የሚጠየቁ ጥያቄዎች",
     "Common questions answered": "የተለመዱ ጥያቄዎች መልስ አግኝተዋል",
-    "How does Totals read my transactions?": "Totals የእኔን ትራንዛክሽኖች እንዴት ያነባል?",
+    "How does Finomi read my transactions?": "Finomi የእኔን ትራንዛክሽኖች እንዴት ያነባል?",
     "How do I categorize transactions?": "ትራንዛክሽኖችን እንዴት እመድባለሁ?",
     "How do budgets work?": "በጀቶች እንዴት ይሰራሉ?",
     "How do I export my data?": "ዳታዬን እንዴት ወደ ውጭ እልካለሁ?",
@@ -1942,10 +1942,10 @@ class AppLocalizations {
         "የክፍያ ማረጋገጫ እና የሩቅ ውቅር ዝማኔዎች ከኦንላይን አገልግሎቶች ጋር ሊገናኙ ይችላሉ። ማረጋገጫ ያስገቧቸውን ምስሎች፣ የክፍያ ማጣቀሻዎች፣ የተመረጡ አካውንት ቁጥሮች እና የባንክ መለያዎችን ሊልክ ይችላል።",
     "Camera access is used for account QR scanning and payment verification capture. QR scanning is handled on-device. Verification images are uploaded only when you choose to verify them.":
         "የካሜራ መዳረሻ ለአካውንት QR ቅኝት እና ለክፍያ ማረጋገጫ መቅረጽ ይጠቅማል። QR ቅኝት በመሳሪያው ላይ ይካሄዳል። የማረጋገጫ ምስሎች የሚሰቀሉት ለማረጋገጥ ሲመርጡ ብቻ ነው።",
-    "For core transaction tracking, Totals reads and parses supported bank SMS messages locally on your device. Those SMS contents are not sent to our servers.":
-        "ለዋና የትራንዛክሽን ክትትል Totals የሚደገፉ የባንክ ኤስኤምኤስ መልዕክቶችን በመሳሪያዎ ላይ ብቻ ያነባል እና ይተነትናል። እነዚያ የኤስኤምኤስ ይዘቶች ወደ ሰርቨሮቻችን አይላኩም።",
-    "Totals does not include advertising SDKs or analytics telemetry to profile you or sell your data.":
-        "Totals እርስዎን ለመግለጽ ወይም ዳታዎን ለመሸጥ የሚያገለግሉ የማስታወቂያ SDKዎችን ወይም የትንታኔ ቴሌሜትሪን አያካትትም።",
+    "For core transaction tracking, Finomi reads and parses supported bank SMS messages locally on your device. Those SMS contents are not sent to our servers.":
+        "ለዋና የትራንዛክሽን ክትትል Finomi የሚደገፉ የባንክ ኤስኤምኤስ መልዕክቶችን በመሳሪያዎ ላይ ብቻ ያነባል እና ይተነትናል። እነዚያ የኤስኤምኤስ ይዘቶች ወደ ሰርቨሮቻችን አይላኩም።",
+    "Finomi does not include advertising SDKs or analytics telemetry to profile you or sell your data.":
+        "Finomi እርስዎን ለመግለጽ ወይም ዳታዎን ለመሸጥ የሚያገለግሉ የማስታወቂያ SDKዎችን ወይም የትንታኔ ቴሌሜትሪን አያካትትም።",
     "Most app data stays on your device until you export, clear, or uninstall it. If you manually start the local web dashboard, your data becomes reachable on your local network until you stop the server.":
         "አብዛኛው የመተግበሪያ ዳታ እስክታወጡት፣ እስክታጸዱት ወይም እስክታስወግዱት ድረስ በመሳሪያዎ ላይ ይቆያል። የአካባቢ ድር ዳሽቦርዱን በእጅ ከጀመሩ፣ ሰርቨሩን እስክታቆሙ ድረስ ዳታዎ በአካባቢ ኔትወርክዎ ላይ ሊደረስበት ይችላል።",
     "Auto-categorize": "ራስ-ሰር መድብ",
@@ -1955,8 +1955,8 @@ class AppLocalizations {
     "automatically for future transactions from":
         "ከዚህ በኋላ ለሚመጡ ትራንዛክሽኖች በራስ-ሰር",
     "Nothing to Import": "የሚገባ ምንም የለም",
-    "To make sure you get notified instantly when a transaction happens, Totals needs to be excluded from battery optimization. Without this, your phone may stop delivering notifications in the background.":
-        "ትራንዛክሽን ሲኖር ወዲያውኑ ማሳወቂያ እንዲደርስዎ፣ Totals ከባትሪ ማመቻቸት መነጠል ያስፈልገዋል። ይህ ካልሆነ ስልክዎ በጀርባ ማሳወቂያዎችን ማድረስ ሊያቆም ይችላል።",
+    "To make sure you get notified instantly when a transaction happens, Finomi needs to be excluded from battery optimization. Without this, your phone may stop delivering notifications in the background.":
+        "ትራንዛክሽን ሲኖር ወዲያውኑ ማሳወቂያ እንዲደርስዎ፣ Finomi ከባትሪ ማመቻቸት መነጠል ያስፈልገዋል። ይህ ካልሆነ ስልክዎ በጀርባ ማሳወቂያዎችን ማድረስ ሊያቆም ይችላል።",
     "Review bank transactions without patterns":
         "ንድፍ የሌላቸውን የባንክ ትራንዛክሽኖች ይመልከቱ",
     "Could not update auto-categorization. Changes were reverted.":
@@ -2129,8 +2129,8 @@ class AppLocalizations {
     "CBE Birr": "CBE ብር",
     "new transactions": "አዲስ ትራንዛክሽኖች",
     "INSIGHT": "ግንዛቤ",
-    "No monthly activity yet. Keep using Totals to unlock insights.":
-        "እስካሁን ወርሃዊ እንቅስቃሴ የለም። ግንዛቤዎችን ለማግኘት Totalsን መጠቀምዎን ይቀጥሉ።",
+    "No monthly activity yet. Keep using Finomi to unlock insights.":
+        "እስካሁን ወርሃዊ እንቅስቃሴ የለም። ግንዛቤዎችን ለማግኘት Finomiን መጠቀምዎን ይቀጥሉ።",
     "ETB": "ብር",
     "GET STARTED": "ጀምር",
     "How did I get here?": "እዚህ እንዴት ደረስኩ?",
@@ -2144,14 +2144,14 @@ class AppLocalizations {
     "Starting Balance": "መነሻ ቀሪ ሂሳብ",
     "No transactions this last 7 days": "ባለፉት 7 ቀናት ምንም ትራንዛክሽን የለም",
     "No transactions this month": "በዚህ ወር ምንም ትራንዛክሽን የለም",
-    "Used Totals before? Import your backup to restore your accounts, transactions, budgets, and categories.":
-        "ከዚህ በፊት Totalsን ተጠቅመዋል? አካውንቶችዎን፣ ትራንዛክሽኖችዎን፣ በጀቶችዎን እና ምድቦችዎን ለመመለስ ምትኬዎን ያስገቡ።",
+    "Used Finomi before? Import your backup to restore your accounts, transactions, budgets, and categories.":
+        "ከዚህ በፊት Finomiን ተጠቅመዋል? አካውንቶችዎን፣ ትራንዛክሽኖችዎን፣ በጀቶችዎን እና ምድቦችዎን ለመመለስ ምትኬዎን ያስገቡ።",
     "No income or expense data yet.": "እስካሁን የገቢ ወይም የወጪ ዳታ የለም።",
     "Failed to save category": "ምድብ ማስቀመጥ አልተቻለም",
     "No expense categories yet": "እስካሁን የወጪ ምድቦች የሉም",
     "No income categories yet": "እስካሁን የገቢ ምድቦች የሉም",
     "Removed auto-categorization for": "ራስ-ሰር ምደባ ተወግዷል፦",
-    "Totals can ask again for": "Totals እንደገና መጠየቅ ይችላል፦",
+    "Finomi can ask again for": "Finomi እንደገና መጠየቅ ይችላል፦",
     "Built-in": "ነባር",
     "Included by default": "በነባሪ የተካተተ",
     "No built-in expense categories available.": "ምንም ነባር የወጪ ምድቦች አይገኙም።",
@@ -2183,8 +2183,8 @@ class AppLocalizations {
     "Importing rules...": "ደንቦች በማስገባት ላይ...",
     "Camera unavailable. Please enable permissions.":
         "ካሜራ አይገኝም። እባክዎ ፈቃዶችን ያብሩ።",
-    "Point your camera at a Totals auto-category QR.":
-        "ካሜራዎን ወደ Totals የራስ-ሰር ምደባ QR ያመልክቱ።",
+    "Point your camera at a Finomi auto-category QR.":
+        "ካሜራዎን ወደ Finomi የራስ-ሰር ምደባ QR ያመልክቱ።",
     "Import auto-category rules?": "የራስ-ሰር ምደባ ደንቦች ይገቡ?",
     "Rules for the same counterparty will be updated. Missing categories will be created first.":
         "ለተመሳሳይ ተቀባይ/ላኪ ያሉ ደንቦች ይዘመናሉ። የጎደሉ ምድቦች መጀመሪያ ይፈጠራሉ።",

@@ -1,10 +1,10 @@
 import 'package:sqflite/sqflite.dart';
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/auto_categorization.dart';
-import 'package:totals/models/category.dart';
-import 'package:totals/services/notification_settings_service.dart';
-import 'package:totals/services/receiver_category_service.dart';
-import 'package:totals/utils/loan_debt_utils.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/auto_categorization.dart';
+import 'package:finomi/models/category.dart';
+import 'package:finomi/services/notification_settings_service.dart';
+import 'package:finomi/services/receiver_category_service.dart';
+import 'package:finomi/utils/loan_debt_utils.dart';
 
 class AutoCategorizationService {
   AutoCategorizationService._();

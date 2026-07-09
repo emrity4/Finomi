@@ -3,12 +3,12 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:totals/repositories/shared_expense_repository.dart';
-import 'package:totals/services/shared_expense_crypto_service.dart';
-import 'package:totals/services/shared_expense_realtime_bus.dart';
-import 'package:totals/services/shared_expense_recovery_code.dart';
-import 'package:totals/services/shared_expense_vault.dart';
-import 'package:totals/services/totals_engine_client.dart';
+import 'package:finomi/repositories/shared_expense_repository.dart';
+import 'package:finomi/services/shared_expense_crypto_service.dart';
+import 'package:finomi/services/shared_expense_realtime_bus.dart';
+import 'package:finomi/services/shared_expense_recovery_code.dart';
+import 'package:finomi/services/shared_expense_vault.dart';
+import 'package:finomi/services/finomi_engine_client.dart';
 
 void _vaultLog(String message) {
   if (kDebugMode) {

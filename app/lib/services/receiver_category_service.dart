@@ -1,5 +1,5 @@
 import 'package:sqflite/sqflite.dart';
-import 'package:totals/database/database_helper.dart';
+import 'package:finomi/database/database_helper.dart';
 
 class ReceiverCategoryService {
   static final ReceiverCategoryService instance = ReceiverCategoryService._();

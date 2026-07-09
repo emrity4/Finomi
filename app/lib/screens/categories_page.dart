@@ -6,16 +6,16 @@ import 'package:flutter/rendering.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/models/auto_categorization.dart';
-import 'package:totals/models/category.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/screens/auto_categorization_rules_scan_page.dart';
-import 'package:totals/utils/auto_categorization_rules_share_payload.dart';
-import 'package:totals/utils/category_icons.dart';
-import 'package:totals/utils/category_style.dart';
-import 'package:totals/widgets/account_share_qr_code.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/models/auto_categorization.dart';
+import 'package:finomi/models/category.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/screens/auto_categorization_rules_scan_page.dart';
+import 'package:finomi/utils/auto_categorization_rules_share_payload.dart';
+import 'package:finomi/utils/category_icons.dart';
+import 'package:finomi/utils/category_style.dart';
+import 'package:finomi/widgets/account_share_qr_code.dart';
 
 // ═════════════════════════════════════════════════════════════════════════════
 // Categories Page

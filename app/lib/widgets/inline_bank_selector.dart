@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/models/bank.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/models/bank.dart';
 
 class BankSelectorOption {
   final Bank bank;

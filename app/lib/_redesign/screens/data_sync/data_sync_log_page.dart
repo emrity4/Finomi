@@ -3,15 +3,15 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:totals/_redesign/screens/data_sync/data_sync_widgets.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/constants/cash_constants.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/services/data_sync/data_sync_repository.dart';
-import 'package:totals/services/data_sync/sync_models.dart';
-import 'package:totals/services/data_sync/sync_service.dart';
-import 'package:totals/utils/text_utils.dart';
+import 'package:finomi/_redesign/screens/data_sync/data_sync_widgets.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/constants/cash_constants.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/services/data_sync/data_sync_repository.dart';
+import 'package:finomi/services/data_sync/sync_models.dart';
+import 'package:finomi/services/data_sync/sync_service.dart';
+import 'package:finomi/utils/text_utils.dart';
 
 /// Read-only view of the outbox: what was sent, what is pending, what failed.
 class DataSyncLogPage extends StatefulWidget {

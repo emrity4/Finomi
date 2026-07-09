@@ -1,9 +1,9 @@
 import 'dart:ui' show lerpDouble;
 
 import 'package:flutter/material.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 class RedesignBottomNav extends StatelessWidget {
   static const int _tabCount = 5;

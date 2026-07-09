@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/models/budget.dart';
-import 'package:totals/providers/budget_provider.dart';
+import 'package:finomi/models/budget.dart';
+import 'package:finomi/providers/budget_provider.dart';
 
 class BudgetFormSheet extends StatefulWidget {
   final Budget? budget;

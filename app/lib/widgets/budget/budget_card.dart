@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/services/budget_service.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/utils/category_icons.dart';
-import 'package:totals/utils/category_style.dart';
-import 'package:totals/widgets/budget/budget_progress_bar.dart';
+import 'package:finomi/services/budget_service.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/utils/category_icons.dart';
+import 'package:finomi/utils/category_style.dart';
+import 'package:finomi/widgets/budget/budget_progress_bar.dart';
 
 class BudgetCard extends StatelessWidget {
   final BudgetStatus status;

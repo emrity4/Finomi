@@ -1,6 +1,6 @@
 import 'package:sqflite/sqflite.dart';
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/user_account.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/user_account.dart';
 
 class UserAccountRepository {
   Future<List<UserAccount>> getUserAccounts() async {

@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:shelf/shelf.dart';
 import 'package:shelf_router/shelf_router.dart';
-import 'package:totals/models/budget.dart';
-import 'package:totals/models/category.dart';
-import 'package:totals/repositories/budget_repository.dart';
-import 'package:totals/repositories/category_repository.dart';
-import 'package:totals/services/budget_service.dart';
+import 'package:finomi/models/budget.dart';
+import 'package:finomi/models/category.dart';
+import 'package:finomi/repositories/budget_repository.dart';
+import 'package:finomi/repositories/category_repository.dart';
+import 'package:finomi/services/budget_service.dart';
 
 /// Handler for budget-related API endpoints.
 class BudgetsHandler {

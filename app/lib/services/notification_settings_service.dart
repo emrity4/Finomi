@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/repositories/category_repository.dart';
+import 'package:finomi/repositories/category_repository.dart';
 
 class NotificationSettingsService {
   NotificationSettingsService._();

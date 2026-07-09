@@ -1,10 +1,10 @@
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/transaction.dart' as models;
-import 'package:totals/models/failed_parse.dart';
-import 'package:totals/models/sms_pattern.dart';
-import 'package:totals/models/account.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/transaction.dart' as models;
+import 'package:finomi/models/failed_parse.dart';
+import 'package:finomi/models/sms_pattern.dart';
+import 'package:finomi/models/account.dart';
 import 'package:sqflite/sqflite.dart';
 
 class MigrationHelper {

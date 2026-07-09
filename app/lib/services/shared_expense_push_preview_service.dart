@@ -1,5 +1,5 @@
-import 'package:totals/models/shared_expense_group.dart';
-import 'package:totals/utils/text_utils.dart';
+import 'package:finomi/models/shared_expense_group.dart';
+import 'package:finomi/utils/text_utils.dart';
 
 class SharedExpensePushPreview {
   final String title;

@@ -4,8 +4,8 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
-import 'package:totals/models/shared_expense_group.dart';
-import 'package:totals/services/shared_expense_crypto_service.dart';
+import 'package:finomi/models/shared_expense_group.dart';
+import 'package:finomi/services/shared_expense_crypto_service.dart';
 
 void _engineLog(String message) {
   if (kDebugMode) {
@@ -427,7 +427,7 @@ class TotalsEngineClient {
       final decoded = _decodeBody(bodyText);
       _engineLog('streamPending errorBody=${_logBody(bodyText)}');
       throw TotalsEngineException(
-        _errorMessage(decoded) ?? 'Totals Engine stream failed.',
+        _errorMessage(decoded) ?? 'Finomi Engine stream failed.',
         statusCode: response.statusCode,
         retryAfter: _retryAfter(response.headers),
       );
@@ -443,7 +443,7 @@ class TotalsEngineClient {
         if (payload.id.isNotEmpty) yield payload;
       } else if (event.event == 'error') {
         throw TotalsEngineException(
-          event.data.isEmpty ? 'Totals Engine stream failed.' : event.data,
+          event.data.isEmpty ? 'Finomi Engine stream failed.' : event.data,
         );
       }
     }
@@ -464,7 +464,7 @@ class TotalsEngineClient {
       final decoded = _decodeBody(bodyText);
       _engineLog('streamAllPending errorBody=${_logBody(bodyText)}');
       throw TotalsEngineException(
-        _errorMessage(decoded) ?? 'Totals Engine stream failed.',
+        _errorMessage(decoded) ?? 'Finomi Engine stream failed.',
         statusCode: response.statusCode,
         retryAfter: _retryAfter(response.headers),
       );
@@ -480,7 +480,7 @@ class TotalsEngineClient {
         if (payload.id.isNotEmpty) yield payload;
       } else if (event.event == 'error') {
         throw TotalsEngineException(
-          event.data.isEmpty ? 'Totals Engine stream failed.' : event.data,
+          event.data.isEmpty ? 'Finomi Engine stream failed.' : event.data,
         );
       }
     }
@@ -501,7 +501,7 @@ class TotalsEngineClient {
       final decoded = _decodeBody(bodyText);
       _engineLog('streamGroupListChanges errorBody=${_logBody(bodyText)}');
       throw TotalsEngineException(
-        _errorMessage(decoded) ?? 'Totals Engine group stream failed.',
+        _errorMessage(decoded) ?? 'Finomi Engine group stream failed.',
         statusCode: response.statusCode,
         retryAfter: _retryAfter(response.headers),
       );
@@ -513,7 +513,7 @@ class TotalsEngineClient {
       } else if (event.event == 'error') {
         throw TotalsEngineException(
           event.data.isEmpty
-              ? 'Totals Engine group stream failed.'
+              ? 'Finomi Engine group stream failed.'
               : event.data,
         );
       }
@@ -600,12 +600,12 @@ class TotalsEngineClient {
             : await _sendAuthenticatedRequest(method, uri, auth.headers, body);
       } on TimeoutException catch (error) {
         throw TotalsEngineException(
-          'Totals Engine took too long to respond. Check your connection and try again.',
+          'Finomi Engine took too long to respond. Check your connection and try again.',
           body: {'cause': error.toString()},
         );
       } on http.ClientException catch (error) {
         throw TotalsEngineException(
-          'Can\'t reach Totals Engine. Check your internet and try again.',
+          'Can\'t reach Finomi Engine. Check your internet and try again.',
           body: {'cause': error.message},
         );
       }
@@ -619,7 +619,7 @@ class TotalsEngineClient {
       if (response.statusCode < 200 || response.statusCode >= 300) {
         _engineLog('$method $path errorBody=${_logBody(response.bodyText)}');
         throw TotalsEngineException(
-          _errorMessage(response.decoded) ?? 'Totals Engine request failed.',
+          _errorMessage(response.decoded) ?? 'Finomi Engine request failed.',
           statusCode: response.statusCode,
           retryAfter: _retryAfter(response.headers),
           body: response.decoded,
@@ -628,7 +628,7 @@ class TotalsEngineClient {
       return response.decoded;
     }
 
-    throw const TotalsEngineException('Totals Engine authentication failed.');
+    throw const TotalsEngineException('Finomi Engine authentication failed.');
   }
 
   Future<_AuthHeaderSet> _authHeaders({bool forceChallenge = false}) async {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/models/auto_categorization.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/models/auto_categorization.dart';
 
 Future<bool?> showAutoCategorizationPromptDialog({
   required BuildContext context,

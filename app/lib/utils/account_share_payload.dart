@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:totals/data/all_banks_from_assets.dart';
-import 'package:totals/models/bank.dart';
+import 'package:finomi/data/all_banks_from_assets.dart';
+import 'package:finomi/models/bank.dart';
 
 final List<Bank> _knownBanks = AllBanksFromAssets.getAllBanks();
 final Set<int> _knownBankIds = {

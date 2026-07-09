@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:totals/data/consts.dart';
-import 'package:totals/main.dart';
+import 'package:finomi/data/consts.dart';
+import 'package:finomi/main.dart';
 
 class Transaction {
   final String reference;

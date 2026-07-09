@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/services/bank_config_service.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/services/bank_config_service.dart';
 
 class BanksListPage extends StatefulWidget {
   final Function(int) onBankSelected;

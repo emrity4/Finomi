@@ -5,7 +5,7 @@ class AccountShareQrCode extends StatelessWidget {
   static const Color _defaultForegroundColor = Color(0xFF1976D2);
   static const PrettyQrDecorationImage _defaultQrImage =
       PrettyQrDecorationImage(
-    image: AssetImage('assets/icon/totals_icon.png'),
+    image: AssetImage('assets/icon/finomi_icon.png'),
     scale: 0.2,
     padding: EdgeInsets.all(6),
   );

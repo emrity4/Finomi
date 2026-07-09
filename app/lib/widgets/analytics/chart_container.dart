@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:totals/models/transaction.dart';
+import 'package:finomi/models/transaction.dart';
 import 'chart_data_point.dart';
 import 'charts/line_chart_widget.dart';
 import 'charts/bar_chart_widget.dart';

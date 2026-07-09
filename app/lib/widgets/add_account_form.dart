@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/components/custom_inputfield.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/services/account_registration_service.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/services/fallback_sms_parser.dart';
-import 'package:totals/services/sms_config_service.dart';
-import 'package:totals/widgets/inline_bank_selector.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/components/custom_inputfield.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/services/account_registration_service.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/services/fallback_sms_parser.dart';
+import 'package:finomi/services/sms_config_service.dart';
+import 'package:finomi/widgets/inline_bank_selector.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 class RegisterAccountForm extends StatefulWidget {
   final void Function() onSubmit;

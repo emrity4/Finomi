@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:shelf/shelf.dart';
 import 'package:shelf_router/shelf_router.dart';
-import 'package:totals/models/category.dart';
-import 'package:totals/repositories/category_repository.dart';
+import 'package:finomi/models/category.dart';
+import 'package:finomi/repositories/category_repository.dart';
 
 /// Handler for category-related API endpoints
 class CategoriesHandler {

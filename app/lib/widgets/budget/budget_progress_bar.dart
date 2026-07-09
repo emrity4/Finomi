@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:totals/services/budget_service.dart';
+import 'package:finomi/services/budget_service.dart';
 
 class BudgetProgressBar extends StatelessWidget {
   final BudgetStatus status;

@@ -1,5 +1,5 @@
-import 'package:totals/models/sms_pattern.dart';
-import 'package:totals/models/transaction.dart';
+import 'package:finomi/models/sms_pattern.dart';
+import 'package:finomi/models/transaction.dart';
 
 class TransactionLinkUtils {
   static final RegExp _urlPattern =

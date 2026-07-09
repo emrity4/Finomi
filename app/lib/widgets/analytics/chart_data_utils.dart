@@ -1,4 +1,4 @@
-import 'package:totals/models/transaction.dart';
+import 'package:finomi/models/transaction.dart';
 import 'chart_data_point.dart';
 
 class ChartDataUtils {

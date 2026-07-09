@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:totals/_redesign/screens/data_sync/data_sync_home_page.dart';
-import 'package:totals/_redesign/screens/data_sync/data_sync_widgets.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/services/advanced_settings_service.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/_redesign/screens/data_sync/data_sync_home_page.dart';
+import 'package:finomi/_redesign/screens/data_sync/data_sync_widgets.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/services/advanced_settings_service.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 class RedesignAdvancedSettingsPage extends StatefulWidget {
   const RedesignAdvancedSettingsPage({super.key});

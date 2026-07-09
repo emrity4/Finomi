@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/utils/text_utils.dart';
-import 'package:totals/widgets/account_detail.dart';
-import 'package:totals/models/summary_models.dart';
-import 'package:totals/services/account_sync_status_service.dart';
-import 'package:totals/repositories/account_repository.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/constants/cash_constants.dart';
-import 'package:totals/utils/gradients.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/utils/text_utils.dart';
+import 'package:finomi/widgets/account_detail.dart';
+import 'package:finomi/models/summary_models.dart';
+import 'package:finomi/services/account_sync_status_service.dart';
+import 'package:finomi/repositories/account_repository.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/constants/cash_constants.dart';
+import 'package:finomi/utils/gradients.dart';
 
 class AccountsSummaryList extends StatefulWidget {
   final List<AccountSummary> accountSummaries;

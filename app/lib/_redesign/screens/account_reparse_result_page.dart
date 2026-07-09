@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/services/account_reparse_result_service.dart';
-import 'package:totals/utils/text_utils.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/services/account_reparse_result_service.dart';
+import 'package:finomi/utils/text_utils.dart';
 
 class AccountReparseResultPage extends StatelessWidget {
   final AccountReparseDebugResult result;

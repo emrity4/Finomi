@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/services/account_sync_status_service.dart';
-import 'package:totals/services/bank_detection_service.dart';
-import 'package:totals/widgets/add_account_form.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/services/account_sync_status_service.dart';
+import 'package:finomi/services/bank_detection_service.dart';
+import 'package:finomi/widgets/add_account_form.dart';
 
 /// Widget that displays banks detected from user's SMS
 /// and allows quick account registration

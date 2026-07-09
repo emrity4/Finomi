@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:totals/models/shared_expense_group.dart';
+import 'package:finomi/models/shared_expense_group.dart';
 
 class SharedExpenseRealtimeBus {
   SharedExpenseRealtimeBus._();

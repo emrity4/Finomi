@@ -1,6 +1,6 @@
-import 'package:totals/models/category.dart';
-import 'package:totals/models/loan_debt_entry.dart';
-import 'package:totals/models/transaction.dart';
+import 'package:finomi/models/category.dart';
+import 'package:finomi/models/loan_debt_entry.dart';
+import 'package:finomi/models/transaction.dart';
 
 bool isLoanDebtCategory(Category category) {
   final key = (category.builtInKey ?? '').trim().toLowerCase();

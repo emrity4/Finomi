@@ -1,13 +1,13 @@
 import 'dart:convert';
 import 'package:another_telephony/telephony.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/models/account.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/repositories/account_repository.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/services/fallback_sms_parser.dart';
-import 'package:totals/services/sms_config_service.dart';
-import 'package:totals/utils/bank_sender_matcher.dart';
+import 'package:finomi/models/account.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/repositories/account_repository.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/services/fallback_sms_parser.dart';
+import 'package:finomi/services/sms_config_service.dart';
+import 'package:finomi/utils/bank_sender_matcher.dart';
 
 /// Represents a bank detected from SMS messages
 class DetectedBank {

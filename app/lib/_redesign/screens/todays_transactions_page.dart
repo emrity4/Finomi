@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/_redesign/screens/loans_page.dart';
-import 'package:totals/providers/theme_provider.dart';
-import 'package:totals/theme/app_calendar_option.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/_redesign/widgets/transaction_category_sheet.dart';
-import 'package:totals/_redesign/widgets/transaction_details_sheet.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/utils/app_date_format.dart';
-import 'package:totals/utils/text_utils.dart';
-import 'package:totals/_redesign/widgets/transaction_tile.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/_redesign/screens/loans_page.dart';
+import 'package:finomi/providers/theme_provider.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/_redesign/widgets/transaction_category_sheet.dart';
+import 'package:finomi/_redesign/widgets/transaction_details_sheet.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/utils/app_date_format.dart';
+import 'package:finomi/utils/text_utils.dart';
+import 'package:finomi/_redesign/widgets/transaction_tile.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 class TodaysTransactionsPage extends StatefulWidget {
   const TodaysTransactionsPage({super.key});

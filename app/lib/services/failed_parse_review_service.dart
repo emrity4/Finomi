@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/models/failed_parse.dart';
-import 'package:totals/repositories/account_repository.dart';
-import 'package:totals/repositories/failed_parse_repository.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/models/failed_parse.dart';
+import 'package:finomi/repositories/account_repository.dart';
+import 'package:finomi/repositories/failed_parse_repository.dart';
 
 class FailedParseReviewService {
   FailedParseReviewService._();

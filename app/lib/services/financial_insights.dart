@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:totals/models/category.dart';
+import 'package:finomi/models/category.dart';
 
 import '../data/consts.dart';
 import '../models/transaction.dart';

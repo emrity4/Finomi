@@ -1,6 +1,6 @@
-import 'package:totals/models/budget.dart';
-import 'package:totals/repositories/budget_repository.dart';
-import 'package:totals/repositories/transaction_repository.dart';
+import 'package:finomi/models/budget.dart';
+import 'package:finomi/repositories/budget_repository.dart';
+import 'package:finomi/repositories/transaction_repository.dart';
 
 class BudgetService {
   final BudgetRepository _budgetRepository = BudgetRepository();

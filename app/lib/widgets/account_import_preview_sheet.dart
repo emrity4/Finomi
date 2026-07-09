@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:totals/data/all_banks_from_assets.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/repositories/user_account_repository.dart';
-import 'package:totals/utils/account_share_payload.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/data/all_banks_from_assets.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/repositories/user_account_repository.dart';
+import 'package:finomi/utils/account_share_payload.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 class _AccountPreviewItem {
   final AccountShareEntry entry;

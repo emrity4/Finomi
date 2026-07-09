@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/constants/cash_constants.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/constants/cash_constants.dart';
 
 class HomeTabs extends StatefulWidget {
   static const int recentTabId = -1;

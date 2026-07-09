@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/models/category.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/utils/auto_categorization_rules_share_payload.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/models/category.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/utils/auto_categorization_rules_share_payload.dart';
 
 class AutoCategorizationRulesScanPage extends StatefulWidget {
   const AutoCategorizationRulesScanPage({super.key});

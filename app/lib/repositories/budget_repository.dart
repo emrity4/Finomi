@@ -1,9 +1,9 @@
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/budget.dart';
-import 'package:totals/services/data_sync/sync_enqueuer.dart';
-import 'package:totals/services/data_sync/sync_models.dart';
-import 'package:totals/theme/app_calendar_option.dart';
-import 'package:totals/utils/app_calendar_date_utils.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/budget.dart';
+import 'package:finomi/services/data_sync/sync_enqueuer.dart';
+import 'package:finomi/services/data_sync/sync_models.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
+import 'package:finomi/utils/app_calendar_date_utils.dart';
 
 class BudgetRepository {
   String? _normalizeCalendar(String? calendar) {

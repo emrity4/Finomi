@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/screens/accounts_page.dart';
-import 'package:totals/screens/failed_parses_page.dart';
-import 'package:totals/screens/verify_payments_page.dart';
-import 'package:totals/screens/web_page.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/screens/accounts_page.dart';
+import 'package:finomi/screens/failed_parses_page.dart';
+import 'package:finomi/screens/verify_payments_page.dart';
+import 'package:finomi/screens/web_page.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 class RedesignToolsPage extends StatelessWidget {
   const RedesignToolsPage({super.key});

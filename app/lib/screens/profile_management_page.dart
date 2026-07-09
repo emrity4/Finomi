@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/models/profile.dart';
-import 'package:totals/repositories/profile_repository.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/models/profile.dart';
+import 'package:finomi/repositories/profile_repository.dart';
 
 class ProfileManagementPage extends StatefulWidget {
   const ProfileManagementPage({super.key});

@@ -1,5 +1,5 @@
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/failed_parse.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/failed_parse.dart';
 
 class FailedParseRepository {
   Future<List<FailedParse>> getAll() async {

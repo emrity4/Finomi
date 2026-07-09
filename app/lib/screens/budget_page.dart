@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/providers/budget_provider.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/widgets/budget/budget_card.dart';
-import 'package:totals/widgets/budget/budget_alert_banner.dart';
-import 'package:totals/widgets/budget/budget_period_selector.dart';
-import 'package:totals/widgets/budget/category_budget_list.dart';
-import 'package:totals/widgets/budget/budget_form_sheet.dart';
-import 'package:totals/widgets/budget/category_budget_form_sheet.dart';
-import 'package:totals/services/budget_service.dart';
-import 'package:totals/models/budget.dart';
+import 'package:finomi/providers/budget_provider.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/widgets/budget/budget_card.dart';
+import 'package:finomi/widgets/budget/budget_alert_banner.dart';
+import 'package:finomi/widgets/budget/budget_period_selector.dart';
+import 'package:finomi/widgets/budget/category_budget_list.dart';
+import 'package:finomi/widgets/budget/budget_form_sheet.dart';
+import 'package:finomi/widgets/budget/category_budget_form_sheet.dart';
+import 'package:finomi/services/budget_service.dart';
+import 'package:finomi/models/budget.dart';
 
 class BudgetPage extends StatefulWidget {
   const BudgetPage({super.key});

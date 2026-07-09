@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'package:shelf/shelf.dart';
 import 'package:shelf_router/shelf_router.dart';
-import 'package:totals/models/account.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/repositories/account_repository.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/constants/cash_constants.dart';
+import 'package:finomi/models/account.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/repositories/account_repository.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/constants/cash_constants.dart';
 
 /// Handler for account-related API endpoints
 class AccountsHandler {

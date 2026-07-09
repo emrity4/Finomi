@@ -2,26 +2,26 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:totals/constants/cash_constants.dart';
-import 'package:totals/models/account.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/models/sms_pattern.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/repositories/account_repository.dart';
-import 'package:totals/repositories/transaction_repository.dart';
-import 'package:totals/services/account_reparse_result_service.dart';
-import 'package:totals/services/account_sync_status_service.dart';
-import 'package:totals/services/auto_categorization_service.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/services/background_refresh_signal_service.dart';
-import 'package:totals/services/fallback_sms_parser.dart';
-import 'package:totals/services/notification_service.dart';
-import 'package:totals/services/sms_service.dart';
-import 'package:totals/services/sms_config_service.dart';
-import 'package:totals/sms_handler/telephony.dart';
-import 'package:totals/utils/bank_sender_matcher.dart';
-import 'package:totals/utils/pattern_parser.dart';
-import 'package:totals/utils/sms_transaction_source.dart';
+import 'package:finomi/constants/cash_constants.dart';
+import 'package:finomi/models/account.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/models/sms_pattern.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/repositories/account_repository.dart';
+import 'package:finomi/repositories/transaction_repository.dart';
+import 'package:finomi/services/account_reparse_result_service.dart';
+import 'package:finomi/services/account_sync_status_service.dart';
+import 'package:finomi/services/auto_categorization_service.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/services/background_refresh_signal_service.dart';
+import 'package:finomi/services/fallback_sms_parser.dart';
+import 'package:finomi/services/notification_service.dart';
+import 'package:finomi/services/sms_service.dart';
+import 'package:finomi/services/sms_config_service.dart';
+import 'package:finomi/sms_handler/telephony.dart';
+import 'package:finomi/utils/bank_sender_matcher.dart';
+import 'package:finomi/utils/pattern_parser.dart';
+import 'package:finomi/utils/sms_transaction_source.dart';
 
 typedef _ReparseProgressCallback = Future<void> Function(
   String stage,

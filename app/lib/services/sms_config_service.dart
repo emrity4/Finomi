@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/sms_pattern.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/sms_pattern.dart';
 
 class SmsConfigService {
   static const String _patternsAssetPath = 'assets/sms_patterns.json';

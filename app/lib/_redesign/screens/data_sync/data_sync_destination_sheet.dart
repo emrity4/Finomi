@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:totals/_redesign/screens/data_sync/data_sync_widgets.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/services/data_sync/data_sync_repository.dart';
-import 'package:totals/services/data_sync/outbound_http_client.dart';
-import 'package:totals/services/data_sync/sync_models.dart';
-import 'package:totals/services/data_sync/sync_url.dart';
+import 'package:finomi/_redesign/screens/data_sync/data_sync_widgets.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/services/data_sync/data_sync_repository.dart';
+import 'package:finomi/services/data_sync/outbound_http_client.dart';
+import 'package:finomi/services/data_sync/sync_models.dart';
+import 'package:finomi/services/data_sync/sync_url.dart';
 
 /// Shows the add/edit destination sheet. Returns true if a destination was
 /// saved.

@@ -1,4 +1,4 @@
-import 'package:totals/models/bank.dart';
+import 'package:finomi/models/bank.dart';
 
 String normalizeBankSenderToken(String value) {
   return value.toLowerCase().replaceAll(RegExp(r'[^a-z0-9]'), '');

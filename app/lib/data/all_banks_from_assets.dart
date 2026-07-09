@@ -1,4 +1,4 @@
-import 'package:totals/models/bank.dart';
+import 'package:finomi/models/bank.dart';
 
 /// Comprehensive list of all banks available in assets for account creation
 /// This includes all banks from the assets/images folder

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:totals/models/bank.dart';
+import 'package:finomi/models/bank.dart';
 
 class FallbackSmsParser {
   static bool get isEnabled => false;

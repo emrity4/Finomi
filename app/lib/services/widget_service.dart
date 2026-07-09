@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:home_widget/home_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/services/budget_widget_data_provider.dart';
-import 'package:totals/services/widget_data_provider.dart';
-import 'package:totals/services/widget_refresh_state_service.dart';
-import 'package:totals/theme/app_calendar_option.dart';
+import 'package:finomi/services/budget_widget_data_provider.dart';
+import 'package:finomi/services/widget_data_provider.dart';
+import 'package:finomi/services/widget_refresh_state_service.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
 
 class WidgetService {
   static const String appGroupId = 'group.detached.totals.widget';

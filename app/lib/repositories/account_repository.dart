@@ -1,12 +1,12 @@
 import 'package:sqflite/sqflite.dart' hide Transaction;
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/account.dart';
-import 'package:totals/repositories/transaction_repository.dart';
-import 'package:totals/repositories/profile_repository.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/services/data_sync/sync_enqueuer.dart';
-import 'package:totals/services/data_sync/sync_models.dart';
-import 'package:totals/constants/cash_constants.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/account.dart';
+import 'package:finomi/repositories/transaction_repository.dart';
+import 'package:finomi/repositories/profile_repository.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/services/data_sync/sync_enqueuer.dart';
+import 'package:finomi/services/data_sync/sync_models.dart';
+import 'package:finomi/constants/cash_constants.dart';
 
 class AccountRepository {
   final ProfileRepository _profileRepo = ProfileRepository();

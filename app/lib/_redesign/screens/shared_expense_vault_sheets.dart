@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/services/shared_expense_recovery_code.dart';
-import 'package:totals/services/shared_expense_vault.dart';
-import 'package:totals/services/shared_expense_vault_service.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/services/shared_expense_recovery_code.dart';
+import 'package:finomi/services/shared_expense_vault.dart';
+import 'package:finomi/services/shared_expense_vault_service.dart';
 
 const int _minPinLength = 6;
 

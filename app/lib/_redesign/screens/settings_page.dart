@@ -5,25 +5,25 @@ import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/_redesign/screens/tools_page.dart';
-import 'package:totals/_redesign/screens/advanced_settings_page.dart';
-import 'package:totals/providers/theme_provider.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/screens/categories_page.dart';
-import 'package:totals/screens/notification_settings_page.dart';
-import 'package:totals/screens/privacy_policy_page.dart';
-import 'package:totals/screens/profile_management_page.dart';
-import 'package:totals/widgets/clear_database_dialog.dart';
-import 'package:totals/repositories/profile_repository.dart';
-import 'package:totals/services/app_update_service.dart';
-import 'package:totals/services/data_export_import_service.dart';
-import 'package:totals/services/sms_config_service.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/theme/app_font_option.dart';
-import 'package:totals/theme/app_calendar_option.dart';
-import 'package:totals/theme/app_language_option.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/_redesign/screens/tools_page.dart';
+import 'package:finomi/_redesign/screens/advanced_settings_page.dart';
+import 'package:finomi/providers/theme_provider.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/screens/categories_page.dart';
+import 'package:finomi/screens/notification_settings_page.dart';
+import 'package:finomi/screens/privacy_policy_page.dart';
+import 'package:finomi/screens/profile_management_page.dart';
+import 'package:finomi/widgets/clear_database_dialog.dart';
+import 'package:finomi/repositories/profile_repository.dart';
+import 'package:finomi/services/app_update_service.dart';
+import 'package:finomi/services/data_export_import_service.dart';
+import 'package:finomi/services/sms_config_service.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/theme/app_font_option.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
+import 'package:finomi/theme/app_language_option.dart';
 
 // ── Support links ───────────────────────────────────────────────────────────
 Future<void> _openSupportLink() async {
@@ -287,7 +287,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                           '${sheetCtx.l10nText('Current size')}: ${_scaleLabel(selectedScale)}',
                           style: TextStyle(
                             fontSize: 12 * selectedScale,
-                            color: AppColors.primaryLight,
+                            color: Theme.of(context).colorScheme.primary,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -310,7 +310,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                     max: (scaleOptions.length - 1).toDouble(),
                     divisions: scaleOptions.length - 1,
                     label: _scaleLabel(selectedScale),
-                    activeColor: AppColors.primaryLight,
+                    activeColor: Theme.of(context).colorScheme.primary,
                     inactiveColor: AppColors.borderColor(sheetCtx),
                     onChanged: (v) => updateScale(v.round()),
                   ),
@@ -324,15 +324,15 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                           label: Text(_scaleLabel(scaleOptions[i])),
                           selected: i == selectedScaleIndex,
                           selectedColor:
-                              AppColors.primaryLight.withValues(alpha: 0.2),
+                              Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
                           side: BorderSide(
                             color: i == selectedScaleIndex
-                                ? AppColors.primaryLight
+                                ? Theme.of(context).colorScheme.primary
                                 : AppColors.borderColor(sheetCtx),
                           ),
                           labelStyle: TextStyle(
                             color: i == selectedScaleIndex
-                                ? AppColors.primaryLight
+                                ? Theme.of(context).colorScheme.primary
                                 : AppColors.textPrimary(sheetCtx),
                             fontWeight: FontWeight.w600,
                           ),
@@ -367,15 +367,15 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                           label: Text(_paddingLabel(paddingOptions[i])),
                           selected: i == selectedPaddingIndex,
                           selectedColor:
-                              AppColors.primaryLight.withValues(alpha: 0.2),
+                              Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
                           side: BorderSide(
                             color: i == selectedPaddingIndex
-                                ? AppColors.primaryLight
+                                ? Theme.of(context).colorScheme.primary
                                 : AppColors.borderColor(sheetCtx),
                           ),
                           labelStyle: TextStyle(
                             color: i == selectedPaddingIndex
-                                ? AppColors.primaryLight
+                                ? Theme.of(context).colorScheme.primary
                                 : AppColors.textPrimary(sheetCtx),
                             fontWeight: FontWeight.w600,
                           ),
@@ -409,7 +409,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                         child: ElevatedButton(
                           onPressed: () => Navigator.of(sheetCtx).pop(true),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primaryDark,
+                            backgroundColor: Theme.of(context).colorScheme.primary,
                             foregroundColor: AppColors.white,
                             elevation: 0,
                             shape: RoundedRectangleBorder(
@@ -492,7 +492,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                     RadioListTile<AppFontOption>(
                       value: option,
                       groupValue: selectedFont,
-                      activeColor: AppColors.primaryLight,
+                      activeColor: Theme.of(context).colorScheme.primary,
                       contentPadding: EdgeInsets.zero,
                       title: Text(
                         option.label,
@@ -540,7 +540,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                           onPressed: () =>
                               Navigator.of(sheetCtx).pop(selectedFont),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primaryDark,
+                            backgroundColor: Theme.of(context).colorScheme.primary,
                             foregroundColor: AppColors.white,
                             elevation: 0,
                             shape: RoundedRectangleBorder(
@@ -677,7 +677,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                           onPressed: () =>
                               Navigator.of(sheetCtx).pop(selected),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primaryDark,
+                            backgroundColor: Theme.of(context).colorScheme.primary,
                             foregroundColor: AppColors.white,
                             elevation: 0,
                             shape: RoundedRectangleBorder(
@@ -768,7 +768,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                     RadioListTile<AppLanguageOption>(
                       value: option,
                       groupValue: selectedLanguage,
-                      activeColor: AppColors.primaryLight,
+                      activeColor: Theme.of(context).colorScheme.primary,
                       contentPadding: EdgeInsets.zero,
                       title: Text(
                         option.nativeLabel,
@@ -824,7 +824,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                           onPressed: () =>
                               Navigator.of(sheetCtx).pop(selectedLanguage),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primaryDark,
+                            backgroundColor: Theme.of(context).colorScheme.primary,
                             foregroundColor: AppColors.white,
                             elevation: 0,
                             shape: RoundedRectangleBorder(
@@ -907,7 +907,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                     RadioListTile<AppCalendarOption>(
                       value: option,
                       groupValue: selectedCalendar,
-                      activeColor: AppColors.primaryLight,
+                      activeColor: Theme.of(context).colorScheme.primary,
                       contentPadding: EdgeInsets.zero,
                       title: Text(
                         sheetCtx.l10nText(option.label),
@@ -952,7 +952,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                           onPressed: () =>
                               Navigator.of(sheetCtx).pop(selectedCalendar),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primaryDark,
+                            backgroundColor: Theme.of(context).colorScheme.primary,
                             foregroundColor: AppColors.white,
                             elevation: 0,
                             shape: RoundedRectangleBorder(
@@ -1059,8 +1059,8 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
             if (mounted) {
               await Share.shareXFiles(
                 [XFile(tempFile.path)],
-                text: context.l10nTextRead('Totals Data Export'),
-                subject: context.l10nTextRead('Totals Backup'),
+                text: context.l10nTextRead('Finomi Data Export'),
+                subject: context.l10nTextRead('Finomi Backup'),
               );
               if (mounted) {
                 _showSnack(context.l10nTextRead('Use Share to save the file'));
@@ -1144,8 +1144,8 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
         if (!mounted) return;
         await Share.shareXFiles(
           [XFile(file.path)],
-          text: context.l10nTextRead('Totals Data Export'),
-          subject: context.l10nTextRead('Totals Backup'),
+          text: context.l10nTextRead('Finomi Data Export'),
+          subject: context.l10nTextRead('Finomi Backup'),
         );
         if (mounted)
           _showSnack(context.l10nTextRead('Data exported successfully'));
@@ -1200,7 +1200,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
               ElevatedButton(
                 onPressed: () => Navigator.pop(ctx, true),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.primaryDark,
+                  backgroundColor: Theme.of(context).colorScheme.primary,
                   foregroundColor: AppColors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
@@ -1318,7 +1318,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
 
               _SettingTile(
                 icon: AppIcons.palette_outlined,
-                iconColor: AppColors.primaryLight,
+                iconColor: Theme.of(context).colorScheme.primary,
                 title: context.l10n('settings.theme', 'Theme'),
                 subtitle: context.l10n(
                   'settings.themeSubtitle',
@@ -1329,7 +1329,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                   icon: Icon(
                     _themeModeIcon(themeProvider.themeMode),
                     size: 16,
-                    color: AppColors.primaryLight,
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                   label: Text(
                     themeProvider.themeModeLabel,
@@ -1462,7 +1462,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
 
               _SettingTile(
                 icon: Icons.calendar_today_rounded,
-                iconColor: AppColors.primaryLight,
+                iconColor: Theme.of(context).colorScheme.primary,
                 title: context.l10n('settings.calendar', 'Calendar'),
                 subtitle: context.l10n(
                   'settings.calendarSubtitle',
@@ -1500,7 +1500,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
               //     trailing: Switch(
               //       value: _useRedesign,
               //       onChanged: _toggleRedesign,
-              //       activeColor: AppColors.primaryLight,
+              //       activeColor: Theme.of(context).colorScheme.primary,
               //     ),
               //   ),
 
@@ -1527,7 +1527,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
               //     trailing: Switch(
               //       value: _autoCategorizeEnabled,
               //       onChanged: _toggleAutoCategorize,
-              //       activeColor: AppColors.primaryLight,
+              //       activeColor: Theme.of(context).colorScheme.primary,
               //     ),
               //   ),
 
@@ -1601,7 +1601,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                         height: 20,
                         child: CircularProgressIndicator(
                           strokeWidth: 2,
-                          color: AppColors.primaryLight,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                       )
                     : null,
@@ -1623,7 +1623,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                         height: 20,
                         child: CircularProgressIndicator(
                           strokeWidth: 2,
-                          color: AppColors.primaryLight,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                       )
                     : null,
@@ -1645,7 +1645,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                         height: 20,
                         child: CircularProgressIndicator(
                           strokeWidth: 2,
-                          color: AppColors.primaryLight,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                       )
                     : null,
@@ -1686,7 +1686,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
                         height: 20,
                         child: CircularProgressIndicator(
                           strokeWidth: 2,
-                          color: AppColors.primaryLight,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                       )
                     : null,
@@ -1695,7 +1695,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
 
               _SettingTile(
                 icon: AppIcons.info_outline_rounded,
-                iconColor: AppColors.primaryLight,
+                iconColor: Theme.of(context).colorScheme.primary,
                 title: context.l10n('settings.about', 'About'),
                 subtitle: context.l10n(
                   'settings.versionPrivacyCredits',
@@ -1711,7 +1711,7 @@ class _RedesignSettingsPageState extends State<RedesignSettingsPage> {
 
               _SettingTile(
                 icon: AppIcons.shield_check,
-                iconColor: AppColors.primaryLight,
+                iconColor: Theme.of(context).colorScheme.primary,
                 title: context.l10n('settings.privacyPolicy', 'Privacy Policy'),
                 subtitle: context.l10n(
                   'settings.privacyPolicySubtitle',
@@ -1810,7 +1810,7 @@ class _ProfileCard extends StatelessWidget {
                 width: 52,
                 height: 52,
                 decoration: const BoxDecoration(
-                  color: AppColors.primaryDark,
+                  color: Theme.of(context).colorScheme.primary,
                   shape: BoxShape.circle,
                 ),
                 child: Center(
@@ -1967,14 +1967,14 @@ class _SupportDevelopersCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             gradient: LinearGradient(
               colors: [
-                AppColors.primaryDark.withValues(alpha: 0.12),
-                AppColors.primaryLight.withValues(alpha: 0.08),
+                Theme.of(context).colorScheme.primary.withValues(alpha: 0.12),
+                Theme.of(context).colorScheme.primary.withValues(alpha: 0.08),
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
             border: Border.all(
-              color: AppColors.primaryLight.withValues(alpha: 0.2),
+              color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.2),
             ),
           ),
           child: Row(
@@ -1982,14 +1982,14 @@ class _SupportDevelopersCard extends StatelessWidget {
             children: [
               const Icon(
                 AppIcons.favorite_rounded,
-                color: AppColors.primaryLight,
+                color: Theme.of(context).colorScheme.primary,
                 size: 20,
               ),
               const SizedBox(width: 10),
               Text(
                 context.l10n('settings.supportProject', 'Support the Project'),
                 style: theme.textTheme.bodyLarge?.copyWith(
-                  color: AppColors.primaryLight,
+                  color: Theme.of(context).colorScheme.primary,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -2104,7 +2104,7 @@ class _RedesignAboutPage extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(14),
                     child: Image.asset(
-                      'assets/icon/totals_icon.png',
+                      'assets/icon/finomi_icon.png',
                       width: 64,
                       height: 64,
                       fit: BoxFit.contain,
@@ -2258,7 +2258,7 @@ class _RedesignAboutPage extends StatelessWidget {
             const SizedBox(height: 8),
             Center(
               child: Text(
-                '${context.l10nText('Version')} 1.3.3',
+                '${context.l10nText('Version')} 1.4.4',
                 style: theme.textTheme.bodySmall?.copyWith(
                   color:
                       AppColors.textSecondary(context).withValues(alpha: 0.6),
@@ -2304,12 +2304,12 @@ class _AboutFeatureCard extends StatelessWidget {
               width: 40,
               height: 40,
               decoration: BoxDecoration(
-                color: AppColors.primaryLight.withValues(alpha: 0.1),
+                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Icon(
                 icon,
-                color: AppColors.primaryLight,
+                color: Theme.of(context).colorScheme.primary,
                 size: 20,
               ),
             ),
@@ -2372,14 +2372,14 @@ class _AboutStepCard extends StatelessWidget {
               width: 32,
               height: 32,
               decoration: BoxDecoration(
-                color: AppColors.primaryLight.withValues(alpha: 0.1),
+                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               child: Center(
                 child: Text(
                   '$step',
                   style: const TextStyle(
-                    color: AppColors.primaryLight,
+                    color: Theme.of(context).colorScheme.primary,
                     fontWeight: FontWeight.w700,
                     fontSize: 14,
                   ),
@@ -2600,12 +2600,12 @@ class _RedesignFAQPageState extends State<_RedesignFAQPage> {
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: AppColors.primaryLight.withValues(alpha: 0.1),
+                      color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(
                       AppIcons.sms_outlined,
-                      color: AppColors.primaryLight,
+                      color: Theme.of(context).colorScheme.primary,
                       size: 20,
                     ),
                   ),
@@ -2634,8 +2634,8 @@ class _RedesignFAQPageState extends State<_RedesignFAQPage> {
                     child: OutlinedButton(
                       onPressed: _openSupportChat,
                       style: OutlinedButton.styleFrom(
-                        foregroundColor: AppColors.primaryLight,
-                        side: const BorderSide(color: AppColors.primaryLight),
+                        foregroundColor: Theme.of(context).colorScheme.primary,
+                        side: const BorderSide(color: Theme.of(context).colorScheme.primary),
                         padding: const EdgeInsets.symmetric(vertical: 12),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -2702,12 +2702,12 @@ class _RedesignFAQPageState extends State<_RedesignFAQPage> {
                         width: 36,
                         height: 36,
                         decoration: BoxDecoration(
-                          color: AppColors.primaryLight.withValues(alpha: 0.1),
+                          color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Icon(
                           _iconForKey(item['icon']!),
-                          color: AppColors.primaryLight,
+                          color: Theme.of(context).colorScheme.primary,
                           size: 18,
                         ),
                       ),

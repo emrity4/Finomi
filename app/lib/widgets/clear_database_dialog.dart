@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/providers/budget_provider.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/repositories/account_repository.dart';
-import 'package:totals/repositories/budget_repository.dart';
-import 'package:totals/repositories/failed_parse_repository.dart';
-import 'package:totals/repositories/transaction_repository.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/providers/budget_provider.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/repositories/account_repository.dart';
+import 'package:finomi/repositories/budget_repository.dart';
+import 'package:finomi/repositories/failed_parse_repository.dart';
+import 'package:finomi/repositories/transaction_repository.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 Future<void> showClearDatabaseDialog(BuildContext context) async {
   bool clearFinancialData = false;

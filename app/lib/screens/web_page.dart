@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/local_server/server_service.dart';
-import 'package:totals/local_server/network_utils.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/local_server/server_service.dart';
+import 'package:finomi/local_server/network_utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class WebPage extends StatefulWidget {

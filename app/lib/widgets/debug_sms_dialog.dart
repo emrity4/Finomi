@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/services/sms_service.dart';
-import 'package:totals/widgets/failed_parse_dialog.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/services/sms_service.dart';
+import 'package:finomi/widgets/failed_parse_dialog.dart';
 
 Future<void> showDebugSmsDialog(BuildContext context) async {
   final TextEditingController addressController = TextEditingController();

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:in_app_update/in_app_update.dart';
 import 'package:platform/platform.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 enum AppUpdateCheckSource { launch, manual }
 
@@ -65,7 +65,7 @@ class AppUpdateService {
 
       if (!_hasUpdate(updateInfo)) {
         if (isManual) {
-          _showSnackBar(context, context.l10nTextRead('Totals is up to date.'));
+          _showSnackBar(context, context.l10nTextRead('Finomi is up to date.'));
         }
         return;
       }
@@ -133,7 +133,7 @@ class AppUpdateService {
           title: Text(dialogContext.l10nText('Update available')),
           content: Text(
             dialogContext.l10nText(
-              'A newer version of Totals is available.',
+              'A newer version of Finomi is available.',
             ),
           ),
           actions: [

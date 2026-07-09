@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:workmanager/workmanager.dart';
-import 'package:totals/background/daily_spending_worker.dart';
-import 'package:totals/services/notification_settings_service.dart';
+import 'package:finomi/background/daily_spending_worker.dart';
+import 'package:finomi/services/notification_settings_service.dart';
 
 class NotificationScheduler {
   NotificationScheduler._();

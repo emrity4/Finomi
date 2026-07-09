@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:sqflite/sqflite.dart';
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/category.dart' as models;
-import 'package:totals/services/auto_categorization_service.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/category.dart' as models;
+import 'package:finomi/services/auto_categorization_service.dart';
 
 class CategoryRepository {
   Future<void> ensureSeeded() async {

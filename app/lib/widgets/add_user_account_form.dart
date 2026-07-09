@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:totals/components/custom_inputfield.dart';
-import 'package:totals/data/all_banks_from_assets.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/models/user_account.dart';
-import 'package:totals/repositories/user_account_repository.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/services/fallback_sms_parser.dart';
-import 'package:totals/services/sms_config_service.dart';
-import 'package:totals/widgets/inline_bank_selector.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/components/custom_inputfield.dart';
+import 'package:finomi/data/all_banks_from_assets.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/models/user_account.dart';
+import 'package:finomi/repositories/user_account_repository.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/services/fallback_sms_parser.dart';
+import 'package:finomi/services/sms_config_service.dart';
+import 'package:finomi/widgets/inline_bank_selector.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 class AddUserAccountForm extends StatefulWidget {
   final void Function() onAccountAdded;

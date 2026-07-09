@@ -1,19 +1,19 @@
-import 'package:totals/models/account.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/repositories/account_repository.dart';
-import 'package:totals/services/sms_service.dart';
-import 'package:totals/services/sms_config_service.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/services/account_sync_status_service.dart';
-import 'package:totals/services/fallback_sms_parser.dart';
-import 'package:totals/services/notification_service.dart';
-import 'package:totals/sms_handler/telephony.dart';
-import 'package:totals/utils/bank_sender_matcher.dart';
-import 'package:totals/utils/pattern_parser.dart';
-import 'package:totals/repositories/transaction_repository.dart';
-import 'package:totals/utils/sms_transaction_source.dart';
-import 'package:totals/utils/transaction_duplicate_detector.dart';
+import 'package:finomi/models/account.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/repositories/account_repository.dart';
+import 'package:finomi/services/sms_service.dart';
+import 'package:finomi/services/sms_config_service.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/services/account_sync_status_service.dart';
+import 'package:finomi/services/fallback_sms_parser.dart';
+import 'package:finomi/services/notification_service.dart';
+import 'package:finomi/sms_handler/telephony.dart';
+import 'package:finomi/utils/bank_sender_matcher.dart';
+import 'package:finomi/utils/pattern_parser.dart';
+import 'package:finomi/repositories/transaction_repository.dart';
+import 'package:finomi/utils/sms_transaction_source.dart';
+import 'package:finomi/utils/transaction_duplicate_detector.dart';
 
 const int _dashenBankId = 4;
 

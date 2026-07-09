@@ -1,5 +1,5 @@
-import 'package:totals/models/bank.dart';
-import 'package:totals/models/transaction.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/models/transaction.dart';
 
 class TelebirrBankTransferMatch {
   final Transaction telebirrTransaction;

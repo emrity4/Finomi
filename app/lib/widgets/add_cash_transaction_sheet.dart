@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:totals/constants/cash_constants.dart';
-import 'package:totals/models/account.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/models/category.dart';
-import 'package:totals/models/summary_models.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/repositories/account_repository.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/utils/app_date_format.dart';
-import 'package:totals/utils/category_icons.dart';
-import 'package:totals/utils/category_sort.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/constants/cash_constants.dart';
+import 'package:finomi/models/account.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/models/category.dart';
+import 'package:finomi/models/summary_models.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/repositories/account_repository.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/utils/app_date_format.dart';
+import 'package:finomi/utils/category_icons.dart';
+import 'package:finomi/utils/category_sort.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 Future<void> showAddCashTransactionSheet({
   required BuildContext context,

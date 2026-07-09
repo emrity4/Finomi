@@ -1,19 +1,19 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:totals/_redesign/screens/data_sync/data_sync_widgets.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/constants/cash_constants.dart';
-import 'package:totals/models/account.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/models/profile.dart';
-import 'package:totals/repositories/profile_repository.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/services/data_sync/data_sync_repository.dart';
-import 'package:totals/services/data_sync/data_sync_scheduler.dart';
-import 'package:totals/services/data_sync/sync_models.dart';
-import 'package:totals/services/data_sync/sync_service.dart';
+import 'package:finomi/_redesign/screens/data_sync/data_sync_widgets.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/constants/cash_constants.dart';
+import 'package:finomi/models/account.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/models/profile.dart';
+import 'package:finomi/repositories/profile_repository.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/services/data_sync/data_sync_repository.dart';
+import 'package:finomi/services/data_sync/data_sync_scheduler.dart';
+import 'package:finomi/services/data_sync/sync_models.dart';
+import 'package:finomi/services/data_sync/sync_service.dart';
 
 /// Opens the full-screen, step-by-step rule editor. Returns true if saved.
 Future<bool?> showDataSyncRuleSheet(

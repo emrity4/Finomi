@@ -1,5 +1,5 @@
-import 'package:totals/models/account.dart';
-import 'package:totals/models/transaction.dart';
+import 'package:finomi/models/account.dart';
+import 'package:finomi/models/transaction.dart';
 
 String accountBalanceResolverKey(Account account) {
   return '${account.bank}:${account.accountNumber}';

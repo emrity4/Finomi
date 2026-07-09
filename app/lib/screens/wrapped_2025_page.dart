@@ -4,12 +4,12 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/screens/stats_recap_page.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/utils/text_utils.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/screens/stats_recap_page.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/utils/text_utils.dart';
 
 class Wrapped2025Page extends StatefulWidget {
   const Wrapped2025Page({super.key});

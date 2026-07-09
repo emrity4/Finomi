@@ -1,4 +1,4 @@
-package detached.totals
+package finomi
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -59,7 +59,7 @@ class SafeIncomingSmsReceiver : BroadcastReceiver() {
     }
 
     private companion object {
-        private const val TAG = "TotalsSmsReceiver"
+        private const val TAG = "FinomiSmsReceiver"
         private const val TELEPHONY_SHARED_PREFERENCES =
             "com.shounakmulay.android_telephony_plugin"
         private const val TELEPHONY_BACKGROUND_SETUP_HANDLE = "background_setup_handle"

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/theme/app_font_option.dart';
-import 'package:totals/theme/app_calendar_option.dart';
-import 'package:totals/theme/app_language_option.dart';
-import 'package:totals/services/widget_service.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/theme/app_font_option.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
+import 'package:finomi/theme/app_language_option.dart';
+import 'package:finomi/services/widget_service.dart';
 
 class ThemeProvider extends ChangeNotifier {
   static const String _themeKey = 'theme_mode';

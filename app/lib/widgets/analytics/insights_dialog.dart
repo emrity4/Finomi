@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/services/financial_insights.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/providers/transaction_provider.dart';
+import 'package:finomi/services/financial_insights.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/providers/transaction_provider.dart';
 import 'package:intl/intl.dart';
 
 class InsightsDialog extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:shelf/shelf.dart';
 import 'package:shelf_router/shelf_router.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/services/bank_config_service.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/services/bank_config_service.dart';
 
 /// Handler for bank-related API endpoints
 class BanksHandler {

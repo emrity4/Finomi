@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:totals/models/summary_models.dart';
-import 'package:totals/utils/gradients.dart';
-import 'package:totals/utils/text_utils.dart';
+import 'package:finomi/models/summary_models.dart';
+import 'package:finomi/utils/gradients.dart';
+import 'package:finomi/utils/text_utils.dart';
 
 class TotalBalanceCard extends StatefulWidget {
   final AllSummary? summary;

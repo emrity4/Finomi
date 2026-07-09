@@ -6,14 +6,14 @@ import 'package:flutter/rendering.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/constants/cash_constants.dart';
-import 'package:totals/data/all_banks_from_assets.dart';
-import 'package:totals/models/account.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/repositories/account_repository.dart';
-import 'package:totals/utils/account_share_payload.dart';
-import 'package:totals/widgets/account_share_qr_code.dart';
+import 'package:finomi/constants/cash_constants.dart';
+import 'package:finomi/data/all_banks_from_assets.dart';
+import 'package:finomi/models/account.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/repositories/account_repository.dart';
+import 'package:finomi/utils/account_share_payload.dart';
+import 'package:finomi/widgets/account_share_qr_code.dart';
 
 class AccountShareQrPage extends StatefulWidget {
   const AccountShareQrPage({super.key});

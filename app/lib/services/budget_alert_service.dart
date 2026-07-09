@@ -1,7 +1,7 @@
-import 'package:totals/models/budget.dart';
-import 'package:totals/services/budget_service.dart';
-import 'package:totals/services/notification_service.dart';
-import 'package:totals/services/notification_settings_service.dart';
+import 'package:finomi/models/budget.dart';
+import 'package:finomi/services/budget_service.dart';
+import 'package:finomi/services/notification_service.dart';
+import 'package:finomi/services/notification_settings_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class BudgetAlertService {

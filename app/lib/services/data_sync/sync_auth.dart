@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:totals/services/data_sync/data_sync_repository.dart';
-import 'package:totals/services/data_sync/sync_models.dart';
+import 'package:finomi/services/data_sync/data_sync_repository.dart';
+import 'package:finomi/services/data_sync/sync_models.dart';
 
 /// Builds outbound auth headers for a destination, reading the secret value
 /// from secure storage via [DataSyncRepository]. Secrets are never logged or

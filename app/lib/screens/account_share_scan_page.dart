@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
-import 'package:totals/models/user_account.dart';
-import 'package:totals/repositories/user_account_repository.dart';
-import 'package:totals/utils/account_share_payload.dart';
-import 'package:totals/widgets/account_import_preview_sheet.dart';
+import 'package:finomi/models/user_account.dart';
+import 'package:finomi/repositories/user_account_repository.dart';
+import 'package:finomi/utils/account_share_payload.dart';
+import 'package:finomi/widgets/account_import_preview_sheet.dart';
 
 class AccountShareScanPage extends StatefulWidget {
   const AccountShareScanPage({super.key});

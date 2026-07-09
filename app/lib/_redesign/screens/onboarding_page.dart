@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/_redesign/screens/redesign_shell.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/_redesign/screens/redesign_shell.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 const String _kOnboardingCompleteKey = 'has_completed_onboarding';
 

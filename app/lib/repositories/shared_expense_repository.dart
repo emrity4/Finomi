@@ -5,14 +5,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/shared_expense_group.dart';
-import 'package:totals/services/notification_service.dart';
-import 'package:totals/services/shared_expense_realtime_bus.dart';
-import 'package:totals/services/shared_expense_crypto_service.dart';
-import 'package:totals/services/shared_expense_push_notification_service.dart';
-import 'package:totals/services/shared_expense_vault_service.dart';
-import 'package:totals/services/totals_engine_client.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/shared_expense_group.dart';
+import 'package:finomi/services/notification_service.dart';
+import 'package:finomi/services/shared_expense_realtime_bus.dart';
+import 'package:finomi/services/shared_expense_crypto_service.dart';
+import 'package:finomi/services/shared_expense_push_notification_service.dart';
+import 'package:finomi/services/shared_expense_vault_service.dart';
+import 'package:finomi/services/finomi_engine_client.dart';
 import 'package:uuid/uuid.dart';
 
 void _sharedExpenseLog(String message) {

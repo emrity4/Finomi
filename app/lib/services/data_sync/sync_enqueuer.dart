@@ -3,12 +3,12 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:sqflite/sqflite.dart' hide Transaction;
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/services/background_sync_signal_service.dart';
-import 'package:totals/services/data_sync/data_sync_repository.dart';
-import 'package:totals/services/data_sync/data_sync_settings_service.dart';
-import 'package:totals/services/data_sync/sync_models.dart';
-import 'package:totals/services/data_sync/sync_service.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/services/background_sync_signal_service.dart';
+import 'package:finomi/services/data_sync/data_sync_repository.dart';
+import 'package:finomi/services/data_sync/data_sync_settings_service.dart';
+import 'package:finomi/services/data_sync/sync_models.dart';
+import 'package:finomi/services/data_sync/sync_service.dart';
 
 /// Hooks the repository write/delete choke-points into the outbox. Designed to
 /// be effectively free when Data Sync is disabled (the default): the very first

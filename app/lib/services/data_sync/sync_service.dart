@@ -3,18 +3,18 @@ import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:sqflite/sqflite.dart' hide Transaction;
-import 'package:totals/data/all_banks_from_assets.dart';
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/account.dart';
-import 'package:totals/models/budget.dart';
-import 'package:totals/models/category.dart' as models;
-import 'package:totals/models/transaction.dart';
-import 'package:totals/services/data_sync/data_sync_repository.dart';
-import 'package:totals/services/data_sync/data_sync_settings_service.dart';
-import 'package:totals/services/data_sync/outbound_http_client.dart';
-import 'package:totals/services/data_sync/sync_auth.dart';
-import 'package:totals/services/data_sync/sync_models.dart';
-import 'package:totals/services/notification_service.dart';
+import 'package:finomi/data/all_banks_from_assets.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/account.dart';
+import 'package:finomi/models/budget.dart';
+import 'package:finomi/models/category.dart' as models;
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/services/data_sync/data_sync_repository.dart';
+import 'package:finomi/services/data_sync/data_sync_settings_service.dart';
+import 'package:finomi/services/data_sync/outbound_http_client.dart';
+import 'package:finomi/services/data_sync/sync_auth.dart';
+import 'package:finomi/services/data_sync/sync_models.dart';
+import 'package:finomi/services/notification_service.dart';
 
 void _log(String message) {
   if (kDebugMode) debugPrint('debug: SyncService: $message');

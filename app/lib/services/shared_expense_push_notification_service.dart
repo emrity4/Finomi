@@ -4,14 +4,14 @@ import 'dart:ui';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
-import 'package:totals/models/shared_expense_group.dart';
-import 'package:totals/repositories/shared_expense_repository.dart';
-import 'package:totals/services/notification_intent_bus.dart';
-import 'package:totals/services/notification_service.dart';
-import 'package:totals/services/notification_settings_service.dart';
-import 'package:totals/services/shared_expense_notification_coordinator.dart';
-import 'package:totals/services/shared_expense_realtime_bus.dart';
-import 'package:totals/services/totals_engine_client.dart';
+import 'package:finomi/models/shared_expense_group.dart';
+import 'package:finomi/repositories/shared_expense_repository.dart';
+import 'package:finomi/services/notification_intent_bus.dart';
+import 'package:finomi/services/notification_service.dart';
+import 'package:finomi/services/notification_settings_service.dart';
+import 'package:finomi/services/shared_expense_notification_coordinator.dart';
+import 'package:finomi/services/shared_expense_realtime_bus.dart';
+import 'package:finomi/services/finomi_engine_client.dart';
 
 /// Doorbell-model push handler.
 ///

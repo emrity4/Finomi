@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/models/transaction.dart';
+import 'package:finomi/models/transaction.dart';
 
 class AccountReparseDebugResult {
   final String id;

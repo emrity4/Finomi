@@ -1,4 +1,4 @@
-package detached.totals
+package finomi
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -31,7 +31,7 @@ class BudgetWidgetProvider : HomeWidgetProvider() {
         private const val MAX_BUDGETS = 3
         private const val MATERIAL_ICONS_FONT_ASSET = "flutter_assets/fonts/MaterialIcons-Regular.otf"
         private const val ACTION_TOGGLE_BUDGET_PERIOD =
-            "detached.totals.action.TOGGLE_BUDGET_PERIOD"
+            "finomi.action.TOGGLE_BUDGET_PERIOD"
         private const val BUDGET_PERIOD_PREF_PREFIX = "budget_widget_period_"
 
         @Volatile
@@ -134,8 +134,8 @@ class BudgetWidgetProvider : HomeWidgetProvider() {
             val items = loadItems(widgetData, selectedPeriod)
             val emptyMessage = widgetData.getString(
                 "budget_widget_empty_message",
-                "Choose up to 3 budgets in Totals."
-            ) ?: "Choose up to 3 budgets in Totals."
+                "Choose up to 3 budgets in Finomi."
+            ) ?: "Choose up to 3 budgets in Finomi."
 
             bindClickAction(context, views, widgetId)
             applyResponsiveLayout(context, views, mode)

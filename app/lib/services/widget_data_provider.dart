@@ -1,10 +1,10 @@
-import 'package:totals/constants/cash_constants.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/repositories/category_repository.dart';
-import 'package:totals/repositories/transaction_repository.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/services/telebirr_bank_transfer_service.dart';
-import 'package:totals/utils/text_utils.dart';
+import 'package:finomi/constants/cash_constants.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/repositories/category_repository.dart';
+import 'package:finomi/repositories/transaction_repository.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/services/telebirr_bank_transfer_service.dart';
+import 'package:finomi/utils/text_utils.dart';
 
 class CategoryExpense {
   final int categoryId;

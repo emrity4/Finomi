@@ -1,4 +1,4 @@
-import 'package:totals/models/category.dart';
+import 'package:finomi/models/category.dart';
 
 int compareCategoriesAlphabetically(Category a, Category b) {
   final nameCompare =

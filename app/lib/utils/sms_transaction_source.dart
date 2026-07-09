@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:totals/sms_handler/telephony.dart';
+import 'package:finomi/sms_handler/telephony.dart';
 
 class SmsTransactionSource {
   static const String smsType = 'sms';

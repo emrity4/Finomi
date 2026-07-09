@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:totals/models/budget.dart';
-import 'package:totals/models/category.dart';
-import 'package:totals/repositories/category_repository.dart';
-import 'package:totals/services/budget_service.dart';
+import 'package:finomi/models/budget.dart';
+import 'package:finomi/models/category.dart';
+import 'package:finomi/repositories/category_repository.dart';
+import 'package:finomi/services/budget_service.dart';
 
 class BudgetWidgetMetricSnapshot {
   final double spentRaw;

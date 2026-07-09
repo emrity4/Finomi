@@ -1,7 +1,7 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/profile.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/profile.dart';
 
 class ProfileRepository {
   Future<List<Profile>> getProfiles() async {

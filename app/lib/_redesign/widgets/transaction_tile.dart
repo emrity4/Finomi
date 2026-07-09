@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/models/category.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/models/category.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 /// Shared transaction tile used across all redesign pages.
 ///

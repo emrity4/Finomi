@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/models/shared_expense_group.dart';
-import 'package:totals/repositories/shared_expense_repository.dart';
-import 'package:totals/services/notification_service.dart';
-import 'package:totals/services/notification_settings_service.dart';
+import 'package:finomi/models/shared_expense_group.dart';
+import 'package:finomi/repositories/shared_expense_repository.dart';
+import 'package:finomi/services/notification_service.dart';
+import 'package:finomi/services/notification_settings_service.dart';
 
 void _sharedExpenseBackgroundNotificationLog(String message) {
   if (kDebugMode) {

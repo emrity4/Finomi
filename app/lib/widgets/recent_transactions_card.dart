@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:totals/models/category.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/utils/text_utils.dart';
-import 'package:totals/utils/category_icons.dart';
-import 'package:totals/utils/category_style.dart';
+import 'package:finomi/models/category.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/utils/text_utils.dart';
+import 'package:finomi/utils/category_icons.dart';
+import 'package:finomi/utils/category_style.dart';
 
 class RecentTransactionsCard extends StatelessWidget {
   final List<Transaction> transactions;

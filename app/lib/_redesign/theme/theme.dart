@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/theme/app_font_option.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/theme/app_font_option.dart';
 
 class RedesignTheme {
   RedesignTheme._();

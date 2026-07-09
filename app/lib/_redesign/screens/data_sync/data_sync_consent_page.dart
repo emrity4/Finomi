@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:totals/_redesign/screens/data_sync/data_sync_widgets.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/services/data_sync/data_sync_settings_service.dart';
+import 'package:finomi/_redesign/screens/data_sync/data_sync_widgets.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/services/data_sync/data_sync_settings_service.dart';
 
 /// Full-screen consent gate shown before Data Sync can be enabled. The user
 /// must explicitly acknowledge that their data will leave the device. Pops

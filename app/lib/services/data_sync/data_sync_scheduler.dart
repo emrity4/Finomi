@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:workmanager/workmanager.dart';
-import 'package:totals/background/daily_spending_worker.dart';
-import 'package:totals/services/data_sync/data_sync_repository.dart';
-import 'package:totals/services/data_sync/data_sync_settings_service.dart';
+import 'package:finomi/background/daily_spending_worker.dart';
+import 'package:finomi/services/data_sync/data_sync_repository.dart';
+import 'package:finomi/services/data_sync/data_sync_settings_service.dart';
 
 /// Registers (or cancels) the periodic WorkManager task that drains the Data
 /// Sync outbox. Only scheduled when the feature is enabled AND at least one

@@ -8,33 +8,33 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/constants/cash_constants.dart';
-import 'package:totals/models/summary_models.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/providers/theme_provider.dart';
-import 'package:totals/repositories/profile_repository.dart';
-import 'package:totals/theme/app_calendar_option.dart';
-import 'package:totals/_redesign/screens/data_sync/data_sync_home_page.dart';
-import 'package:totals/_redesign/screens/redesign_shell.dart';
-import 'package:totals/_redesign/screens/loans_page.dart';
-import 'package:totals/screens/accounts_page.dart';
-import 'package:totals/screens/failed_parses_page.dart';
-import 'package:totals/screens/verify_payments_page.dart';
-import 'package:totals/screens/web_page.dart';
-import 'package:totals/services/advanced_settings_service.dart';
-import 'package:totals/services/data_export_import_service.dart';
-import 'package:totals/services/sms_service.dart';
-import 'package:totals/utils/app_date_format.dart';
-import 'package:totals/utils/text_utils.dart';
-import 'package:totals/_redesign/widgets/transaction_category_sheet.dart';
-import 'package:totals/_redesign/screens/todays_transactions_page.dart';
-import 'package:totals/_redesign/widgets/transaction_details_sheet.dart';
-import 'package:totals/_redesign/widgets/transaction_tile.dart';
-import 'package:totals/widgets/add_cash_transaction_sheet.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/constants/cash_constants.dart';
+import 'package:finomi/models/summary_models.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/providers/theme_provider.dart';
+import 'package:finomi/repositories/profile_repository.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
+import 'package:finomi/_redesign/screens/data_sync/data_sync_home_page.dart';
+import 'package:finomi/_redesign/screens/redesign_shell.dart';
+import 'package:finomi/_redesign/screens/loans_page.dart';
+import 'package:finomi/screens/accounts_page.dart';
+import 'package:finomi/screens/failed_parses_page.dart';
+import 'package:finomi/screens/verify_payments_page.dart';
+import 'package:finomi/screens/web_page.dart';
+import 'package:finomi/services/advanced_settings_service.dart';
+import 'package:finomi/services/data_export_import_service.dart';
+import 'package:finomi/services/sms_service.dart';
+import 'package:finomi/utils/app_date_format.dart';
+import 'package:finomi/utils/text_utils.dart';
+import 'package:finomi/_redesign/widgets/transaction_category_sheet.dart';
+import 'package:finomi/_redesign/screens/todays_transactions_page.dart';
+import 'package:finomi/_redesign/widgets/transaction_details_sheet.dart';
+import 'package:finomi/_redesign/widgets/transaction_tile.dart';
+import 'package:finomi/widgets/add_cash_transaction_sheet.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 class RedesignHomePage extends StatefulWidget {
   final ValueNotifier<bool>? toolsMenuOpenNotifier;
@@ -1096,42 +1096,42 @@ class _CenturionCardState extends State<_CenturionCard> {
       case AppColorTheme.defaults:
         return const LinearGradient(
           begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
-          colors: [Color(0xFF2a1f6e), Color(0xFF1e1550), Color(0xFF141040), Color(0xFF0c0828)],
+          colors: [Color(0xFF8679d9), Color(0xFF4832bf), Color(0xFF2f2699), Color(0xFF1c135f)],
         );
       case AppColorTheme.theme1:
         return const LinearGradient(
           begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
-          colors: [Color(0xFF3a0e0e), Color(0xFF2a0808), Color(0xFF1a0404), Color(0xFF0e0202)],
+          colors: [Color(0xFF8b2121), Color(0xFF641313), Color(0xFF3e0909), Color(0xFF210404)],
         );
       case AppColorTheme.theme2:
         return const LinearGradient(
           begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
-          colors: [Color(0xFF0f2848), Color(0xFF0c1e38), Color(0xFF081428), Color(0xFF040a18)],
+          colors: [Color(0xFF245fac), Color(0xFF1c4786), Color(0xFF13305f), Color(0xFF091739)],
         );
       case AppColorTheme.emerald:
         return const LinearGradient(
           begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
-          colors: [Color(0xFF0a2a18), Color(0xFF072010), Color(0xFF05160a), Color(0xFF020c06)],
+          colors: [Color(0xFF186439), Color(0xFF104c26), Color(0xFF0b3417), Color(0xFF041c0e)],
         );
       case AppColorTheme.sunset:
         return const LinearGradient(
           begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
-          colors: [Color(0xFF2a1204), Color(0xFF1e0c02), Color(0xFF140800), Color(0xFF0a0400)],
+          colors: [Color(0xFF642b09), Color(0xFF481c04), Color(0xFF301300), Color(0xFF180900)],
         );
       case AppColorTheme.ocean:
         return const LinearGradient(
           begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
-          colors: [Color(0xFF0a2230), Color(0xFF071a24), Color(0xFF041218), Color(0xFF020a0e)],
+          colors: [Color(0xFF185173), Color(0xFF103e56), Color(0xFF092b39), Color(0xFF041821)],
         );
       case AppColorTheme.rose:
         return const LinearGradient(
           begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
-          colors: [Color(0xFF2a0a14), Color(0xFF1e060e), Color(0xFF14030a), Color(0xFF0a0104)],
+          colors: [Color(0xFF641830), Color(0xFF470e21), Color(0xFF300717), Color(0xFF180209)],
         );
       case AppColorTheme.lavender:
         return const LinearGradient(
           begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
-          colors: [Color(0xFF1e0a30), Color(0xFF140824), Color(0xFF0e0418), Color(0xFF06020e)],
+          colors: [Color(0xFF481873), Color(0xFF2f1356), Color(0xFF210939), Color(0xFF0e0421)],
         );
     }
   }
@@ -1171,7 +1171,7 @@ class _CardNumberGroup extends StatelessWidget {
         letterSpacing: 6,
         color: Colors.white.withValues(alpha: 0.7),
         fontWeight: FontWeight.w500,
-        fontFamily: 'monospace',
+        fontFamily: GoogleFonts.sourceCodePro().fontFamily,
       ),
     );
   }
@@ -1209,7 +1209,7 @@ class _CardDetail extends StatelessWidget {
             fontSize: 14,
             fontWeight: FontWeight.w600,
             color: Colors.white.withValues(alpha: 0.55),
-            fontFamily: mono ? 'monospace' : null,
+            fontFamily: mono ? GoogleFonts.sourceCodePro().fontFamily : null,
             letterSpacing: mono ? 2 : 0.5,
           ),
         ),

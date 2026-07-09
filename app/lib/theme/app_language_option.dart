@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:totals/theme/app_calendar_option.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
 
 enum AppLanguageOption {
   english(

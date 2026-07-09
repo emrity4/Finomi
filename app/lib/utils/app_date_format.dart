@@ -2,9 +2,9 @@ import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 import 'package:kenat/kenat.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/providers/theme_provider.dart';
-import 'package:totals/theme/app_calendar_option.dart';
-import 'package:totals/theme/app_language_option.dart';
+import 'package:finomi/providers/theme_provider.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
+import 'package:finomi/theme/app_language_option.dart';
 
 class AppDateFormat {
   static const List<String> ethiopianMonthFull = <String>[

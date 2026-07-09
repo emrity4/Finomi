@@ -1,7 +1,7 @@
-import 'package:totals/models/bank.dart';
-import 'package:totals/models/sms_pattern.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/utils/transaction_link_utils.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/models/sms_pattern.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/utils/transaction_link_utils.dart';
 
 class PatternParser {
   /// Iterates through [patterns] that match the [senderAddress].

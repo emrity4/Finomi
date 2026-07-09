@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:totals/models/category.dart';
+import 'package:finomi/models/category.dart';
 
 class CategoryColorOption {
   final String key;

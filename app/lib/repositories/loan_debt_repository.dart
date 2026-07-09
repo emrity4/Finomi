@@ -1,7 +1,7 @@
 import 'package:sqflite/sqflite.dart';
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/loan_debt_entry.dart';
-import 'package:totals/services/notification_service.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/loan_debt_entry.dart';
+import 'package:finomi/services/notification_service.dart';
 
 class LoanDebtRepaymentAllocation {
   final String loanDebtTransactionReference;

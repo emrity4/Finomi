@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/services/data_sync/sync_models.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/services/data_sync/sync_models.dart';
 
 /// Shared building blocks for the Data Sync screens. Public counterparts of the
 /// file-private widgets used elsewhere in the redesign, matching the same

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:totals/theme/app_calendar_option.dart';
-import 'package:totals/utils/app_calendar_date_utils.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
+import 'package:finomi/utils/app_calendar_date_utils.dart';
 
 class Budget {
   final int? id;

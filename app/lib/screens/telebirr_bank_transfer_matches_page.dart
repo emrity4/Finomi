@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/services/telebirr_bank_transfer_service.dart';
-import 'package:totals/utils/text_utils.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/services/telebirr_bank_transfer_service.dart';
+import 'package:finomi/utils/text_utils.dart';
 
 class TelebirrBankTransferMatchesPage extends StatefulWidget {
   const TelebirrBankTransferMatchesPage({super.key});

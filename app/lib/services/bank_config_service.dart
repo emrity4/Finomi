@@ -3,9 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:totals/database/database_helper.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/constants/cash_constants.dart';
+import 'package:finomi/database/database_helper.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/constants/cash_constants.dart';
 
 class BankConfigService {
   static const String _banksAssetPath = 'assets/banks.json';

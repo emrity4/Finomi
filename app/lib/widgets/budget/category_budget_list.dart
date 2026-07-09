@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/providers/budget_provider.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/widgets/budget/budget_card.dart';
-import 'package:totals/models/budget.dart';
+import 'package:finomi/providers/budget_provider.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/widgets/budget/budget_card.dart';
+import 'package:finomi/models/budget.dart';
 
 class CategoryBudgetList extends StatelessWidget {
   final Function(Budget)? onBudgetTap;

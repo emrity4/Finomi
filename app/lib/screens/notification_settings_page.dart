@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/models/category.dart';
-import 'package:totals/repositories/category_repository.dart';
-import 'package:totals/repositories/loan_debt_repository.dart';
-import 'package:totals/services/data_sync/data_sync_settings_service.dart';
-import 'package:totals/services/notification_service.dart';
-import 'package:totals/services/notification_scheduler.dart';
-import 'package:totals/services/notification_settings_service.dart';
-import 'package:totals/services/shared_expense_push_notification_service.dart';
-import 'package:totals/services/widget_data_provider.dart';
-import 'package:totals/services/widget_refresh_scheduler.dart';
-import 'package:totals/services/widget_refresh_settings_service.dart';
-import 'package:totals/services/widget_refresh_state_service.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/utils/category_icons.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/models/category.dart';
+import 'package:finomi/repositories/category_repository.dart';
+import 'package:finomi/repositories/loan_debt_repository.dart';
+import 'package:finomi/services/data_sync/data_sync_settings_service.dart';
+import 'package:finomi/services/notification_service.dart';
+import 'package:finomi/services/notification_scheduler.dart';
+import 'package:finomi/services/notification_settings_service.dart';
+import 'package:finomi/services/shared_expense_push_notification_service.dart';
+import 'package:finomi/services/widget_data_provider.dart';
+import 'package:finomi/services/widget_refresh_scheduler.dart';
+import 'package:finomi/services/widget_refresh_settings_service.dart';
+import 'package:finomi/services/widget_refresh_state_service.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/utils/category_icons.dart';
 
 class NotificationSettingsPage extends StatefulWidget {
   const NotificationSettingsPage({super.key});

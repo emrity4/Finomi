@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
-import 'package:totals/models/budget.dart';
-import 'package:totals/repositories/budget_repository.dart';
-import 'package:totals/services/budget_service.dart';
-import 'package:totals/services/budget_alert_service.dart';
-import 'package:totals/services/widget_service.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/theme/app_calendar_option.dart';
+import 'package:finomi/models/budget.dart';
+import 'package:finomi/repositories/budget_repository.dart';
+import 'package:finomi/services/budget_service.dart';
+import 'package:finomi/services/budget_alert_service.dart';
+import 'package:finomi/services/widget_service.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
 
-export 'package:totals/services/budget_service.dart' show BudgetStatus;
+export 'package:finomi/services/budget_service.dart' show BudgetStatus;
 
 class BudgetProvider with ChangeNotifier {
   final BudgetRepository _budgetRepository = BudgetRepository();

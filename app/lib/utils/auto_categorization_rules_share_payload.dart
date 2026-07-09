@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:totals/models/auto_categorization.dart';
-import 'package:totals/models/category.dart';
+import 'package:finomi/models/auto_categorization.dart';
+import 'package:finomi/models/category.dart';
 
 String? _asText(dynamic value) {
   final text = value?.toString().trim();

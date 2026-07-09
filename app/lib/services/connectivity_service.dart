@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart';
-import 'package:totals/services/data_sync/sync_service.dart';
+import 'package:finomi/services/data_sync/sync_service.dart';
 
 /// The app's first long-lived connectivity listener. When the device
 /// transitions from offline to online it kicks a Data Sync drain so queued

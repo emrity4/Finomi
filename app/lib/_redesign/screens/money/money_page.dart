@@ -5,37 +5,37 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/constants/cash_constants.dart';
-import 'package:totals/data/all_banks_from_assets.dart';
-import 'package:totals/data/consts.dart';
-import 'package:totals/models/bank.dart' as bank_model;
-import 'package:totals/models/category.dart' show Category;
-import 'package:totals/models/summary_models.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/repositories/account_repository.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/constants/cash_constants.dart';
+import 'package:finomi/data/all_banks_from_assets.dart';
+import 'package:finomi/data/consts.dart';
+import 'package:finomi/models/bank.dart' as bank_model;
+import 'package:finomi/models/category.dart' show Category;
+import 'package:finomi/models/summary_models.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/repositories/account_repository.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:totals/services/account_registration_service.dart';
-import 'package:totals/services/account_transaction_reparse_service.dart';
-import 'package:totals/services/account_sync_status_service.dart';
-import 'package:totals/services/bank_detection_service.dart';
-import 'package:totals/services/fallback_sms_parser.dart';
-import 'package:totals/services/sms_config_service.dart';
-import 'package:totals/utils/app_date_format.dart';
-import 'package:totals/utils/text_utils.dart';
-import 'package:totals/_redesign/screens/loans_page.dart';
-import 'package:totals/widgets/add_cash_transaction_sheet.dart';
-import 'package:totals/widgets/inline_bank_selector.dart';
-import 'package:totals/_redesign/widgets/transaction_category_sheet.dart';
-import 'package:totals/_redesign/widgets/transaction_details_sheet.dart';
-import 'package:totals/_redesign/widgets/transaction_tile.dart';
+import 'package:finomi/services/account_registration_service.dart';
+import 'package:finomi/services/account_transaction_reparse_service.dart';
+import 'package:finomi/services/account_sync_status_service.dart';
+import 'package:finomi/services/bank_detection_service.dart';
+import 'package:finomi/services/fallback_sms_parser.dart';
+import 'package:finomi/services/sms_config_service.dart';
+import 'package:finomi/utils/app_date_format.dart';
+import 'package:finomi/utils/text_utils.dart';
+import 'package:finomi/_redesign/screens/loans_page.dart';
+import 'package:finomi/widgets/add_cash_transaction_sheet.dart';
+import 'package:finomi/widgets/inline_bank_selector.dart';
+import 'package:finomi/_redesign/widgets/transaction_category_sheet.dart';
+import 'package:finomi/_redesign/widgets/transaction_details_sheet.dart';
+import 'package:finomi/_redesign/widgets/transaction_tile.dart';
 import 'package:kenat/kenat.dart';
-import 'package:totals/providers/theme_provider.dart';
-import 'package:totals/theme/app_calendar_option.dart';
-import 'package:totals/theme/app_language_option.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/l10n/app_localizations.dart';
+import 'package:finomi/providers/theme_provider.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
+import 'package:finomi/theme/app_language_option.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/l10n/app_localizations.dart';
 
 class RedesignMoneyPage extends StatefulWidget {
   const RedesignMoneyPage({super.key});
@@ -12803,7 +12803,7 @@ class _BankSelectorStrip extends StatelessWidget {
                     padding: const EdgeInsets.all(2),
                     child: ClipOval(
                       child: Image.asset(
-                        'assets/icon/totals_icon.png',
+                        'assets/icon/finomi_icon.png',
                         width: 36,
                         height: 36,
                         fit: BoxFit.cover,

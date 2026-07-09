@@ -1,4 +1,4 @@
-name: totals
+name: finomi
 description: "Finomi - Personal finance tracker"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -93,9 +93,9 @@ dev_dependencies:
 flutter_launcher_icons:
   android: true
   ios: false
-  image_path: "assets/icon/totals_icon.png" # Path to your app icon
+  image_path: "assets/icon/finomi_icon.png" # Path to your app icon
   adaptive_icon_background: "#ffffff" # (Optional) For Android adaptive icons
-  adaptive_icon_foreground: "assets/icon/totals_icon.png"
+  adaptive_icon_foreground: "assets/icon/finomi_icon.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -113,8 +113,8 @@ flutter:
     - assets/fallback_sms_patterns.json
     - assets/webapp/
     - assets/webapp/assets/
-    - assets/icon/totals_icon.png
-    - assets/icon/totals_logo.svg
+    - assets/icon/finomi_icon.png
+    - assets/icon/finomi_logo.svg
     - PRIVACY_POLICY.md
   uses-material-design: true
 

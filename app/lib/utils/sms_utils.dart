@@ -1,4 +1,4 @@
-import 'package:totals/data/consts.dart';
+import 'package:finomi/data/consts.dart';
 
 class SmsUtils {
   static Map<String, dynamic> extractCBETransactionDetails(String message) {

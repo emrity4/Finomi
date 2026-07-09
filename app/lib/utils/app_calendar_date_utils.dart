@@ -1,5 +1,5 @@
 import 'package:kenat/kenat.dart';
-import 'package:totals/theme/app_calendar_option.dart';
+import 'package:finomi/theme/app_calendar_option.dart';
 
 class AppCalendarDateUtils {
   const AppCalendarDateUtils._();

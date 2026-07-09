@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:totals/repositories/user_account_repository.dart';
-import 'package:totals/data/all_banks_from_assets.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/models/user_account.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/widgets/add_user_account_form.dart';
-import 'package:totals/screens/account_share_qr_page.dart';
-import 'package:totals/screens/account_share_scan_page.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/constants/cash_constants.dart';
+import 'package:finomi/repositories/user_account_repository.dart';
+import 'package:finomi/data/all_banks_from_assets.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/models/user_account.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/widgets/add_user_account_form.dart';
+import 'package:finomi/screens/account_share_qr_page.dart';
+import 'package:finomi/screens/account_share_scan_page.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/constants/cash_constants.dart';
 
 class AccountsPage extends StatefulWidget {
   const AccountsPage({super.key});

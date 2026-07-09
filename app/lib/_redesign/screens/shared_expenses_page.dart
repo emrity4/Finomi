@@ -11,24 +11,24 @@ import 'package:pretty_qr_code/pretty_qr_code.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/_redesign/screens/shared_expense_vault_sheets.dart';
-import 'package:totals/_redesign/theme/app_colors.dart';
-import 'package:totals/_redesign/theme/app_icons.dart';
-import 'package:totals/_redesign/widgets/transaction_details_sheet.dart';
-import 'package:totals/constants/cash_constants.dart';
-import 'package:totals/data/all_banks_from_assets.dart';
-import 'package:totals/l10n/app_localizations.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/models/shared_expense_group.dart';
-import 'package:totals/models/summary_models.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/repositories/account_repository.dart';
-import 'package:totals/repositories/shared_expense_repository.dart';
-import 'package:totals/services/shared_expense_realtime_bus.dart';
-import 'package:totals/services/shared_expense_vault_service.dart';
-import 'package:totals/services/totals_engine_client.dart';
-import 'package:totals/utils/text_utils.dart' show formatAmountCompact;
+import 'package:finomi/_redesign/screens/shared_expense_vault_sheets.dart';
+import 'package:finomi/_redesign/theme/app_colors.dart';
+import 'package:finomi/_redesign/theme/app_icons.dart';
+import 'package:finomi/_redesign/widgets/transaction_details_sheet.dart';
+import 'package:finomi/constants/cash_constants.dart';
+import 'package:finomi/data/all_banks_from_assets.dart';
+import 'package:finomi/l10n/app_localizations.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/models/shared_expense_group.dart';
+import 'package:finomi/models/summary_models.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/repositories/account_repository.dart';
+import 'package:finomi/repositories/shared_expense_repository.dart';
+import 'package:finomi/services/shared_expense_realtime_bus.dart';
+import 'package:finomi/services/shared_expense_vault_service.dart';
+import 'package:finomi/services/finomi_engine_client.dart';
+import 'package:finomi/utils/text_utils.dart' show formatAmountCompact;
 
 part 'shared_expenses_page.analytics.dart';
 part 'shared_expenses_page.ios_widgets.dart';
@@ -1922,7 +1922,7 @@ class _RedesignSharedExpensesPageState extends State<RedesignSharedExpensesPage>
                         const SizedBox(height: 12),
                         _EngineStatusBanner(
                           label: context.l10nText(
-                            'Totals Engine is not reachable',
+                            'Finomi Engine is not reachable',
                           ),
                         ),
                       ],

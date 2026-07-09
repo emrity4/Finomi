@@ -2,12 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/models/shared_expense_group.dart';
-import 'package:totals/repositories/shared_expense_repository.dart';
-import 'package:totals/services/notification_service.dart';
-import 'package:totals/services/shared_expense_realtime_bus.dart';
-import 'package:totals/services/totals_engine_client.dart';
-import 'package:totals/utils/text_utils.dart';
+import 'package:finomi/models/shared_expense_group.dart';
+import 'package:finomi/repositories/shared_expense_repository.dart';
+import 'package:finomi/services/notification_service.dart';
+import 'package:finomi/services/shared_expense_realtime_bus.dart';
+import 'package:finomi/services/finomi_engine_client.dart';
+import 'package:finomi/utils/text_utils.dart';
 
 void _sharedExpenseNotificationLog(String message) {
   if (kDebugMode) {

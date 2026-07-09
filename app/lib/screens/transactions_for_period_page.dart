@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:totals/models/transaction.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/widgets/analytics/transactions_list.dart';
-import 'package:totals/widgets/categorize_transaction_sheet.dart';
-import 'package:totals/widgets/category_filter_button.dart';
-import 'package:totals/widgets/category_filter_sheet.dart';
+import 'package:finomi/models/transaction.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/widgets/analytics/transactions_list.dart';
+import 'package:finomi/widgets/categorize_transaction_sheet.dart';
+import 'package:finomi/widgets/category_filter_button.dart';
+import 'package:finomi/widgets/category_filter_sheet.dart';
 
 class TransactionsForPeriodPage extends StatefulWidget {
   final List<Transaction> transactions;

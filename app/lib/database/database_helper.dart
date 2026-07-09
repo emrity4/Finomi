@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totals/models/category.dart' as models;
+import 'package:finomi/models/category.dart' as models;
 
 class DatabaseHelper {
   static final DatabaseHelper instance = DatabaseHelper._init();

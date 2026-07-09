@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:workmanager/workmanager.dart';
-import 'package:totals/background/daily_spending_worker.dart';
+import 'package:finomi/background/daily_spending_worker.dart';
 
 class WidgetRefreshScheduler {
   WidgetRefreshScheduler._();

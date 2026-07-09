@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:totals/models/bank.dart';
-import 'package:totals/services/bank_config_service.dart';
-import 'package:totals/models/summary_models.dart';
-import 'package:totals/widgets/accounts_summary.dart';
-import 'package:totals/widgets/total_balance_card.dart';
-import 'package:totals/constants/cash_constants.dart';
-import 'package:totals/providers/transaction_provider.dart';
-import 'package:totals/widgets/add_cash_transaction_sheet.dart';
+import 'package:finomi/models/bank.dart';
+import 'package:finomi/services/bank_config_service.dart';
+import 'package:finomi/models/summary_models.dart';
+import 'package:finomi/widgets/accounts_summary.dart';
+import 'package:finomi/widgets/total_balance_card.dart';
+import 'package:finomi/constants/cash_constants.dart';
+import 'package:finomi/providers/transaction_provider.dart';
+import 'package:finomi/widgets/add_cash_transaction_sheet.dart';
 import 'package:provider/provider.dart';
-import 'package:totals/utils/text_utils.dart';
+import 'package:finomi/utils/text_utils.dart';
 
 class BankDetail extends StatefulWidget {
   final int bankId;

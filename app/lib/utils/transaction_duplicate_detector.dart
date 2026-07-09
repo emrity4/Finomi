@@ -1,4 +1,4 @@
-import 'package:totals/models/transaction.dart';
+import 'package:finomi/models/transaction.dart';
 
 const int dashenCanonicalMaskPattern = 3;
 const int dashenLegacyMaskPattern = 4;
