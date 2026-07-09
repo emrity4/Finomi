@@ -1044,7 +1044,7 @@ class _RefreshButton extends StatelessWidget {
           ),
         ),
         icon: isLoading
-            ? const SizedBox(
+            ? SizedBox(
                 width: 16,
                 height: 16,
                 child: CircularProgressIndicator(
@@ -2955,7 +2955,7 @@ class _BalanceBreakdownSheetState extends State<_BalanceBreakdownSheet> {
                                 Container(
                                   width: 10,
                                   height: 10,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     color: Theme.of(context).colorScheme.primary,
                                     shape: BoxShape.circle,
                                   ),
