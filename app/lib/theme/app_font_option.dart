@@ -17,6 +17,30 @@ enum AppFontOption {
   california(
     storageValue: 'california',
     label: 'California',
+  ),
+  inter(
+    storageValue: 'inter',
+    label: 'Inter',
+  ),
+  dmSans(
+    storageValue: 'dm_sans',
+    label: 'DM Sans',
+  ),
+  plusJakartaSans(
+    storageValue: 'plus_jakarta_sans',
+    label: 'Plus Jakarta Sans',
+  ),
+  outfit(
+    storageValue: 'outfit',
+    label: 'Outfit',
+  ),
+  manrope(
+    storageValue: 'manrope',
+    label: 'Manrope',
+  ),
+  sora(
+    storageValue: 'sora',
+    label: 'Sora',
   );
 
   const AppFontOption({
@@ -37,6 +61,18 @@ enum AppFontOption {
         return 'Matterhorn';
       case AppFontOption.california:
         return 'California';
+      case AppFontOption.inter:
+        return 'Inter';
+      case AppFontOption.dmSans:
+        return 'DM Sans';
+      case AppFontOption.plusJakartaSans:
+        return 'Plus Jakarta Sans';
+      case AppFontOption.outfit:
+        return 'Outfit';
+      case AppFontOption.manrope:
+        return 'Manrope';
+      case AppFontOption.sora:
+        return 'Sora';
     }
   }
 
@@ -84,6 +120,42 @@ class AppFontTheme {
           textTheme: GoogleFonts.spaceGroteskTextTheme(base.textTheme),
           primaryTextTheme:
               GoogleFonts.spaceGroteskTextTheme(base.primaryTextTheme),
+        );
+      case AppFontOption.inter:
+        return base.copyWith(
+          textTheme: GoogleFonts.interTextTheme(base.textTheme),
+          primaryTextTheme:
+              GoogleFonts.interTextTheme(base.primaryTextTheme),
+        );
+      case AppFontOption.dmSans:
+        return base.copyWith(
+          textTheme: GoogleFonts.dmSansTextTheme(base.textTheme),
+          primaryTextTheme:
+              GoogleFonts.dmSansTextTheme(base.primaryTextTheme),
+        );
+      case AppFontOption.plusJakartaSans:
+        return base.copyWith(
+          textTheme: GoogleFonts.plusJakartaSansTextTheme(base.textTheme),
+          primaryTextTheme:
+              GoogleFonts.plusJakartaSansTextTheme(base.primaryTextTheme),
+        );
+      case AppFontOption.outfit:
+        return base.copyWith(
+          textTheme: GoogleFonts.outfitTextTheme(base.textTheme),
+          primaryTextTheme:
+              GoogleFonts.outfitTextTheme(base.primaryTextTheme),
+        );
+      case AppFontOption.manrope:
+        return base.copyWith(
+          textTheme: GoogleFonts.manropeTextTheme(base.textTheme),
+          primaryTextTheme:
+              GoogleFonts.manropeTextTheme(base.primaryTextTheme),
+        );
+      case AppFontOption.sora:
+        return base.copyWith(
+          textTheme: GoogleFonts.soraTextTheme(base.textTheme),
+          primaryTextTheme:
+              GoogleFonts.soraTextTheme(base.primaryTextTheme),
         );
       case AppFontOption.sfProDisplay:
       case AppFontOption.matterhorn:
