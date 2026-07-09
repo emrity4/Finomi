@@ -1,4 +1,4 @@
-package finomi
+package finomi.app
 
 import android.content.BroadcastReceiver
 import android.content.Context

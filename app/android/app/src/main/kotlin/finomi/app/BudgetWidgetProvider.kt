@@ -1,4 +1,4 @@
-package finomi
+package finomi.app
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -31,7 +31,7 @@ class BudgetWidgetProvider : HomeWidgetProvider() {
         private const val MAX_BUDGETS = 3
         private const val MATERIAL_ICONS_FONT_ASSET = "flutter_assets/fonts/MaterialIcons-Regular.otf"
         private const val ACTION_TOGGLE_BUDGET_PERIOD =
-            "finomi.action.TOGGLE_BUDGET_PERIOD"
+            "finomi.app.action.TOGGLE_BUDGET_PERIOD"
         private const val BUDGET_PERIOD_PREF_PREFIX = "budget_widget_period_"
 
         @Volatile

@@ -1,4 +1,4 @@
-package finomi
+package finomi.app
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -24,9 +24,9 @@ import kotlin.math.roundToInt
 class ExpenseWidgetProvider : HomeWidgetProvider() {
     companion object {
         private const val ACTION_TOGGLE_VISIBILITY =
-            "finomi.widget.TOGGLE_VISIBILITY"
+            "finomi.app.widget.TOGGLE_VISIBILITY"
         private const val ACTION_TOGGLE_FLOW =
-            "finomi.widget.TOGGLE_FLOW"
+            "finomi.app.widget.TOGGLE_FLOW"
         private const val PREF_KEY_HIDDEN_PREFIX = "expense_widget_hidden_"
         private const val PREF_KEY_FLOW_PREFIX = "expense_widget_show_income_"
     }
