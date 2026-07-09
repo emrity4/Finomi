@@ -258,7 +258,7 @@ class _RedesignHomePageState extends State<RedesignHomePage>
             child: Stack(
               children: [
                 RefreshIndicator(
-                  color: AppColors.primaryLight,
+                  color: Theme.of(context).colorScheme.primary,
                   onRefresh: provider.loadData,
                   child: SingleChildScrollView(
                     physics: const AlwaysScrollableScrollPhysics(),
@@ -324,7 +324,7 @@ class _RedesignHomePageState extends State<RedesignHomePage>
                                         style: TextButton.styleFrom(
                                           padding: EdgeInsets.zero,
                                           foregroundColor:
-                                              AppColors.primaryLight,
+                                              Theme.of(context).colorScheme.primary,
                                         ),
                                         child:
                                             Text(context.l10nText('See all')),
@@ -600,7 +600,7 @@ class _RedesignHomePageState extends State<RedesignHomePage>
             ElevatedButton(
               onPressed: () => Navigator.pop(ctx, true),
               style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.primaryDark,
+                backgroundColor: Theme.of(context).colorScheme.primary,
                 foregroundColor: AppColors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -863,7 +863,7 @@ class _TotalBalanceCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: AppColors.primaryDark,
+          color: Theme.of(context).colorScheme.primary,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
@@ -1049,7 +1049,7 @@ class _RefreshButton extends StatelessWidget {
                 height: 16,
                 child: CircularProgressIndicator(
                   strokeWidth: 2,
-                  color: AppColors.primaryLight,
+                  color: Theme.of(context).colorScheme.primary,
                 ),
               )
             : const Icon(AppIcons.refresh, size: 18),
@@ -1171,7 +1171,7 @@ class _HomeToolsFabMenuState extends State<_HomeToolsFabMenu> {
     const itemHeight = 48.0;
     const itemGap = 8.0;
     const menuGap = 8.0;
-    const actionColor = AppColors.primaryLight;
+    final actionColor = Theme.of(context).colorScheme.primary;
     final visibleItems = widget.visibleItems.isEmpty
         ? AdvancedSettingsService.defaultToolsFabItems
         : widget.visibleItems;
@@ -1263,7 +1263,7 @@ class _HomeToolsFabMenuState extends State<_HomeToolsFabMenu> {
               child: FloatingActionButton(
                 heroTag: 'home-tools-fab',
                 onPressed: _toggleMenu,
-                backgroundColor: AppColors.primaryLight,
+                backgroundColor: Theme.of(context).colorScheme.primary,
                 foregroundColor: AppColors.white,
                 elevation: 0,
                 focusElevation: 0,
@@ -1505,7 +1505,7 @@ class _InsightCard extends StatelessWidget {
                   FilledButton.icon(
                     onPressed: isImportingBackup ? null : onImportBackupTap,
                     style: FilledButton.styleFrom(
-                      backgroundColor: AppColors.primaryDark,
+                      backgroundColor: Theme.of(context).colorScheme.primary,
                       foregroundColor: AppColors.white,
                       padding: const EdgeInsets.symmetric(
                         horizontal: 14,
@@ -1753,7 +1753,7 @@ class _HomeLoadingSkeletonState extends State<_HomeLoadingSkeleton>
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.primaryDark,
+        color: Theme.of(context).colorScheme.primary,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
@@ -1978,7 +1978,7 @@ class _HomeLoadingSkeletonState extends State<_HomeLoadingSkeleton>
             Text(
               context.l10nText('See all'),
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: AppColors.primaryLight.withValues(alpha: 0.7),
+                    color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.7),
                     fontWeight: FontWeight.w500,
                   ),
             ),
@@ -2228,17 +2228,17 @@ class _SelectionBar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
-        color: AppColors.primaryLight.withValues(alpha: 0.08),
+        color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.08),
         borderRadius: BorderRadius.circular(10),
         border:
-            Border.all(color: AppColors.primaryLight.withValues(alpha: 0.3)),
+            Border.all(color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.3)),
       ),
       child: Row(
         children: [
           Text(
             '$count selected',
             style: theme.textTheme.bodySmall?.copyWith(
-              color: AppColors.primaryDark,
+color: Theme.of(context).colorScheme.primary,
               fontWeight: FontWeight.w600,
             ),
           ),
@@ -2956,7 +2956,7 @@ class _BalanceBreakdownSheetState extends State<_BalanceBreakdownSheet> {
                                   width: 10,
                                   height: 10,
                                   decoration: const BoxDecoration(
-                                    color: AppColors.primaryLight,
+                                    color: Theme.of(context).colorScheme.primary,
                                     shape: BoxShape.circle,
                                   ),
                                 ),
@@ -3137,11 +3137,11 @@ class _PeriodChip extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         decoration: BoxDecoration(
-          color: selected ? AppColors.primaryDark : Colors.transparent,
+          color: selected ? Theme.of(context).colorScheme.primary : Colors.transparent,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: selected
-                ? AppColors.primaryDark
+                ? Theme.of(context).colorScheme.primary
                 : AppColors.borderColor(context),
           ),
         ),
