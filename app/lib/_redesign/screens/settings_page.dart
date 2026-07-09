@@ -1809,7 +1809,7 @@ class _ProfileCard extends StatelessWidget {
               Container(
                 width: 52,
                 height: 52,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.primary,
                   shape: BoxShape.circle,
                 ),
@@ -1980,7 +1980,7 @@ class _SupportDevelopersCard extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(
+              Icon(
                 AppIcons.favorite_rounded,
                 color: Theme.of(context).colorScheme.primary,
                 size: 20,
@@ -2378,7 +2378,7 @@ class _AboutStepCard extends StatelessWidget {
               child: Center(
                 child: Text(
                   '$step',
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Theme.of(context).colorScheme.primary,
                     fontWeight: FontWeight.w700,
                     fontSize: 14,
@@ -2603,7 +2603,7 @@ class _RedesignFAQPageState extends State<_RedesignFAQPage> {
                       color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
                       shape: BoxShape.circle,
                     ),
-                    child: const Icon(
+                    child: Icon(
                       AppIcons.sms_outlined,
                       color: Theme.of(context).colorScheme.primary,
                       size: 20,
@@ -2635,7 +2635,7 @@ class _RedesignFAQPageState extends State<_RedesignFAQPage> {
                       onPressed: _openSupportChat,
                       style: OutlinedButton.styleFrom(
                         foregroundColor: Theme.of(context).colorScheme.primary,
-                        side: const BorderSide(color: Theme.of(context).colorScheme.primary),
+                        side: BorderSide(color: Theme.of(context).colorScheme.primary),
                         padding: const EdgeInsets.symmetric(vertical: 12),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
