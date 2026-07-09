@@ -5,12 +5,16 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:uuid/uuid.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:totals/_redesign/theme/app_colors.dart';
 import 'package:totals/constants/cash_constants.dart';
 import 'package:totals/models/summary_models.dart';
 import 'package:totals/models/transaction.dart';
 import 'package:totals/providers/transaction_provider.dart';
 import 'package:totals/providers/theme_provider.dart';
+import 'package:totals/repositories/profile_repository.dart';
 import 'package:totals/theme/app_calendar_option.dart';
 import 'package:totals/_redesign/screens/data_sync/data_sync_home_page.dart';
 import 'package:totals/_redesign/screens/redesign_shell.dart';
@@ -268,27 +272,15 @@ class _RedesignHomePageState extends State<RedesignHomePage>
                         : Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              _TotalBalanceCard(
+                              _CenturionCard(
                                 totalBalance: totalBalance,
-                                todayIncome: todayTotals.income,
-                                todayExpense: todayTotals.expense,
-                                weekIncome: weekTotals.income,
-                                weekExpense: weekTotals.expense,
                                 showBalance: _showBalance,
                                 onToggleBalance: () {
                                   setState(() {
                                     _showBalance = !_showBalance;
                                   });
                                 },
-                                hasAddedBankAccounts: hasAddedBankAccounts,
                                 onCardTap: _openAccountsPage,
-                                onBreakdownTap: () => _openBalanceBreakdown(
-                                  totalBalance: totalBalance,
-                                  monthTransactions: monthTransactionsCount,
-                                  selfTransferCount: selfTransferCount,
-                                  monthTotals: monthTotals,
-                                  thirtyDayTotals: thirtyDayTotals,
-                                ),
                               ),
                               const SizedBox(height: 12),
                               _InsightCard(
@@ -819,201 +811,673 @@ String _transactionTimeLabel(Transaction transaction, BuildContext context) {
   return '$hh:$mm';
 }
 
-class _TotalBalanceCard extends StatelessWidget {
+// ─── Centurion ATM Card ──────────────────────────────────────────────────────
+
+class _CenturionCard extends StatefulWidget {
   final double totalBalance;
-  final double todayIncome;
-  final double todayExpense;
-  final double weekIncome;
-  final double weekExpense;
   final bool showBalance;
   final VoidCallback onToggleBalance;
-  final bool hasAddedBankAccounts;
   final VoidCallback onCardTap;
-  final VoidCallback onBreakdownTap;
 
-  const _TotalBalanceCard({
+  const _CenturionCard({
     required this.totalBalance,
-    required this.todayIncome,
-    required this.todayExpense,
-    required this.weekIncome,
-    required this.weekExpense,
     required this.showBalance,
     required this.onToggleBalance,
-    required this.hasAddedBankAccounts,
     required this.onCardTap,
-    required this.onBreakdownTap,
   });
 
   @override
+  State<_CenturionCard> createState() => _CenturionCardState();
+}
+
+class _CenturionCardState extends State<_CenturionCard> {
+  String _cardholderName = 'Add Profile Name';
+  String _cardNumber = '5484 000000 00000';
+
+  @override
+  void initState() {
+    super.initState();
+    _loadCardData();
+  }
+
+  Future<void> _loadCardData() async {
+    final repo = ProfileRepository();
+    final profile = await repo.getActiveProfile();
+    final name = profile?.name ?? 'Add Profile Name';
+
+    final prefs = await SharedPreferences.getInstance();
+    const key = 'device_card_id';
+    String deviceId = prefs.getString(key) ?? '';
+    if (deviceId.isEmpty) {
+      deviceId = const Uuid().v4();
+      await prefs.setString(key, deviceId);
+    }
+
+    final cardNum = _generateCardNumber(deviceId);
+
+    if (mounted) {
+      setState(() {
+        _cardholderName = name.trim().isEmpty ? 'Add Profile Name' : name;
+        _cardNumber = cardNum;
+      });
+    }
+  }
+
+  String _generateCardNumber(String deviceId) {
+    const fixed = '5484';
+    int hash = 0;
+    for (int i = 0; i < deviceId.length; i++) {
+      hash = ((hash << 5) - hash) + deviceId.codeUnitAt(i);
+      hash = hash & hash;
+    }
+    hash = hash.abs();
+    final seed = hash % 100000000000;
+    final num = seed.toString().padLeft(11, '0');
+    return '$fixed ${num.substring(0, 6)} ${num.substring(6, 11)}';
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final currencyLabel = context.l10nText('ETB');
-    final displayBalance =
-        showBalance ? formatNumberWithComma(totalBalance) : '***';
-    final todayIncomeLabel =
-        showBalance ? '+ ${_formatDelta(todayIncome)}' : '***';
-    final todayExpenseLabel =
-        showBalance ? '- ${_formatDelta(todayExpense)}' : '***';
-    final weekIncomeLabel =
-        showBalance ? '+ ${_formatDelta(weekIncome)}' : '***';
-    final weekExpenseLabel =
-        showBalance ? '- ${_formatDelta(weekExpense)}' : '***';
+    final colorTheme = context.watch<ThemeProvider>().appColorTheme;
+    final _show = widget.showBalance;
+    final displayBalance = _show
+        ? 'ETB ${formatNumberWithComma(widget.totalBalance)}'
+        : '••••••••';
+    final displayName = _cardholderName;
 
     return GestureDetector(
-      onTap: onCardTap,
+      onTap: widget.onCardTap,
       child: Container(
-        padding: const EdgeInsets.all(16),
+        width: double.infinity,
+        height: 250,
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.primary,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(18),
+          gradient: _cardGradient(colorTheme),
+          boxShadow: [
+            BoxShadow(
+              color: _cardGlow(colorTheme).withValues(alpha: 0.15),
+              blurRadius: 40,
+              spreadRadius: 0,
+            ),
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.5),
+              blurRadius: 60,
+              spreadRadius: 0,
+              offset: const Offset(0, 20),
+            ),
+          ],
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
           children: [
-            Row(
-              children: [
-                Text(
-                  context.l10nText(
-                    hasAddedBankAccounts ? 'TOTAL BALANCE' : 'GET STARTED',
-                  ),
-                  style: TextStyle(
-                    color: AppColors.white.withValues(alpha: 0.85),
-                    fontSize: 12,
-                    letterSpacing: 1.1,
-                    fontWeight: FontWeight.w500,
+            // Brushed metal lines
+            Positioned.fill(
+              child: IgnorePointer(
+                child: CustomPaint(
+                  painter: _BrushedMetalPainter(),
+                ),
+              ),
+            ),
+            // Border frame
+            Positioned(
+              top: 12, left: 12, right: 12, bottom: 12,
+              child: IgnorePointer(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      color: const Color(0xFFC8B4A0).withValues(alpha: 0.08),
+                    ),
                   ),
                 ),
-              ],
-            ),
-            if (hasAddedBankAccounts) ...[
-              const SizedBox(height: 8),
-              Row(
-                children: [
-                  Text(
-                    '$currencyLabel $displayBalance',
-                    style: const TextStyle(
-                      color: AppColors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.w800,
-                      letterSpacing: -0.5,
-                    ),
-                  ),
-                  const Spacer(),
-                  IconButton(
-                    onPressed: onToggleBalance,
-                    style: IconButton.styleFrom(
-                      foregroundColor: AppColors.white.withValues(alpha: 0.9),
-                      padding: EdgeInsets.zero,
-                      minimumSize: const Size(24, 24),
-                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    ),
-                    icon: Icon(
-                      showBalance
-                          ? AppIcons.visibility_outlined
-                          : AppIcons.visibility_off_outlined,
-                      size: 24,
-                    ),
-                  ),
-                ],
               ),
-              const SizedBox(height: 6),
-              InkWell(
-                onTap: onBreakdownTap,
-                borderRadius: BorderRadius.circular(8),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4),
-                  child: Row(
+            ),
+            // Accent line at top
+            Positioned(
+              top: 0, left: 24, right: 24,
+              child: IgnorePointer(
+                child: Container(
+                  height: 2,
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.vertical(bottom: Radius.circular(2)),
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.transparent,
+                        const Color(0xFFC8B4A0).withValues(alpha: 0.2),
+                        const Color(0xFFC8B4A0).withValues(alpha: 0.4),
+                        const Color(0xFFC8B4A0).withValues(alpha: 0.2),
+                        Colors.transparent,
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            // Top bar: logo left, crest right
+            Positioned(
+              top: 28, left: 30, right: 30,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Logo area
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(
-                        context.l10nText('How did I get here?'),
-                        style: TextStyle(
-                          color: AppColors.white.withValues(alpha: 0.85),
-                          fontSize: 13,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      Icon(
-                        AppIcons.arrow_forward,
-                        size: 14,
-                        color: AppColors.white.withValues(alpha: 0.8),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SizedBox(
+                            width: 26,
+                            height: 26,
+                            child: _FinomiSvgIcon(
+                              color: Colors.white.withValues(alpha: 0.85),
+                            ),
+                          ),
+                          const SizedBox(width: 6),
+                          Text(
+                            'Finomi',
+                            style: TextStyle(
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                              letterSpacing: 3,
+                              color: Colors.white.withValues(alpha: 0.35),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Container(
-                height: 1,
-                color: AppColors.white.withValues(alpha: 0.22),
-              ),
-              const SizedBox(height: 10),
-              Row(
-                children: [
-                  Expanded(
-                    child: _BalanceDelta(
-                      label: context.l10nText('Today'),
-                      income: todayIncomeLabel,
-                      expense: todayExpenseLabel,
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: _BalanceDelta(
-                      label: context.l10nText('This week'),
-                      income: weekIncomeLabel,
-                      expense: weekExpenseLabel,
-                    ),
+                  // Crest - clickable for balance toggle
+                  _BalanceToggleCrest(
+                    onTap: widget.onToggleBalance,
                   ),
                 ],
               ),
-            ] else ...[
-              const SizedBox(height: 14),
-              Text(
-                context.l10nText('No bank accounts added yet.'),
-                style: const TextStyle(
-                  color: AppColors.white,
-                  fontSize: 22,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: -0.3,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                context.l10nText(
-                  'Tap this card to open Accounts and add your bank accounts.',
-                ),
-                style: TextStyle(
-                  color: AppColors.white.withValues(alpha: 0.82),
-                  fontSize: 14,
-                  height: 1.35,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              const SizedBox(height: 14),
-              Row(
+            ),
+            // Dark golden chip
+            Positioned(
+              top: 66, left: 30,
+              child: _GoldChip(),
+            ),
+            // Card number
+            Positioned(
+              top: 104, left: 30, right: 30,
+              child: Row(
                 children: [
-                  Text(
-                    context.l10nText('Open Accounts'),
-                    style: TextStyle(
-                      color: AppColors.white.withValues(alpha: 0.95),
-                      fontSize: 13,
-                      fontWeight: FontWeight.w800,
-                    ),
+                  _CardNumberGroup(text: _cardNumber.split(' ')[0]),
+                  const SizedBox(width: 20),
+                  _CardNumberGroup(text: _cardNumber.split(' ')[1]),
+                  const SizedBox(width: 20),
+                  _CardNumberGroup(text: _cardNumber.split(' ')[2]),
+                ],
+              ),
+            ),
+            // Info row
+            Positioned(
+              bottom: 72, left: 30, right: 30,
+              child: Row(
+                children: [
+                  _CardDetail(label: 'Card Holder', value: displayName),
+                  const SizedBox(width: 40),
+                  _CardDetail(label: 'Expires', value: '09/29', mono: true),
+                  const SizedBox(width: 40),
+                  _CardDetail(label: 'CVV', value: '•••', mono: true),
+                ],
+              ),
+            ),
+            // Bottom bar
+            Positioned(
+              bottom: 24, left: 30, right: 30,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // Balance
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Balance',
+                        style: TextStyle(
+                          fontSize: 8,
+                          letterSpacing: 1,
+                          color: Colors.white.withValues(alpha: 0.15),
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Text(
+                        displayBalance,
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w700,
+                          color: _show
+                              ? Colors.white.withValues(alpha: 0.3)
+                              : Colors.white.withValues(alpha: 0.08),
+                          letterSpacing: _show ? 0.3 : 6,
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(width: 8),
-                  Icon(
-                    AppIcons.arrow_forward,
-                    size: 16,
-                    color: AppColors.white.withValues(alpha: 0.9),
+                  // Network name + contactless
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Finomi',
+                        style: GoogleFonts.marcellus(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white.withValues(alpha: 0.06),
+                          letterSpacing: 4,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      SizedBox(
+                        width: 18,
+                        height: 18,
+                        child: _ContactlessIcon(
+                          color: Colors.white.withValues(alpha: 0.06),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
-            ],
+            ),
           ],
         ),
       ),
     );
   }
+
+  LinearGradient _cardGradient(AppColorTheme theme) {
+    switch (theme) {
+      case AppColorTheme.defaults:
+        return const LinearGradient(
+          begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
+          colors: [Color(0xFF2a1f6e), Color(0xFF1e1550), Color(0xFF141040), Color(0xFF0c0828)],
+        );
+      case AppColorTheme.theme1:
+        return const LinearGradient(
+          begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
+          colors: [Color(0xFF3a0e0e), Color(0xFF2a0808), Color(0xFF1a0404), Color(0xFF0e0202)],
+        );
+      case AppColorTheme.theme2:
+        return const LinearGradient(
+          begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
+          colors: [Color(0xFF0f2848), Color(0xFF0c1e38), Color(0xFF081428), Color(0xFF040a18)],
+        );
+      case AppColorTheme.emerald:
+        return const LinearGradient(
+          begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
+          colors: [Color(0xFF0a2a18), Color(0xFF072010), Color(0xFF05160a), Color(0xFF020c06)],
+        );
+      case AppColorTheme.sunset:
+        return const LinearGradient(
+          begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
+          colors: [Color(0xFF2a1204), Color(0xFF1e0c02), Color(0xFF140800), Color(0xFF0a0400)],
+        );
+      case AppColorTheme.ocean:
+        return const LinearGradient(
+          begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
+          colors: [Color(0xFF0a2230), Color(0xFF071a24), Color(0xFF041218), Color(0xFF020a0e)],
+        );
+      case AppColorTheme.rose:
+        return const LinearGradient(
+          begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
+          colors: [Color(0xFF2a0a14), Color(0xFF1e060e), Color(0xFF14030a), Color(0xFF0a0104)],
+        );
+      case AppColorTheme.lavender:
+        return const LinearGradient(
+          begin: Alignment(0.2, -1), end: Alignment(-0.2, 1),
+          colors: [Color(0xFF1e0a30), Color(0xFF140824), Color(0xFF0e0418), Color(0xFF06020e)],
+        );
+    }
+  }
+
+  Color _cardGlow(AppColorTheme theme) {
+    switch (theme) {
+      case AppColorTheme.defaults:
+        return const Color(0xFF6366F1);
+      case AppColorTheme.theme1:
+        return const Color(0xFFAD1312);
+      case AppColorTheme.theme2:
+        return const Color(0xFF336E7F);
+      case AppColorTheme.emerald:
+        return const Color(0xFF059669);
+      case AppColorTheme.sunset:
+        return const Color(0xFFD97706);
+      case AppColorTheme.ocean:
+        return const Color(0xFF0891B2);
+      case AppColorTheme.rose:
+        return const Color(0xFFE11D48);
+      case AppColorTheme.lavender:
+        return const Color(0xFF7C3AED);
+    }
+  }
+}
+
+class _CardNumberGroup extends StatelessWidget {
+  final String text;
+  const _CardNumberGroup({required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: 21,
+        letterSpacing: 6,
+        color: Colors.white.withValues(alpha: 0.7),
+        fontWeight: FontWeight.w500,
+        fontFamily: 'monospace',
+      ),
+    );
+  }
+}
+
+class _CardDetail extends StatelessWidget {
+  final String label;
+  final String value;
+  final bool mono;
+
+  const _CardDetail({
+    required this.label,
+    required this.value,
+    this.mono = false,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 7,
+            letterSpacing: 1.5,
+            color: Colors.white.withValues(alpha: 0.2),
+          ),
+        ),
+        const SizedBox(height: 3),
+        Text(
+          value,
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+            color: Colors.white.withValues(alpha: 0.55),
+            fontFamily: mono ? 'monospace' : null,
+            letterSpacing: mono ? 2 : 0.5,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _GoldChip extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 40,
+      height: 30,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(4),
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color(0xFF8a7330),
+            Color(0xFFc4a84a),
+            Color(0xFFa68a38),
+            Color(0xFF7a6428),
+            Color(0xFF5c4a1a),
+          ],
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF785a1e).withValues(alpha: 0.2),
+            blurRadius: 4,
+          ),
+        ],
+      ),
+      child: Container(
+        margin: const EdgeInsets.all(4),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.black.withValues(alpha: 0.15)),
+          borderRadius: BorderRadius.circular(2),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: List.generate(
+            3,
+            (_) => Container(
+              width: 1.5,
+              height: 14,
+              margin: const EdgeInsets.symmetric(horizontal: 2),
+              color: Colors.black.withValues(alpha: 0.1),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _BalanceToggleCrest extends StatelessWidget {
+  final VoidCallback onTap;
+  const _BalanceToggleCrest({required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 44,
+        height: 44,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: const Color(0xFFC8B4A0).withValues(alpha: 0.15),
+            width: 1.5,
+          ),
+        ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              width: 50,
+              height: 50,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: const Color(0xFFC8B4A0).withValues(alpha: 0.06),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 22,
+              height: 22,
+              child: _FinomiSvgIcon(
+                color: const Color(0xFFC8B4A0).withValues(alpha: 0.25),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _FinomiSvgIcon extends StatelessWidget {
+  final Color color;
+  const _FinomiSvgIcon({required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomPaint(
+      painter: _FinomiPeakPainter(color),
+      size: const Size(26, 26),
+    );
+  }
+}
+
+class _FinomiPeakPainter extends CustomPainter {
+  final Color color;
+  _FinomiPeakPainter(this.color);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = color
+      ..style = PaintingStyle.fill;
+
+    final s = size.width / 32;
+
+    final path1 = Path()
+      ..moveTo(27.1 * s, 21 * s)
+      ..lineTo(25.3 * s, 18 * s)
+      ..lineTo(6.7 * s, 18 * s)
+      ..lineTo(4.9 * s, 21 * s)
+      ..close();
+    canvas.drawPath(path1, paint);
+
+    final path2 = Path()
+      ..moveTo(24.2 * s, 16 * s)
+      ..lineTo(22.4 * s, 13 * s)
+      ..lineTo(9.6 * s, 13 * s)
+      ..lineTo(7.8 * s, 16 * s)
+      ..close();
+    canvas.drawPath(path2, paint);
+
+    final path3 = Path()
+      ..moveTo(21.2 * s, 11 * s)
+      ..lineTo(16.8 * s, 3.5 * s)
+      ..cubicTo(16.4 * s, 2.9 * s, 15.0 * s, 2.9 * s, 14.7 * s, 3.5 * s)
+      ..lineTo(10.8 * s, 11 * s)
+      ..close();
+    canvas.drawPath(path3, paint);
+
+    final path4 = Path()
+      ..moveTo(30.9 * s, 27.5 * s)
+      ..lineTo(28.2 * s, 23 * s)
+      ..lineTo(3.8 * s, 23 * s)
+      ..lineTo(1.2 * s, 27.5 * s)
+      ..cubicTo(1.0 * s, 27.8 * s, 1.0 * s, 28.2 * s, 1.2 * s, 28.5 * s)
+      ..cubicTo(1.4 * s, 28.8 * s, 1.8 * s, 29 * s, 2.2 * s, 29 * s)
+      ..lineTo(29.8 * s, 29 * s)
+      ..cubicTo(30.2 * s, 29 * s, 30.5 * s, 28.8 * s, 30.7 * s, 28.5 * s)
+      ..cubicTo(30.9 * s, 28.1 * s, 31.0 * s, 27.8 * s, 30.9 * s, 27.5 * s)
+      ..close();
+    canvas.drawPath(path4, paint);
+  }
+
+  @override
+  bool shouldRepaint(_FinomiPeakPainter old) => old.color != color;
+}
+
+class _ContactlessIcon extends StatelessWidget {
+  final Color color;
+  const _ContactlessIcon({required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomPaint(
+      painter: _ContactlessPainter(color),
+      size: const Size(18, 18),
+    );
+  }
+}
+
+class _ContactlessPainter extends CustomPainter {
+  final Color color;
+  _ContactlessPainter(this.color);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = color
+      ..style = PaintingStyle.fill;
+
+    final s = size.width / 24;
+
+    final path1 = Path()
+      ..moveTo(16.8 * s, 4.5 * s)
+      ..cubicTo(16.4 * s, 4.1 * s, 15.8 * s, 4.1 * s, 15.4 * s, 4.5 * s)
+      ..cubicTo(15.0 * s, 4.9 * s, 15.0 * s, 5.5 * s, 15.4 * s, 5.9 * s)
+      ..cubicTo(17.2 * s, 7.7 * s, 17.7 * s, 10.3 * s, 17.0 * s, 12.6 * s)
+      ..cubicTo(16.8 * s, 13.4 * s, 16.4 * s, 14.1 * s, 15.9 * s, 14.7 * s)
+      ..cubicTo(15.5 * s, 15.2 * s, 15.6 * s, 15.9 * s, 16.0 * s, 16.3 * s)
+      ..cubicTo(16.5 * s, 16.7 * s, 17.2 * s, 16.6 * s, 17.6 * s, 16.2 * s)
+      ..cubicTo(18.3 * s, 15.4 * s, 18.8 * s, 14.4 * s, 19.1 * s, 13.4 * s)
+      ..cubicTo(20.0 * s, 10.3 * s, 19.4 * s, 7.0 * s, 16.8 * s, 4.5 * s)
+      ..close();
+    canvas.drawPath(path1, paint);
+
+    final path2 = Path()
+      ..moveTo(7.3 * s, 15.5 * s)
+      ..cubicTo(7.7 * s, 15.1 * s, 7.8 * s, 14.4 * s, 7.4 * s, 13.9 * s)
+      ..cubicTo(6.9 * s, 13.3 * s, 6.5 * s, 12.6 * s, 6.3 * s, 11.8 * s)
+      ..cubicTo(5.6 * s, 9.5 * s, 6.1 * s, 6.9 * s, 7.9 * s, 5.1 * s)
+      ..cubicTo(8.3 * s, 4.7 * s, 8.3 * s, 4.1 * s, 7.9 * s, 3.7 * s)
+      ..cubicTo(7.5 * s, 3.3 * s, 6.9 * s, 3.3 * s, 6.5 * s, 3.7 * s)
+      ..cubicTo(3.9 * s, 6.2 * s, 3.3 * s, 9.5 * s, 4.2 * s, 12.6 * s)
+      ..cubicTo(4.5 * s, 13.5 * s, 5.0 * s, 14.5 * s, 5.7 * s, 15.4 * s)
+      ..cubicTo(6.1 * s, 15.9 * s, 6.8 * s, 15.9 * s, 7.3 * s, 15.5 * s)
+      ..close();
+    canvas.drawPath(path2, paint);
+
+    final path3 = Path()
+      ..moveTo(4.9 * s, 12.5 * s)
+      ..cubicTo(4.2 * s, 10.2 * s, 4.7 * s, 7.6 * s, 6.5 * s, 5.8 * s)
+      ..cubicTo(6.9 * s, 5.4 * s, 6.9 * s, 4.8 * s, 6.5 * s, 4.4 * s)
+      ..cubicTo(6.1 * s, 4.0 * s, 5.5 * s, 4.0 * s, 5.1 * s, 4.4 * s)
+      ..cubicTo(2.5 * s, 6.9 * s, 1.9 * s, 10.2 * s, 2.8 * s, 13.3 * s)
+      ..cubicTo(3.1 * s, 14.2 * s, 3.6 * s, 15.2 * s, 4.3 * s, 16.1 * s)
+      ..cubicTo(4.7 * s, 16.6 * s, 5.4 * s, 16.6 * s, 5.9 * s, 16.2 * s)
+      ..cubicTo(6.3 * s, 15.8 * s, 6.4 * s, 15.1 * s, 6.0 * s, 14.6 * s)
+      ..cubicTo(5.5 * s, 14.0 * s, 5.1 * s, 13.3 * s, 4.9 * s, 12.5 * s)
+      ..close();
+    canvas.drawPath(path3, paint);
+
+    final path4 = Path()
+      ..moveTo(13.4 * s, 8.1 * s)
+      ..cubicTo(13.8 * s, 7.7 * s, 13.8 * s, 7.1 * s, 13.4 * s, 6.7 * s)
+      ..cubicTo(13.0 * s, 6.3 * s, 12.4 * s, 6.3 * s, 12.0 * s, 6.7 * s)
+      ..cubicTo(11.6 * s, 7.1 * s, 11.6 * s, 7.7 * s, 12.0 * s, 8.1 * s)
+      ..cubicTo(12.4 * s, 8.5 * s, 13.0 * s, 8.5 * s, 13.4 * s, 8.1 * s)
+      ..close();
+    canvas.drawPath(path4, paint);
+
+    final path5 = Path()
+      ..moveTo(14.1 * s, 13.3 * s)
+      ..cubicTo(14.5 * s, 12.9 * s, 14.5 * s, 12.3 * s, 14.1 * s, 11.9 * s)
+      ..cubicTo(13.7 * s, 11.5 * s, 13.1 * s, 11.5 * s, 12.7 * s, 11.9 * s)
+      ..cubicTo(12.3 * s, 12.3 * s, 12.3 * s, 12.9 * s, 12.7 * s, 13.3 * s)
+      ..cubicTo(13.1 * s, 13.7 * s, 13.7 * s, 13.7 * s, 14.1 * s, 13.3 * s)
+      ..close();
+    canvas.drawPath(path5, paint);
+  }
+
+  @override
+  bool shouldRepaint(_ContactlessPainter old) => old.color != color;
+}
+
+class _BrushedMetalPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = Colors.white.withValues(alpha: 0.008)
+      ..strokeWidth = 1;
+
+    for (double x = 0; x < size.width; x += 3) {
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
+    }
+  }
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
 class _RefreshButton extends StatelessWidget {
@@ -1056,74 +1520,6 @@ class _RefreshButton extends StatelessWidget {
       ),
     );
   }
-}
-
-class _BalanceDelta extends StatelessWidget {
-  final String label;
-  final String income;
-  final String expense;
-
-  const _BalanceDelta({
-    required this.label,
-    required this.income,
-    required this.expense,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: TextStyle(
-            color: AppColors.white.withValues(alpha: 0.85),
-            fontSize: 11,
-            fontWeight: FontWeight.w500,
-            letterSpacing: 0.5,
-          ),
-        ),
-        const SizedBox(height: 6),
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              income,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                color: AppColors.incomeSuccess,
-                fontSize: 13,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            const SizedBox(width: 8),
-            Container(
-              width: 1,
-              height: 12,
-              color: AppColors.white.withValues(alpha: 0.35),
-            ),
-            const SizedBox(width: 8),
-            Text(
-              expense,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                color: AppColors.red,
-                fontSize: 13,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-}
-
-String _formatDelta(double value) {
-  final formatted = formatNumberAbbreviated(value).replaceAll('k', 'K');
-  return formatted;
 }
 
 class _HomeToolsFabMenu extends StatefulWidget {
