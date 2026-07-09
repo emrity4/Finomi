@@ -170,3 +170,7 @@ See `app/pubspec.yaml` for the complete list.
 ## License
 
 [MIT License](LICENSE.md)
+
+## Credits
+
+Originally created by [detached-space](https://github.com/detached-space).
