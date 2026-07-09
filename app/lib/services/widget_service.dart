@@ -8,15 +8,15 @@ import 'package:finomi/services/widget_refresh_state_service.dart';
 import 'package:finomi/theme/app_calendar_option.dart';
 
 class WidgetService {
-  static const String appGroupId = 'group.detached.totals.widget';
+  static const String appGroupId = 'group.finomi.app.widget';
 
   static const String expenseAndroidWidgetName = 'ExpenseWidgetProvider';
   static const String expenseAndroidWidgetQualifiedName =
-      'detached.totals.$expenseAndroidWidgetName';
+      'finomi.app.$expenseAndroidWidgetName';
 
   static const String budgetAndroidWidgetName = 'BudgetWidgetProvider';
   static const String budgetAndroidWidgetQualifiedName =
-      'detached.totals.$budgetAndroidWidgetName';
+      'finomi.app.$budgetAndroidWidgetName';
   static const int maxBudgetWidgetBudgets = 3;
 
   static const String _appCalendarKey = 'app_calendar';

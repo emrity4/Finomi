@@ -13,7 +13,7 @@ class WidgetLaunchIntentService {
       WidgetLaunchIntentService._();
 
   static const MethodChannel _channel =
-      MethodChannel('detached.totals/widget_launch');
+      MethodChannel('finomi.app/widget_launch');
 
   final StreamController<WidgetLaunchTarget> _controller =
       StreamController<WidgetLaunchTarget>.broadcast();
