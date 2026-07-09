@@ -98,6 +98,7 @@ class AppColors {
   static const Color slate800 = Color(0xFF1E293B);
   static const Color slate900 = Color(0xFF0F172A);
 
+  static const Color darkCard = Color(0xFF1E2230);
   static const Color darkBorder = Color(0xFF34384A);
   static const Color darkMuted = Color(0xFF2A3040);
 

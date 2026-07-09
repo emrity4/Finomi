@@ -63,7 +63,7 @@ class RedesignTheme {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide:
-              const BorderSide(color: colorTheme.lightPrimary, width: 1.5),
+              BorderSide(color: colorTheme.lightPrimary, width: 1.5),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -136,7 +136,7 @@ class RedesignTheme {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide:
-              const BorderSide(color: colorTheme.darkPrimary, width: 1.5),
+              BorderSide(color: colorTheme.darkPrimary, width: 1.5),
         ),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
