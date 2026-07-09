@@ -970,8 +970,9 @@ class _CenturionCardState extends State<_CenturionCard> {
                           SizedBox(
                             width: 26,
                             height: 26,
-                            child: _FinomiSvgIcon(
-                              color: Colors.white.withValues(alpha: 0.85),
+                            child: Image.asset(
+                              'assets/images/finomi-logo.png',
+                              fit: BoxFit.contain,
                             ),
                           ),
                           const SizedBox(width: 6),
@@ -1300,8 +1301,9 @@ class _BalanceToggleCrest extends StatelessWidget {
             SizedBox(
               width: 22,
               height: 22,
-              child: _FinomiSvgIcon(
-                color: const Color(0xFFC8B4A0).withValues(alpha: 0.25),
+              child: Image.asset(
+                'assets/images/finomi-logo.png',
+                fit: BoxFit.contain,
               ),
             ),
           ],
@@ -1309,73 +1311,6 @@ class _BalanceToggleCrest extends StatelessWidget {
       ),
     );
   }
-}
-
-class _FinomiSvgIcon extends StatelessWidget {
-  final Color color;
-  const _FinomiSvgIcon({required this.color});
-
-  @override
-  Widget build(BuildContext context) {
-    return CustomPaint(
-      painter: _FinomiPeakPainter(color),
-      size: const Size(26, 26),
-    );
-  }
-}
-
-class _FinomiPeakPainter extends CustomPainter {
-  final Color color;
-  _FinomiPeakPainter(this.color);
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = color
-      ..style = PaintingStyle.fill;
-
-    final s = size.width / 32;
-
-    final path1 = Path()
-      ..moveTo(27.1 * s, 21 * s)
-      ..lineTo(25.3 * s, 18 * s)
-      ..lineTo(6.7 * s, 18 * s)
-      ..lineTo(4.9 * s, 21 * s)
-      ..close();
-    canvas.drawPath(path1, paint);
-
-    final path2 = Path()
-      ..moveTo(24.2 * s, 16 * s)
-      ..lineTo(22.4 * s, 13 * s)
-      ..lineTo(9.6 * s, 13 * s)
-      ..lineTo(7.8 * s, 16 * s)
-      ..close();
-    canvas.drawPath(path2, paint);
-
-    final path3 = Path()
-      ..moveTo(21.2 * s, 11 * s)
-      ..lineTo(16.8 * s, 3.5 * s)
-      ..cubicTo(16.4 * s, 2.9 * s, 15.0 * s, 2.9 * s, 14.7 * s, 3.5 * s)
-      ..lineTo(10.8 * s, 11 * s)
-      ..close();
-    canvas.drawPath(path3, paint);
-
-    final path4 = Path()
-      ..moveTo(30.9 * s, 27.5 * s)
-      ..lineTo(28.2 * s, 23 * s)
-      ..lineTo(3.8 * s, 23 * s)
-      ..lineTo(1.2 * s, 27.5 * s)
-      ..cubicTo(1.0 * s, 27.8 * s, 1.0 * s, 28.2 * s, 1.2 * s, 28.5 * s)
-      ..cubicTo(1.4 * s, 28.8 * s, 1.8 * s, 29 * s, 2.2 * s, 29 * s)
-      ..lineTo(29.8 * s, 29 * s)
-      ..cubicTo(30.2 * s, 29 * s, 30.5 * s, 28.8 * s, 30.7 * s, 28.5 * s)
-      ..cubicTo(30.9 * s, 28.1 * s, 31.0 * s, 27.8 * s, 30.9 * s, 27.5 * s)
-      ..close();
-    canvas.drawPath(path4, paint);
-  }
-
-  @override
-  bool shouldRepaint(_FinomiPeakPainter old) => old.color != color;
 }
 
 class _ContactlessIcon extends StatelessWidget {
