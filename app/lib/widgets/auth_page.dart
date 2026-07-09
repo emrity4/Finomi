@@ -24,9 +24,9 @@ class AuthPage extends StatelessWidget {
               children: [
                 Center(
                   child: Image.asset(
-                    'assets/images/logo-text-white.png',
-                    fit: BoxFit.cover,
-                    width: 250,
+                    'assets/images/finomi-logo.png',
+                    fit: BoxFit.contain,
+                    width: 60,
                   ),
                 ),
                 SizedBox(height: 20),

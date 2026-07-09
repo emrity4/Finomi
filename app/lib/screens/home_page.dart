@@ -1195,10 +1195,10 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
             child: Image.asset(
-              "assets/images/logo-text.png",
+              "assets/images/finomi-logo.png",
               fit: BoxFit.contain,
-              width: 80,
-              height: 24,
+              width: 26,
+              height: 26,
             ),
           ),
           Flexible(

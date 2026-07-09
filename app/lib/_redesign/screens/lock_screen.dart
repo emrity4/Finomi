@@ -98,8 +98,8 @@ class _RedesignLockScreenState extends State<RedesignLockScreen>
                   );
                 },
                 child: Image.asset(
-                  'assets/images/logo-text.png',
-                  width: 120,
+                  'assets/images/finomi-logo.png',
+                  width: 40,
                   fit: BoxFit.contain,
                 ),
               ),
