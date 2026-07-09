@@ -29,6 +29,7 @@ class RedesignTheme {
 
     final base = ThemeData(
       useMaterial3: true,
+      fontFamily: fontOption.fontFamily,
       colorScheme: colorScheme,
       scaffoldBackgroundColor: colorTheme.lightBg,
       snackBarTheme: _snackBarTheme(),
@@ -104,6 +105,7 @@ class RedesignTheme {
 
     final base = ThemeData(
       useMaterial3: true,
+      fontFamily: fontOption.fontFamily,
       colorScheme: colorScheme,
       scaffoldBackgroundColor: colorTheme.darkBg,
       snackBarTheme: _snackBarTheme(),

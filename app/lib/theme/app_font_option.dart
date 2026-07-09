@@ -81,7 +81,6 @@ class AppFontTheme {
     switch (option) {
       case AppFontOption.appDefault:
         return base.copyWith(
-          fontFamily: 'Space Grotesk',
           textTheme: GoogleFonts.spaceGroteskTextTheme(base.textTheme),
           primaryTextTheme:
               GoogleFonts.spaceGroteskTextTheme(base.primaryTextTheme),
@@ -90,7 +89,6 @@ class AppFontTheme {
       case AppFontOption.matterhorn:
       case AppFontOption.california:
         return base.copyWith(
-          fontFamily: option.fontFamily,
           textTheme: base.textTheme.apply(fontFamily: option.fontFamily),
           primaryTextTheme:
               base.primaryTextTheme.apply(fontFamily: option.fontFamily),
