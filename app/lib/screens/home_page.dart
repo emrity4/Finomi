@@ -12,6 +12,7 @@ import 'package:finomi/widgets/banks_summary_list.dart';
 import 'package:finomi/widgets/bank_detail.dart';
 import 'package:finomi/widgets/add_account_form.dart';
 import 'package:finomi/widgets/total_balance_card.dart';
+import 'package:finomi/widgets/finomi_card.dart';
 import 'package:finomi/services/sms_config_service.dart';
 import 'package:finomi/widgets/custom_bottom_nav.dart';
 import 'package:finomi/widgets/detected_banks_widget.dart';
@@ -867,8 +868,10 @@ class _HomePageState extends State<HomePage> with WidgetsBindingObserver {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 12),
-                          TotalBalanceCard(
-                            summary: provider.summary,
+                          FinomiCard(
+                            balance: showTotalBalance
+                                ? "${formatNumberWithComma(provider.summary?.totalBalance ?? 0.0)} ETB"
+                                : "******",
                             showBalance: showTotalBalance,
                             onToggleBalance: () {
                               setState(() {
